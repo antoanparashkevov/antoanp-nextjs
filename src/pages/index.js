@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Home() {
+export default function HomePage () {
+    const router = useRouter();
+    
   return (
     <>
       <div>
@@ -27,6 +30,8 @@ export default function Home() {
             >
               Service 1</Link>
           </li>
+            <button onClick={() => router.push('/services/1')}>Navigate to Service 1</button>
+            <button onClick={() => router.push({ pathname: '/services/[serviceId]', query: { serviceId : '1' } } ) }>Navigate to Service 1 again</button>
         </ul>
       </div>
     </>
