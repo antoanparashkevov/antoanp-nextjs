@@ -1,7 +1,7 @@
 const ServicesPage = () => {
     return (
         <h1>
-            Services Page
+            Portfolio Page
         </h1>
     )
 }
