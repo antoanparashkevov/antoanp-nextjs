@@ -9,6 +9,7 @@ body {
     background-color: variables.$primary-bg-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: variables.$primary-font-weight;
 }
 
 a {

@@ -1,29 +1,23 @@
-import Link from "next/link";
+import { Fragment } from "react";
+import styled from 'styled-components';
+
+//layout components
+import TheHeader from "@/components/layout/TheHeader";
+
+//styled-components
+const HeaderWrapper = styled.header`
+    width: 100%;
+`
+
 
 export default function HomePage () {
     
   return (
-    <>
-      <div>
-        <ul role='list'>
-          <li>
-            <Link href='/about'>
-                About
-            </Link>
-          </li>
-            <li>
-            <Link href='/skills'>
-                Skills
-            </Link>
-           </li>
-            <li>
-            <Link href='/portfolio'>
-              Portfolio
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </>
+    <Fragment>
+        <HeaderWrapper>
+            <TheHeader />
+        </HeaderWrapper>
+    </Fragment>
   )
 }
 

@@ -1,0 +1,22 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.navbar {
+    @include mixins.flexbox;
+    height: 150px;
+    justify-content: space-evenly;
+}
+
+.navbar_links .navbar_list {
+    @include mixins.flexbox;
+    column-gap: 60px;
+}
+
+.navbar_link {
+   flex: 0 1 60px;
+}
+
+.navbar_link_anchor {
+    font-size: variables.$primary-font-size;
+    color: variables.$primary-text-color;
+}
