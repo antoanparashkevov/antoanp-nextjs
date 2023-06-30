@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 //layout components
 import TheHeader from "@/components/layout/TheHeader";
+import Footer from "@/components/layout/Footer";
 
 //styled-components
 const HeaderWrapper = styled.header`
@@ -35,7 +36,7 @@ export default function HomePage () {
             test
         </MainWrapper>
         <FooterWrapper>
-            test footer
+            <Footer />
         </FooterWrapper>
     </Fragment>
   )
