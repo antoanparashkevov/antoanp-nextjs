@@ -5,7 +5,7 @@ export default function HomePage () {
   return (
     <>
       <div>
-        <ul>
+        <ul role='list'>
           <li>
             <Link href='/about'>
                 About
@@ -17,7 +17,7 @@ export default function HomePage () {
             </Link>
            </li>
             <li>
-            <Link href='/portfolo'>
+            <Link href='/portfolio'>
               Portfolio
             </Link>
           </li>

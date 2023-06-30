@@ -10,9 +10,10 @@ $font-stack: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
 $primary-text-color: #000000;
 $primary-bg-color: #FFFFFF;
 $primary-font-size: 14px;
+$project-min-width: 360px;
 
 body {
-    min-width: 360px;
+    min-width: $project-min-width;
     margin: 0;
     font-family: $font-stack;
     font-size: $primary-font-size;
