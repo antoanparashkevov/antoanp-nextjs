@@ -1,7 +1,11 @@
 import styles from './TheHeader.module.scss';
 import Link from 'next/link';
 
+//UI components
+import CvButton from "@/components/UI/CvButton";
+
 const TheHeader = () => {
+    
     return (
         <nav className={styles['navbar']}>
             <div className={styles['navbar_links']}>
@@ -18,7 +22,7 @@ const TheHeader = () => {
                 </ul>
             </div>
             <div className={styles['cv_button_wrapper']}>
-                <button>Download CV</button>
+                <CvButton>Download CV</CvButton>
             </div>
         </nav>
     )

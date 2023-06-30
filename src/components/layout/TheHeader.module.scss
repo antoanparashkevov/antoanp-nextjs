@@ -20,3 +20,9 @@
     font-size: variables.$primary-font-size;
     color: variables.$primary-text-color;
 }
+
+.cv_button_wrapper button {
+    box-shadow: variables.$box-shadow;
+    font-size: variables.$primary-font-size;
+    border: 1px solid variables.$primary-orange-color;
+}
