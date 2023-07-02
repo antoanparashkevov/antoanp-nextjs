@@ -17,7 +17,7 @@ const SkillsSection = () => {
                     a few questions about what it should look like and done!</p>
                 <FilledButton className={ styles['skills_section_btn'] }>Show More</FilledButton>
             </div>
-            <div className={ styles['skills_section_desc'] }>
+            <div className={ styles['skills_section_main_desc'] }>
                 <div className={ styles['skills_section_frontend_part'] }>
                     <div className={ styles['skills_section_frontend_part_icon'] }>
                         <Icon iconSrc={FrontEndIcon} iconAlt='Diamong' />

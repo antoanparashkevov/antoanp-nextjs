@@ -4,6 +4,7 @@
 .skills_section {
     @include mixins.flexbox;
     justify-content: center;
+    gap: 60px;
 }
 
 //Main content START
@@ -31,9 +32,26 @@
 
 //Main description START
 
-.skills_section_desc {
+.skills_section_main_desc {
     @include mixins.flexItem;
-    flex-basis: 60%;
+    @include mixins.flexbox;
+    flex-basis: calc(60% - 60px);
+    height: 100%;
+    gap: 15px;
+}
+
+.skills_section_frontend_part,
+.skills_section_backend_part {
+    @include mixins.flexbox;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+    flex-basis: 50%
+}
+
+.skills_section_backend_part {
+    align-self: flex-end;
 }
 
 //Main description END

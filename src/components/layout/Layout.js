@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 //styled-components
 const MainWrapper = styled.main`
     display: flex;
-    padding: 2rem 10rem;
+    padding: 2rem 6rem;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -21,7 +21,7 @@ const HeaderWrapper = styled.header`
 
 const FooterWrapper = styled.footer`
     display: flex;
-    height: 80px;
+    min-height: 80px;
     border: 1px solid #92929D;
 `
 
