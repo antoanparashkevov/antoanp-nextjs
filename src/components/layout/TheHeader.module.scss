@@ -7,6 +7,12 @@
     justify-content: space-evenly;
 }
 
+.navbar_title a {
+    color: variables.$primary-orange-color;
+    font-size: 24px;
+    font-weight: 600;
+}
+
 .navbar_links .navbar_list {
     @include mixins.flexbox;
     column-gap: 60px;
@@ -16,9 +22,13 @@
    flex: 0 1 60px;
 }
 
-.navbar_link_anchor {
+.navbar_link a {
     font-size: variables.$primary-font-size;
     color: variables.$primary-text-color;
+}
+
+.navbar_link .active {
+    font-weight: 700;
 }
 
 .cv_button_wrapper button {
