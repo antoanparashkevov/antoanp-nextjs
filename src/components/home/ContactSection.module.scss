@@ -1,0 +1,80 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.contact_section {
+    @include mixins.flexbox;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+//Title START
+
+.contact_section_title h1 {
+    font-size: variables.$h1-font-size;
+    color: variables.$primary-text-color;
+}
+
+.contact_section_title span {
+    color: variables.$primary-orange-color;
+}
+
+//Title END
+
+.contact_section_main_content {
+    @include mixins.flexbox;
+}
+
+//Main content START
+
+//Badges START
+
+.contact_section_badges {
+    @include mixins.flexbox;
+    width: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+//Email START
+
+.contact_section_email_badge {
+    @include mixins.flexbox;
+    column-gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+.contact_section_email_badge > span {
+    margin: 0;
+    background-color: variables.$primary-orange-color;
+    padding: 8px 12px;
+}
+
+.contact_section_email_info {
+    @include mixins.flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact_section_email_info span:first-child {
+    color: variables.$primary-gray-color;
+    text-transform: capitalize;
+}
+
+.contact_section_email_info span:nth-child(2) {
+    font-weight: 500;
+}
+
+//Email END
+
+//Badges END
+
+//Form START
+
+//TODO FORM STYLES
+
+//Form END
+
+//Main content END

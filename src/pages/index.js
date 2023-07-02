@@ -3,7 +3,9 @@ import { Fragment } from "react";
 //section components
 import AboutSection from "@/components/home/AboutSection";
 import SkillsSection from "@/components/home/SkillsSection";
-import Badge from "@/components/home/Badge";
+import PortfolioSection from "@/components/home/PortfolioSection";
+import ContactSection from "@/components/home/ContactSection";
+import Badge from "@/components/UI/Badge";
 
 export default function HomePage () {
     
@@ -13,6 +15,10 @@ export default function HomePage () {
         <AboutSection />
         <Badge>Skills</Badge>
         <SkillsSection />
+        <Badge>Portfolio</Badge>
+        <PortfolioSection />
+        <Badge>Contact</Badge>
+        <ContactSection />
     </Fragment>
   )
 }
