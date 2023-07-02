@@ -8,12 +8,11 @@ import Footer from "@/components/layout/Footer";
 //styled-components
 const MainWrapper = styled.main`
     display: flex;
-    padding: 16rem;
+    padding: 2rem 14rem;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
-    border: 1px solid red;
 `
 
 const HeaderWrapper = styled.header`

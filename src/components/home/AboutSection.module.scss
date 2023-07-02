@@ -1,0 +1,46 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.about_section {
+    @include mixins.flexbox;
+    justify-content: center;
+}
+
+//Main content START 
+
+.about_section_main_content {
+    @include mixins.flexItem;
+    flex-basis: 50%;
+}
+
+.about_section_title {
+    font-size: variables.$h1-font-size;
+    font-weight: variables.$primary-font-weight;
+}
+
+.about_section_title span {
+    color: variables.$primary-orange-color;
+}
+
+.about_section_desc {
+    margin-top: 40px;
+    margin-bottom: 11px;
+}
+
+//Main content START 
+
+//Cover Image START 
+
+.about_section_image {
+    @include mixins.flexItem;
+    flex-basis: 50%;
+    height: 350px;
+}
+
+.about_section_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+//Cover Image END 
