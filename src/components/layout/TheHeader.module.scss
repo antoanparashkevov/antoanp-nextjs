@@ -22,7 +22,10 @@
 }
 
 .cv_button_wrapper button {
+    width: 150px;
+    height: 50px;
     box-shadow: variables.$box-shadow;
     font-size: variables.$primary-font-size;
     border: 1px solid variables.$primary-orange-color;
+    border-radius: 10px;
 }

@@ -5,6 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
+        {/*React portals*/}
+        <div id='overlays' />
         <Main />
         <NextScript />
       </body>
