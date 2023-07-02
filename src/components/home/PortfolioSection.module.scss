@@ -1,0 +1,6 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.portfolio_section {
+    @include mixins.flexbox;    
+}

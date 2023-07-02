@@ -28,6 +28,7 @@ const ContactSection = () => {
                     </div>
                 </div>
                 <div className={styles['contact_section_contact_form']}>
+                    {/*TODO form*/}
                     <form className={styles['contact_form']}>
                         <div className={ formControlClasses() }>
                             
