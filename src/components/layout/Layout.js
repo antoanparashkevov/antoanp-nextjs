@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 import { Fragment } from "react";
+import Image from 'next/image';
 
 //layout components
 import TheHeader from "@/components/layout/TheHeader";
 import Footer from "@/components/layout/Footer";
 
+//gradient image
+import Gradient from '../../../public/images/gradient.svg';
+
 //styled-components
+const ImageWrapper = styled(Image)`
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+`
+
 const MainWrapper = styled.main`
     display: flex;
     padding: 2rem 6rem;
@@ -28,6 +39,7 @@ const FooterWrapper = styled.footer`
 const Layout = ({children}) => {
     return (
         <Fragment>
+            <ImageWrapper src={Gradient} alt='gradient'/>
             <HeaderWrapper>
                 <TheHeader />
             </HeaderWrapper>
