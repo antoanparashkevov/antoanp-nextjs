@@ -4,12 +4,10 @@ import EmailBadge from '../../../public/images/email_badge.svg';
 //UI components
 import Badge from "@/components/UI/Badge";
 import Icon from '@/components/UI/Icon';
+import ContactForm from "@/components/home/ContactForm";
 
 const ContactSection = () => {
     
-    const formControlClasses = (hasError) => {
-        return hasError ? `${styles['form_control']} invalid` : styles['form_control'];
-    }
     return (
         <section className={styles['contact_section']}>
             <div className={styles['contact_section_title']}>
@@ -28,18 +26,7 @@ const ContactSection = () => {
                     </div>
                 </div>
                 <div className={styles['contact_section_contact_form']}>
-                    {/*TODO form*/}
-                    <form className={styles['contact_form']}>
-                        <div className={ formControlClasses() }>
-                            
-                        </div>
-                        <div className={ formControlClasses() }>
-                            
-                        </div>
-                        <div className={ formControlClasses() }>
-                            
-                        </div>
-                    </form>
+                    <ContactForm />
                 </div>
             </div>
         </section>
