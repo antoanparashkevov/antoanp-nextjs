@@ -1,4 +1,4 @@
-import styles from "@/components/home/ContactSection.module.scss";
+import styles from "@/components/home/ContactForm.module.scss";
 
 //hooks
 import useInput from "@/hooks/use-input";

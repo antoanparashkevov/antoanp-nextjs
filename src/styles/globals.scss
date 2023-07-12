@@ -59,3 +59,14 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+/* VALIDATION */
+.invalid {
+    font-weight: 700;
+    color: red;
+}
+
+.invalid input,
+.invalid textarea {
+    border: 2px solid red !important;
+}
