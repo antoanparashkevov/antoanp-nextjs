@@ -5,6 +5,8 @@
     @include mixins.flexbox;
     height: 150px;
     justify-content: space-evenly;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .navbar_title a {
@@ -38,4 +40,62 @@
     font-size: variables.$primary-font-size;
     border: 1px solid variables.$primary-orange-color;
     border-radius: 10px;
+}
+
+/* HAMBURGER MENU START */
+.toggle_buttons {
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 20px;
+    top: 2rem;
+    flex-direction: column;
+    right: 1rem;
+    justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+    
+    .navbar {
+        height: 90px;
+    }
+    
+    .toggle_buttons {
+        display: flex;
+    }
+
+    .navbar_links {
+        display: none;
+        width: 100%;
+        margin-top: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .cv_button_wrapper {
+        display: none;
+    }
+    
+    .navbar_links .navbar_list {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar_links .navbar_list .navbar_link {
+        text-align: center;
+    }
+    
+    .navbar_mobile_height .navbar_links.activate_bar,
+    .navbar_mobile_height .cv_button_wrapper {
+        display: flex;
+    }
+
+    .navbar.navbar_mobile_height {
+        height: auto;
+    }
+}
+
+/* HAMBURGER MENU END */
+
+.close_bar_btn {
+    position: relative;
 }
