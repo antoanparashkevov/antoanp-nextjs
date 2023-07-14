@@ -32,7 +32,7 @@
 
 .contact_section_badges {
     @include mixins.flexbox;
-    width: auto;
+    width: 40%;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -72,7 +72,7 @@
 //Badges END
 
 .contact_section_contact_form {
-    width: 100%;
+    width: 60%;
 }
 
 //Main content END
