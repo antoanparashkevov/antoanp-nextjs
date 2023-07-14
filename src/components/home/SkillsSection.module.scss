@@ -55,3 +55,18 @@
 }
 
 //Main description END
+
+@media screen and (max-width: 490px) {
+    
+    .skills_section {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .skills_section_main_content,
+    .skills_section_main_desc {
+        flex-shrink: 1;
+        flex-basis: unset;
+    }
+}

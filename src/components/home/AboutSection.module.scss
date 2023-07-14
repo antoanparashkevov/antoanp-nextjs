@@ -44,3 +44,25 @@
 }
 
 //Cover Image END 
+
+@media (max-width: 720px) {
+    
+    .about_section_main_content {
+        flex-basis: 70%;    
+    }
+    
+    .about_section_image {
+        flex-basis: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .about_section_main_content {
+        flex-basis: 100%;
+    }
+    
+    .about_section_image {
+        display: none;
+    }
+}

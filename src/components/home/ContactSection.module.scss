@@ -76,3 +76,14 @@
 }
 
 //Main content END
+
+@media screen and (max-width: 750px) {
+    .contact_section_main_content {
+        flex-direction: column;
+    }
+
+    .contact_section_badges,
+    .contact_section_contact_form {
+        width: 100%;
+    }
+}

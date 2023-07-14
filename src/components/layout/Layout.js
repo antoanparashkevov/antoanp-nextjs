@@ -24,6 +24,10 @@ const MainWrapper = styled.main`
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
+    
+    @media (max-width: 1000px) {
+        padding: 2rem 1rem;
+    }
 `
 
 const HeaderWrapper = styled.header`
