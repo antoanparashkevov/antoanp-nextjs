@@ -1,0 +1,36 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.portfolio_section_list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    column-gap: 30px;
+    overflow: hidden;
+    overflow-x: scroll;
+    flex: none;
+}
+
+.portfolio_section_list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.portfolio_section_item {
+    
+}
+
+.portfolio_section_item_image {
+    width: 350px;
+}
+
+.portfolio_section_item_image img {
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.portfolio_section_item_image img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
