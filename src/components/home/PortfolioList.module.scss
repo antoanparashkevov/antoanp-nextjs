@@ -16,12 +16,12 @@
 }
 
 
-.portfolio_section_item {
-    
-}
+.portfolio_section_item {}
 
 .portfolio_section_item_image {
     width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .portfolio_section_item_image img {

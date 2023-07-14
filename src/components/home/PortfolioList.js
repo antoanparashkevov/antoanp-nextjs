@@ -15,15 +15,18 @@ const PortfolioList = () => {
     const projectItems = [
         {
             source: ITCommunity,
-            projectName: 'ITCommunity'
+            projectName: 'ITCommunity',
+            projectUrl: 'https://itcommunity.vercel.app/'
         },
         {
             source: FindFreelancers,
-            projectName: 'FindFreelancers'
+            projectName: 'FindFreelancers',
+            projectUrl: 'https://findfreelancers.vercel.app/freelancers'
         },
         {
             source: FindCoaches,
-            projectName: 'FindCoaches'
+            projectName: 'FindCoaches',
+            projectUrl: 'https://find-coach-vue3.web.app/coaches'
         },
         
     ]
@@ -31,10 +34,20 @@ const PortfolioList = () => {
     const triggerScrolling = (e) => {
         console.log('ev >>> ', e)
         console.log('unorderedListRef.scrollLeft >>> ', unorderedListRef.current.scrollLeft)
+        
         e.preventDefault();
         e.stopPropagation();
         
         unorderedListRef.current.scrollLeft += e.deltaY;
+        
+    }
+    
+    const imageClickHandler = (project) => {
+        
+        window.open(
+            project.projectUrl,
+            '_blank'
+        );
         
     }
     
@@ -60,7 +73,7 @@ const PortfolioList = () => {
                 projectItems.map( project => {
                     return (
                         <li key={project.projectName} className={ styles['portfolio_section_item'] }>
-                            <div className={ styles['portfolio_section_item_image'] }>
+                            <div className={ styles['portfolio_section_item_image'] } onClick={imageClickHandler.bind(this,project)}>
                                 <Image src={ project.source } alt={ project.projectName } width='350' />
                             </div>
                         </li>
