@@ -42,7 +42,7 @@ const ContactForm = () => {
         return hasError ? `${styles['form_control']} invalid` : styles['form_control'];
     }
     
-    const formSubmissionHandler = (event) => {
+    const formSubmissionHandler = async (event) => {
         console.log('submission...')
         
         event.preventDefault();
@@ -50,12 +50,15 @@ const ContactForm = () => {
         if( formIsValid === false ) {
             return;
         }
-        
-        emailReset();
-        budgetReset();
-        messageReset();
-        
-        
+
+        console.log('enteredEmail >>> ', enteredEmail)
+        console.log('enteredBudget >>> ', enteredBudget)
+        console.log('enteredMessage >>> ', enteredMessage)
+
+        // emailReset();
+        // budgetReset();
+        // messageReset();
+
     }
     
     return (
@@ -95,7 +98,10 @@ const ContactForm = () => {
                 />
             </div>
             <div className={styles['form_action']}>
-                <FilledButton type='submit'>
+                <FilledButton
+                    type='submit'
+                    disabled={ !formIsValid }
+                >
                     Send
                 </FilledButton>
             </div>
