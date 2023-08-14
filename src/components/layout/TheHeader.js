@@ -31,7 +31,7 @@ const TheHeader = () => {
     const pathName = usePathname();
     const [activateBar, updateActivateBar] = useState(false);
     
-    console.log('pathName >>> ', pathName);
+    // console.log('pathName >>> ', pathName);
     
     const toggleNavbar = () => {
         updateActivateBar((prevState) => !prevState)

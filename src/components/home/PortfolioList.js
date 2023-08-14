@@ -32,8 +32,8 @@ const PortfolioList = () => {
     ]
     
     const triggerScrolling = (e) => {
-        console.log('ev >>> ', e)
-        console.log('unorderedListRef.scrollLeft >>> ', unorderedListRef.current.scrollLeft)
+        // console.log('ev >>> ', e)
+        // console.log('unorderedListRef.scrollLeft >>> ', unorderedListRef.current.scrollLeft)
         
         e.preventDefault();
         e.stopPropagation();
