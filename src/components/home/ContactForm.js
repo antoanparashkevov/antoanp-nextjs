@@ -55,10 +55,28 @@ const ContactForm = () => {
         console.log('enteredBudget >>> ', enteredBudget)
         console.log('enteredMessage >>> ', enteredMessage)
 
-        // emailReset();
-        // budgetReset();
-        // messageReset();
+        const dataToSubmit = {
+            enteredEmail,
+            enteredBudget,
+            enteredMessage
+        }
 
+        const response = await fetch('/api/submission',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSubmit)//send the data in JSON format (mandatory)
+        })
+        console.log('response >>> ', response)
+
+        if( response.ok && (response.status === 200 || response.status === 201) ) {
+
+            //TODO uncomment when everything works as usual
+            // emailReset();
+            // budgetReset();
+            // messageReset();
+        }
     }
     
     return (
@@ -86,7 +104,8 @@ const ContactForm = () => {
                     onChange={budgetChangeHandler}
                     onBlur={budgetBlurHandler}
                 />
-            </div><div className={ formControlClasses(messageHasError) }>
+            </div>
+            <div className={ formControlClasses(messageHasError) }>
                 {messageHasError && <p>Please enter a valid non-empty message with at least 40 characters!</p>}
                 <textarea
                     id="message"
