@@ -61,14 +61,18 @@ const ContactForm = () => {
             enteredMessage
         }
 
-        const response = await fetch('/api/submission',{
+        const response = await fetch('/api/feedback',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(dataToSubmit)//send the data in JSON format (mandatory)
-        })
+        });
+
+        const data = await response.json();
+
         console.log('response >>> ', response)
+        console.log('data >>> ', data)
 
         if( response.ok && (response.status === 200 || response.status === 201) ) {
 

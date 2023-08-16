@@ -13,15 +13,15 @@ export default function handler(req, res) {
         const message = req.body.enteredMessage;
 
         res.status(200).json({
-                message: 'Success!',
-                submittedData: {
-                    email,
-                    budget,
-                    message
-                }
+            message: 'Success!',
+            submittedData: {
+                email,
+                budget,
+                message
+            }
         })
     } else {
-        res.status(200).json({ message: 'API route works!'})
+        //201 - success
+        res.status(201).json({ message: 'API route works!'})
     }
-
 }
