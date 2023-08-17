@@ -56,12 +56,12 @@ const ContactForm = () => {
         console.log('enteredMessage >>> ', enteredMessage)
 
         const dataToSubmit = {
-            enteredEmail,
-            enteredBudget,
-            enteredMessage
+            email: enteredEmail,
+            budget: Number(enteredBudget),
+            message: enteredMessage
         }
 
-        const response = await fetch('/api/feedback',{
+        const response = await fetch('/api/applications',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
