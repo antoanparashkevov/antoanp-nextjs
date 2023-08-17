@@ -1,4 +1,4 @@
-//this Client Component uses Server-side Rendering (SSR), which means HTML is generated on each request
+//this Client Component uses Static Site Generation (SSG), which means HTML is generated at build time.
 
 export default function AdminPage({data}) {
     return (
@@ -6,7 +6,8 @@ export default function AdminPage({data}) {
     )
 }
 
-export async function getServerSideProps() {
+//getServerSideProps runs on each request instead of on build time
+export async function getStaticProps() {
     const res = await fetch('https://itcommunity.cyclic.app/applicationData/applications/643004fdebea55b514b6638d')
     const data = await res.json();
     console.log('data >>> ', data)
