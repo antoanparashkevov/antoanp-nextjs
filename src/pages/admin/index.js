@@ -6,7 +6,7 @@ export default function AdminPage({data}) {
     )
 }
 
-//getServerSideProps runs on each request instead of on build time
+//getStaticProps runs on build time
 export async function getStaticProps() {
     const res = await fetch('https://itcommunity.cyclic.app/applicationData/applications/643004fdebea55b514b6638d')
     const data = await res.json();
