@@ -1,4 +1,6 @@
-const ServicesPage = () => {
+'use client';
+
+const PortfolioPage = () => {
     return (
         <h1>
             Portfolio Page
@@ -6,4 +8,4 @@ const ServicesPage = () => {
     )
 }
 
-export default ServicesPage;
+export default PortfolioPage;
