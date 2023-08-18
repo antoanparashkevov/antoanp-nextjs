@@ -34,7 +34,7 @@ export default async function applications(req, res) {
             res.status(400).json(error);
         }
     } else {
-        //401 - forbidden
-        res.status(401).json({ message: 'This API Route accepts only POST requests!'})
+        //403 - forbidden
+        res.status(403).json({ message: 'This API Route accepts only POST requests!'})
     }
 }

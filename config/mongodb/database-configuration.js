@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const mongoDBClient = async () => {
     try {
-        await mongoose.connect(process.env['DATABASE_CONNECTION'], {
+        await mongoose.connect(process.env['DATABASE_CONNECTION_DEVELOPMENT'], {
             useUnifiedTopology: true,
             useNewUrlParser: true
         })
