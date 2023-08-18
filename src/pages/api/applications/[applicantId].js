@@ -1,4 +1,5 @@
 import { getById } from '../../../../server/services/applicationService'
+import parseError from "../../../../server/util/parseError";
 
 /**
  *
@@ -19,7 +20,8 @@ export default async function getApplicant(req, res) {
                     applicantData: applicant
                 })
             } catch (error) {
-                console.log('error >>> ', error)
+                const message = parseError(error);
+                res.status(400).json({ message })
             }
         break;
         default:

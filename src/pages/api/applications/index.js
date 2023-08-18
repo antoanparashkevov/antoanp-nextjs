@@ -1,6 +1,7 @@
 import databaseConfiguration from "../../../../server/config/mongodb/database-configuration";
 
 import { create, getAll } from '../../../../server/services/applicationService'
+import parseError from "../../../../server/util/parseError";
 /**
  *
  * @param {import('next').NextApiRequest} req
@@ -34,7 +35,8 @@ export default async function applications(req, res) {
                     submittedData: item
                 })
             } catch (error) {
-                console.log('error >>> ', error)
+                const message = parseError(error);
+                res.status(400).json({ message })
             }
         break;
         case 'GET':
@@ -46,7 +48,8 @@ export default async function applications(req, res) {
                     applicantsData: applicants
                 })
             } catch (error) {
-                console.log('error >>> ', error)
+                const message = parseError(error);
+                res.status(400).json({ message })
             }
         break;
         default:
