@@ -5,6 +5,7 @@ import { create } from '../../../../server/services/applicationService'
  *
  * @param {import('next').NextApiRequest} req
  * @param {import('next').NextApiResponse} res
+ * @returns {Promise<void>}
  * */
 
 
@@ -37,15 +38,10 @@ export default async function applications(req, res) {
             }
         break;
         default:
-            try {
-                //403 - forbidden
-                res.status(403).json({
-                    status: res.statusCode,
-                    message: 'You are allowed to send only POST requests to that API Route!'
-                })
-            } catch (error) {
-                console.log('error >>> ', error)
-            }
+            res.status(403).json({
+                status: res.statusCode,
+                message: 'You are allowed to send only POST requests to that API Route!'
+            })
         break;
     }
 }
