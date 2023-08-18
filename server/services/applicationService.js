@@ -1,9 +1,13 @@
 import Application from "../models/Application";
 
-export const getById = async (id) => {
-    return Application.find({_id: id})
+export const getAll = () => {
+    return Application.find({});
 }
 
-export const create = async (item) => {
-    return Application.create(item)
+export const getById = (id) => {
+    return Application.find({_id: id});
+}
+
+export const create = (item) => {
+    return Application.create(item);
 }

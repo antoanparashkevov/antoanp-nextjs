@@ -1,6 +1,6 @@
 import databaseConfiguration from "../../../../server/config/mongodb/database-configuration";
 
-import { create } from '../../../../server/services/applicationService'
+import { create, getAll } from '../../../../server/services/applicationService'
 /**
  *
  * @param {import('next').NextApiRequest} req
@@ -37,10 +37,22 @@ export default async function applications(req, res) {
                 console.log('error >>> ', error)
             }
         break;
+        case 'GET':
+            try {
+                let applicants = await getAll();
+
+                res.json({
+                    status: res.statusCode,
+                    applicantsData: applicants
+                })
+            } catch (error) {
+                console.log('error >>> ', error)
+            }
+        break;
         default:
             res.status(403).json({
                 status: res.statusCode,
-                message: 'You are allowed to send only POST requests to that API Route!'
+                message: 'You are allowed to send only GET or POST requests to that API Route!'
             })
         break;
     }
