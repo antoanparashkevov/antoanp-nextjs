@@ -43,17 +43,16 @@ const ContactForm = () => {
     }
     
     const formSubmissionHandler = async (event) => {
-        console.log('submission...')
-        
+
         event.preventDefault();
         
         if( formIsValid === false ) {
             return;
         }
 
-        console.log('enteredEmail >>> ', enteredEmail)
-        console.log('enteredBudget >>> ', enteredBudget)
-        console.log('enteredMessage >>> ', enteredMessage)
+        // console.log('enteredEmail >>> ', enteredEmail)
+        // console.log('enteredBudget >>> ', enteredBudget)
+        // console.log('enteredMessage >>> ', enteredMessage)
 
         const dataToSubmit = {
             email: enteredEmail,
