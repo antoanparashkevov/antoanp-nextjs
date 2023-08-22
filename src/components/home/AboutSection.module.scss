@@ -18,7 +18,7 @@
     font-weight: variables.$primary-font-weight;
 }
 
-.about_section_title span {
+.about_section_title > span {
     color: variables.$primary-orange-color;
 }
 
@@ -37,7 +37,7 @@
     height: 350px;
 }
 
-.about_section_image img {
+.about_section_image > img {
     width: 100%;
     height: 100%;
     object-fit: contain;
