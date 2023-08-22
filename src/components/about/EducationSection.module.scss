@@ -1,29 +1,29 @@
 @use '../../styles/mixins';
 @use '../../styles/variables';
 
-.about_page_section {
+.education_section {
     @include mixins.flexbox;
     justify-content: center;
 }
 
 //Main content START 
 
-.about_page_main_content {
+.education_section_main_content {
     @include mixins.flexItem;
     flex-basis: 60%;
 }
 
-.about_page_title {
+.education_section_title {
     font-size: variables.$h1-font-size;
     font-weight: variables.$primary-font-weight;
 }
 
-.about_page_title > span,
-.about_page_desc > span {
+.education_section_title > span,
+.education_section_desc > span {
     color: variables.$primary-orange-color;
 }
 
-.about_page_desc {
+.education_section_desc {
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 11px;
@@ -33,13 +33,13 @@
 
 //Diploma Image START 
 
-.about_page_image {
+.education_section_image {
     @include mixins.flexItem;
     flex-basis: 40%;
     height: 300px;
 }
 
-.about_page_image > img {
+.education_section_image > img {
     width: 100%;
     height: 100%;
     object-fit: contain;

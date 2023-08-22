@@ -15,12 +15,12 @@ const EducationSection = () => {
     }
 
     return (
-        <section className={ styles['about_page_section'] }>
-            <div className={ styles['about_page_main_content'] }>
-                <h1 className={ styles['about_page_title'] }>
+        <section className={ styles['education_section'] }>
+            <div className={ styles['education_section_main_content'] }>
+                <h1 className={ styles['education_section_title'] }>
                     I&apos;m graduated from <span>Software University</span>
                 </h1>
-                <p className={ styles['about_page_desc'] }>
+                <p className={ styles['education_section_desc'] }>
                     During my studies there, I learned both the <span>basic</span> concepts and much
                     more <span>advanced</span> techniques to
                     write better code, avoid errors and use modern technologies that improve the <span>User Interface (UI)</span> and <span>User Experience (UX)</span>.
@@ -30,7 +30,7 @@ const EducationSection = () => {
                     important thing</span> for one business to grow because it will dramatically <span>increase traffic to a site.</span>
                 </p>
             </div>
-            <div className={styles['about_page_image']}>
+            <div className={styles['education_section_image']}>
                 <Image
                     onClick={handleDiplomaClick}
                     src={Diploma}
