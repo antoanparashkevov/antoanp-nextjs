@@ -21,7 +21,7 @@ export const CloseBar = styled(HamburgerBar)`
     background-color: #E0E0E0;
     position: absolute;
     transform: rotate(-45deg);
-    
+
     &:nth-child(2) {
         transform: rotate(45deg);
     }
@@ -29,48 +29,48 @@ export const CloseBar = styled(HamburgerBar)`
 
 const TheHeader = () => {
     const pathName = usePathname();
-    const [activateBar, updateActivateBar] = useState(false);
-    
+    const [ activateBar, updateActivateBar ] = useState(false);
+
     // console.log('pathName >>> ', pathName);
-    
+
     const toggleNavbar = () => {
         updateActivateBar((prevState) => !prevState)
     }
-    
+
     const chooseNavButton = () => {
-        
-        if(activateBar) {
+
+        if ( activateBar ) {
 
             return (
-                <div className={styles['close_bar_btn']}>
-                    <CloseBar />
-                    <CloseBar />
+                <div className={ styles['close_bar_btn'] }>
+                    <CloseBar/>
+                    <CloseBar/>
                 </div>
             )
         } else {
 
             return (
                 <>
-                    <HamburgerBar />
-                    <HamburgerBar />
-                    <HamburgerBar />
+                    <HamburgerBar/>
+                    <HamburgerBar/>
+                    <HamburgerBar/>
                 </>
             )
         }
     }
-    
+
     return (
-        <nav className={`${styles['navbar']} ${activateBar ? styles['navbar_mobile_height'] : ''}`}>
-            <div className={styles['navbar_title']}>
+        <nav className={ `${ styles['navbar'] } ${ activateBar ? styles['navbar_mobile_height'] : '' }` }>
+            <div className={ styles['navbar_title'] }>
                 <Link href='/'>AntoanP</Link>
             </div>
-            <div className={styles['toggle_buttons']} onClick={toggleNavbar}>
-                {chooseNavButton()}
+            <div className={ styles['toggle_buttons'] } onClick={ toggleNavbar }>
+                { chooseNavButton() }
             </div>
-            <div className={`${styles['navbar_links']} ${activateBar ? styles['activate_bar'] : ''}`}>
-                <ul role='list' className={styles['navbar_list']}>
-                    <li className={styles['navbar_link']}>
-                        <Link 
+            <div className={ `${ styles['navbar_links'] } ${ activateBar ? styles['activate_bar'] : '' }` }>
+                <ul role='list' className={ styles['navbar_list'] }>
+                    <li className={ styles['navbar_link'] }>
+                        <Link
                             className={
                                 pathName.startsWith('/about') ? styles['active'] : ''
                             }
@@ -78,22 +78,22 @@ const TheHeader = () => {
                         >
                             About
                         </Link>
-                    </li>  
-                    <li className={styles['navbar_link']}>
-                        <Link 
+                    </li>
+                    <li className={ styles['navbar_link'] }>
+                        <Link
                             className={
                                 pathName.startsWith('/skills') ? styles['active'] : ''
-                            } 
+                            }
                             href='/skills'
                         >
                             Skills
                         </Link>
-                    </li> 
-                    <li className={styles['navbar_link']}>
-                        <Link 
+                    </li>
+                    <li className={ styles['navbar_link'] }>
+                        <Link
                             className={
                                 pathName.startsWith('/portfolio') ? styles['active'] : ''
-                            } 
+                            }
                             href='/portfolio'
                         >
                             Portfolio
@@ -102,7 +102,9 @@ const TheHeader = () => {
                 </ul>
             </div>
             <div className={styles['cv_button_wrapper']}>
-                <Button>Download CV</Button>
+                <a href="resume.pdf" download='resume'>
+                    <Button>Download CV</Button>
+                </a>
             </div>
         </nav>
     )
