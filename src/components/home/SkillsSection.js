@@ -1,4 +1,5 @@
 import styles from './SkillsSection.module.scss';
+import { useRouter } from 'next/router';
 
 import FrontEndIcon from '../../../public/images/diamond-outline.svg';
 import BackEndIcon from '../../../public/images/pulse-outline.svg';
@@ -8,6 +9,8 @@ import Icon from "@/components/UI/Icon";
 import { FilledButton } from "@/components/UI/BaseButton";
 
 const SkillsSection = () => {
+    const router = useRouter();
+
     return (
         <section className={ styles['skills_section'] }>
             <div className={ styles['skills_section_main_content'] }>
@@ -15,12 +18,17 @@ const SkillsSection = () => {
                 <p className={ styles['skills_section_desc'] }>We live in such times that almost everything becomes
                     available through the internet. Your business too! I can make a web application of your choice. Just
                     a few questions about what it should look like and done!</p>
-                <FilledButton className={ styles['skills_section_btn'] }>Show More</FilledButton>
+                <FilledButton 
+                    className={ styles['skills_section_btn'] } 
+                    onClick={ () => router.push('/skills') }
+                >
+                    Show More
+                </FilledButton>
             </div>
             <div className={ styles['skills_section_main_desc'] }>
                 <div className={ styles['skills_section_frontend_part'] }>
                     <div className={ styles['skills_section_frontend_part_icon'] }>
-                        <Icon iconSrc={FrontEndIcon} iconAlt='Diamong' />
+                        <Icon iconSrc={ FrontEndIcon } iconAlt='Diamong'/>
                     </div>
                     <div className={ styles['skills_section_frontend_part_title'] }>
                         <h3>
@@ -35,7 +43,7 @@ const SkillsSection = () => {
                 </div>
                 <div className={ styles['skills_section_backend_part'] }>
                     <div className={ styles['skills_section_backend_part_icon'] }>
-                        <Icon iconSrc={BackEndIcon} iconAlt='Pulse'></Icon>
+                        <Icon iconSrc={ BackEndIcon } iconAlt='Pulse'></Icon>
                     </div>
                     <div className={ styles['skills_section_backend_part_title'] }>
                         <h3>
