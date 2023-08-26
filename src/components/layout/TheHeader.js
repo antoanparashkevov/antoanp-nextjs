@@ -102,9 +102,7 @@ const TheHeader = () => {
                 </ul>
             </div>
             <div className={styles['cv_button_wrapper']}>
-                <a href="resume.pdf" download='resume'>
-                    <Button>Download CV</Button>
-                </a>
+                <Button>Download CV</Button>
             </div>
         </nav>
     )
