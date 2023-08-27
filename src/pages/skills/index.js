@@ -1,11 +1,18 @@
 'use client';
+import { Fragment } from "react";
+
+//section components
+import Badge from "@/components/UI/Badge";
+import CertificationSection from "@/components/skills/CertificationSection";
 
 const SkillsPage = () => {
     
    return (
-       <h1>
-           Skills page
-       </h1>
+       <Fragment>
+           <Badge>Certificates</Badge>
+           <CertificationSection />
+       </Fragment>
+       
    )
 }
 
