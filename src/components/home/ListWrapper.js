@@ -1,4 +1,4 @@
-import styles from "@/components/home/PortfolioList.module.scss";
+import styles from "@/components/home/ListWrapper.module.scss";
 import Image from 'next/image';
 import { useRef } from "react";
 import { useEffect } from "react";
@@ -8,28 +8,9 @@ import ITCommunity from '../../../public/images/itcommunity.png'
 import FindFreelancers from '../../../public/images/findfreelancers.png';
 import FindCoaches from '../../../public/images/findcoaches.png';
 
-const PortfolioList = () => {
+const ListWrapper = ({ listData }) => {
     
     const unorderedListRef = useRef(null);
-    
-    const projectItems = [
-        {
-            source: ITCommunity,
-            projectName: 'ITCommunity',
-            projectUrl: 'https://itcommunity.vercel.app/'
-        },
-        {
-            source: FindFreelancers,
-            projectName: 'FindFreelancers',
-            projectUrl: 'https://findfreelancers.vercel.app/freelancers'
-        },
-        {
-            source: FindCoaches,
-            projectName: 'FindCoaches',
-            projectUrl: 'https://find-coach-vue3.web.app/coaches'
-        },
-        
-    ]
     
     const triggerScrolling = (e) => {
         // console.log('ev >>> ', e)
@@ -42,10 +23,10 @@ const PortfolioList = () => {
         
     }
     
-    const imageClickHandler = (project) => {
+    const imageClickHandler = (item) => {
         
         window.open(
-            project.projectUrl,
+            item.url,
             '_blank'
         );
         
@@ -70,11 +51,11 @@ const PortfolioList = () => {
             role='list'
         >
             {
-                projectItems.map( project => {
+                listData.map( item => {
                     return (
-                        <li key={project.projectName} className={ styles['portfolio_section_item'] }>
-                            <div className={ styles['portfolio_section_item_image'] } onClick={imageClickHandler.bind(this,project)}>
-                                <Image src={ project.source } alt={ project.projectName } width='350' />
+                        <li key={item.name} className={ styles['portfolio_section_item'] }>
+                            <div className={ styles['portfolio_section_item_image'] } onClick={imageClickHandler.bind(this,item)}>
+                                <Image src={ item.source } alt={ item.name } width='350' />
                             </div>
                         </li>
                     )
@@ -84,4 +65,4 @@ const PortfolioList = () => {
     )
 }
 
-export default PortfolioList;
+export default ListWrapper;

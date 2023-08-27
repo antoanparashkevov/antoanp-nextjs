@@ -3,10 +3,32 @@ import { useRouter } from 'next/router';
 
 //components
 import { FilledButton } from "@/components/UI/BaseButton";
-import PortfolioList from "@/components/home/PortfolioList";
+import ListWrapper from "@/components/home/ListWrapper";
+import ITCommunity from "../../../public/images/itcommunity.png";
+import FindFreelancers from "../../../public/images/findfreelancers.png";
+import FindCoaches from "../../../public/images/findcoaches.png";
 
 const PortfolioSection = () => {
     const router = useRouter();
+
+    const projectItems = [
+        {
+            source: ITCommunity,
+            name: 'ITCommunity',
+            url: 'https://itcommunity.vercel.app/'
+        },
+        {
+            source: FindFreelancers,
+            name: 'FindFreelancers',
+            url: 'https://findfreelancers.vercel.app/freelancers'
+        },
+        {
+            source: FindCoaches,
+            name: 'FindCoaches',
+            url: 'https://find-coach-vue3.web.app/coaches'
+        },
+
+    ]
     
     return (
         <section className={styles['portfolio_section']}>
@@ -21,7 +43,7 @@ const PortfolioSection = () => {
                 </FilledButton>
             </div>  
             <div className={styles['portfolio_section_main_desc']}>
-                <PortfolioList />
+                <ListWrapper listData={projectItems} />
             </div>
         </section>
     )
