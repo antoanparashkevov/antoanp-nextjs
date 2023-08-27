@@ -8,6 +8,7 @@ import AngularCertification from '../../../public/images/certifications/angular_
 import JSBackend from '../../../public/images/certifications/jsbackend_certificate.png';
 import ReactCertification from '../../../public/images/certifications/reactjs_certificate.png';
 import HTMLCSSCertification from '../../../public/images/certifications/html_css_certification.png';
+import Diploma from '../../../public/images/diploma.png'
 
 //components
 import ListWrapper from "@/components/home/ListWrapper";
@@ -54,6 +55,11 @@ const CertificationSection = () => {
             source: ReactCertification,
             name: 'react',
             url: 'https://softuni.bg/certificates/details/168565/5d8d822a'
+        },
+        {
+            source: Diploma,
+            name: 'diploma',
+            url: 'https://softuni.bg/certificates/details/171618/f81a3d56'
         },
     ]
 
