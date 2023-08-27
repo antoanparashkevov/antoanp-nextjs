@@ -3,12 +3,7 @@ import Image from 'next/image';
 import { useRef } from "react";
 import { useEffect } from "react";
 
-//images
-import ITCommunity from '../../../public/images/itcommunity.png'
-import FindFreelancers from '../../../public/images/findfreelancers.png';
-import FindCoaches from '../../../public/images/findcoaches.png';
-
-const ListWrapper = ({ listData }) => {
+const ListWrapper = ({ listData, className }) => {
     
     const unorderedListRef = useRef(null);
     
@@ -47,14 +42,14 @@ const ListWrapper = ({ listData }) => {
     return (
         <ul 
             ref={unorderedListRef}
-            className={styles['portfolio_section_list']} 
+            className={`${styles['list_wrapper']} ${styles[className]}`} 
             role='list'
         >
             {
                 listData.map( item => {
                     return (
-                        <li key={item.name} className={ styles['portfolio_section_item'] }>
-                            <div className={ styles['portfolio_section_item_image'] } onClick={imageClickHandler.bind(this,item)}>
+                        <li key={item.name} className={ styles['list_wrapper_item'] }>
+                            <div className={ styles['list_wrapper_item_image'] } onClick={imageClickHandler.bind(this,item)}>
                                 <Image src={ item.source } alt={ item.name } width='350' />
                             </div>
                         </li>
