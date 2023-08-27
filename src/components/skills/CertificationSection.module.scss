@@ -1,0 +1,32 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.certification_section {
+    @include mixins.flexbox;
+    justify-content: center;
+}
+
+//Main content START 
+
+.certification_section_main_content {
+    @include mixins.flexItem;
+    flex-basis: 40%;
+}
+
+.certification_section_title {
+    font-size: variables.$h1-font-size;
+    font-weight: variables.$primary-font-weight;
+}
+
+.certification_section_desc {
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 11px;
+}
+
+.certification_section_title > span,
+.certification_section_desc > span {
+    color: variables.$primary-orange-color;
+}
+
+//Main content END 
