@@ -60,7 +60,7 @@ const ContactForm = () => {
             message: enteredMessage
         }
 
-        const response = await fetch('/api/applications',{
+        const response = await fetch(`${process.env['NEXT_PUBLIC_FIREBASE_URI']}/applications.json`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
