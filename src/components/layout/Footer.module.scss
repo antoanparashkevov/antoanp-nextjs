@@ -1,9 +1,17 @@
+@use '../../styles/mixins';
 @use '../../styles/variables';
 
 .footer_container {
     display: flex;
     justify-content: space-between;
     align-items:center;
+    width: 100%;
     height: 100%;
     font-size: variables.$primary-font-size;
+}
+
+.footer_social_icons {
+    @include mixins.flexbox;
+    width: unset;
+    column-gap: 5px;
 }
