@@ -1,9 +1,9 @@
-import styles from "@/components/home/ListWrapper.module.scss";
+import styles from "@/components/UI/ScrollableListWrapper.module.scss";
 import Image from 'next/image';
 import { useRef } from "react";
 import { useEffect } from "react";
 
-const ListWrapper = ({ listData, className }) => {
+const ScrollableListWrapper = ({ listData, className }) => {
     
     const unorderedListRef = useRef(null);
     
@@ -60,4 +60,4 @@ const ListWrapper = ({ listData, className }) => {
     )
 }
 
-export default ListWrapper;
+export default ScrollableListWrapper;

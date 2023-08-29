@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 //components
 import { FilledButton } from "@/components/UI/BaseButton";
-import ListWrapper from "@/components/home/ListWrapper";
+import ScrollableListWrapper from "@/components/UI/ScrollableListWrapper";
 import ITCommunity from "../../../public/images/itcommunity.png";
 import FindFreelancers from "../../../public/images/findfreelancers.png";
 import FindCoaches from "../../../public/images/findcoaches.png";
@@ -43,7 +43,7 @@ const PortfolioSection = () => {
                 </FilledButton>
             </div>  
             <div className={styles['portfolio_section_main_desc']}>
-                <ListWrapper listData={projectItems} />
+                <ScrollableListWrapper listData={projectItems} />
             </div>
         </section>
     )

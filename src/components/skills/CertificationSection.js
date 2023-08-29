@@ -11,7 +11,7 @@ import HTMLCSSCertification from '../../../public/images/certifications/html_css
 import Diploma from '../../../public/images/diploma.png'
 
 //components
-import ListWrapper from "@/components/home/ListWrapper";
+import ScrollableListWrapper from "@/components/UI/ScrollableListWrapper";
 
 const CertificationSection = () => {
     
@@ -80,7 +80,7 @@ const CertificationSection = () => {
                 </p>
             </div>
             <div className={ styles['certification_section_certifications_list'] }>
-                <ListWrapper className='certification_section_certifications_list_wrapper' listData={ certificates }/>
+                <ScrollableListWrapper className='certification_section_certifications_list_wrapper' listData={ certificates }/>
             </div>
         </section>
     )

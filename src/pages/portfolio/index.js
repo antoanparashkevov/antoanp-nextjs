@@ -1,10 +1,17 @@
 'use client';
 
+import { Fragment } from "react";
+
+//section components
+import ITCommunity from "@/components/portfolio/ITCommunity";
+import Badge from "@/components/UI/Badge";
+
 const PortfolioPage = () => {
     return (
-        <h1>
-            Portfolio Page
-        </h1>
+        <Fragment>
+            <Badge>IT Community</Badge>
+            <ITCommunity />
+        </Fragment>
     )
 }
 
