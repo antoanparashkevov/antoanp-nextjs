@@ -1,13 +1,16 @@
-import styles from './ITCommunity.module.scss';
+import styles from './ITCommunitySection.module.scss';
+import Image from 'next/image'
 
-const ITCommunity = () => {
+import ITCommunity from "../../../public/images/itcommunity.png";
+
+const ITCommunitySection = () => {
 
     return (
         <section className={ styles['itcommunity_section'] }>
             <div className={ styles['itcommunity_section_main_content'] }>
                 <h1 className={ styles['itcommunity_section_title'] }><span>IT Community</span> Job Board</h1>
                 <div className={ styles['itcommunity_section_desc'] }>
-                    <p>A FullStack web application built from scratch. IT Community is a Job Board web application that
+                    <p>A <span>Full-Stack</span> web application built from scratch. IT Community is a <span>Job Board</span> web application that
                         makes it easier for the user to find their desired
                         job. It also helps companies find quality staff. </p>
 
@@ -34,14 +37,25 @@ const ITCommunity = () => {
                                 </a>
                             </p>
                         </li>
-                        <p>Used Technologies:</p>
                     </ul>
-
                 </div>
             </div>
-            <div className={ styles['itcommunity_section_image'] }></div>
+            <div 
+                className={ styles['itcommunity_section_image'] }
+                onClick={
+                    (e)=> window.open(
+                        'https://itcommunity.vercel.app',
+                            '_blank'
+                    )
+                }
+            >
+                <Image 
+                    src={ITCommunity}
+                    alt='ITCommunity Image'
+                />
+            </div>
         </section>
     )
 }
 
-export default ITCommunity;
+export default ITCommunitySection;
