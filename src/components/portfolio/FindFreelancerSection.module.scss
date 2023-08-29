@@ -1,0 +1,54 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.findfreelancer_section {
+    @include mixins.flexbox;
+    justify-content: center;
+}
+
+//Main content START 
+
+.findfreelancer_section_main_content {
+    @include mixins.flexItem;
+    flex-basis: 60%;
+    padding-left: 15px;
+}
+
+.findfreelancer_section_title {
+    font-size: 50px;
+    font-weight: variables.$primary-font-weight;
+}
+
+.findfreelancer_section_desc {
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 11px;
+}
+
+.findfreelancer_section_title > span,
+.findfreelancer_section_desc span {
+    color: variables.$primary-orange-color;
+}
+
+//Main content END 
+
+//image
+.findfreelancer_section_image {
+    @include mixins.flexItem;
+    flex-basis: 45%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.findfreelancer_section_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.findfreelancer_section_image img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
