@@ -1,0 +1,45 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.backend_section {
+    @include mixins.flexbox;
+    justify-content: center;
+}
+
+//Main content START 
+
+.backend_section_main_content {
+    @include mixins.flexItem;
+    flex-basis: 60%;
+    padding-left: 15px;
+}
+
+.backend_section_title {
+    font-size: 50px;
+    font-weight: variables.$primary-font-weight;
+}
+
+.backend_section_desc {
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 11px;
+}
+
+.backend_section_title > span,
+.backend_section_desc > span {
+    color: variables.$primary-orange-color;
+}
+
+//Main content END 
+
+//image
+.backend_section_image {
+    @include mixins.flexItem;
+    flex-basis: 45%;
+    height: 300px;
+}
+.backend_section_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

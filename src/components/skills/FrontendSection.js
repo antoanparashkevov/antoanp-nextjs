@@ -8,7 +8,7 @@ const FrontendSection = () => {
         <section className={ styles['frontend_section'] }>
             <div className={ styles['frontend_section_main_content'] }>
                 <h1 className={ styles['frontend_section_title'] }>
-                    My Frontend solution would be <span>NextJS</span>
+                    My <span>Frontend</span> solution would be <span>NextJS</span>
                 </h1>
                 <p className={ styles['frontend_section_desc'] }>
                     NextJS is an awesome tool for building web applications and I will tell you why in a second. Imagine

@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import Badge from "@/components/UI/Badge";
 import CertificationSection from "@/components/skills/CertificationSection";
 import FrontendSection from "@/components/skills/FrontendSection";
+import BackendSection from "@/components/skills/BackendSection";
 
 const SkillsPage = () => {
     
@@ -14,6 +15,8 @@ const SkillsPage = () => {
            <CertificationSection />
            <Badge>Frontend Part</Badge>
            <FrontendSection />
+           <Badge>Backend Part</Badge>
+           <BackendSection />
        </Fragment>
        
    )
