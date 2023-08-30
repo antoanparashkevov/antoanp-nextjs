@@ -53,4 +53,20 @@
     transform: scale(1.1);
 }
 
-//Diploma Image END 
+//Diploma Image END
+
+@media screen and (max-width: 630px) {
+
+    .education_section {
+        flex-wrap: wrap;
+    }
+
+    .education_section_main_content,
+    .education_section_image {
+        flex-basis: 100%;
+    }
+
+    .education_section_image {
+        margin-bottom: 20px;
+    }
+}

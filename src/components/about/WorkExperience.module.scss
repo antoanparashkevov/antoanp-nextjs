@@ -45,4 +45,19 @@
     object-fit: contain;
 }
 
-//About Me Pic END 
+//About Me Pic END
+
+@media screen and (max-width: 740px) {
+    .work_experience_section {
+        flex-wrap: wrap;
+    }
+
+    .work_experience_main_content,
+    .work_experience_image {
+        flex-basis: 100%;
+    }
+
+    .work_experience_image {
+        margin-bottom: 10px;
+    }
+}
