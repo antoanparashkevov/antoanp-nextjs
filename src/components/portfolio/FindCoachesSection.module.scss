@@ -11,7 +11,7 @@
 .findcoaches_section_main_content {
     @include mixins.flexItem;
     flex-basis: 60%;
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 .findcoaches_section_title {
@@ -51,4 +51,19 @@
     filter: grayscale(0);
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 840px) {
+    .findcoaches_section {
+        flex-wrap: wrap;
+    }
+
+    .findcoaches_section_main_content,
+    .findcoaches_section_image {
+        flex-basis: 100%;
+    }
+
+    .findcoaches_section_image {
+        margin-bottom: 15px;
+    }
 }
