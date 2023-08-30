@@ -33,7 +33,27 @@
 
 //Main content END 
 
-//Certification List
+//Certification List START
+
 .certification_section_certifications_list {
     width: 60%;
+}
+
+//Certification List END
+
+@media screen and (max-width: 700px) {
+
+    .certification_section {
+        flex-wrap: wrap;
+    }
+
+    .certification_section_main_content,
+    .certification_section_certifications_list {
+        flex-basis: 100%;
+    }
+
+    .certification_section_certifications_list {
+        margin: 20px 0;
+    }
+    
 }

@@ -43,3 +43,15 @@
     height: 100%;
     object-fit: contain;
 }
+
+@media screen and (max-width: 700px) {
+
+    .backend_section {
+        flex-wrap: wrap;
+    }
+
+    .backend_section_main_content,
+    .backend_section_image {
+        flex-basis: 100%;
+    }
+}
