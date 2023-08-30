@@ -23,7 +23,7 @@ const BaseSpinner = () => {
 
     return (
         <Fragment>
-            { createPortal(<BaseSpinnerTemplate />, document.getElementById('overlays'))}
+            { typeof document !== 'undefined' ? createPortal(<BaseSpinnerTemplate />, document.getElementById('overlays')) : <BaseSpinnerTemplate/> }
         </Fragment>
     )
 }
