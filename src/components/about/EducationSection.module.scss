@@ -35,7 +35,6 @@
 
 .education_section_image {
     @include mixins.flexItem;
-    cursor: pointer;
     flex-basis: 40%;
     height: 300px;
 }
@@ -44,6 +43,14 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: grayscale(100%);
+    transition: transform .5s;
+}
+
+.education_section_image > img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 //Diploma Image END 

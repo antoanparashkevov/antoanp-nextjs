@@ -37,7 +37,7 @@ const HeaderWrapper = styled.header`
 const FooterWrapper = styled.footer`
     display: flex;
     min-height: 80px;
-    border: 1px solid #92929D;
+    border-top: 1px solid #92929D;
 `
 
 const Layout = ({children}) => {
