@@ -1,0 +1,33 @@
+.alert_checkbox {
+    display: none;
+}
+
+.alert {
+    position: fixed;
+    right: 50%;
+    top: 20px;
+    transform: translateX(50%);
+    z-index: 100;
+    padding: 24px;
+    border-radius: 12px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.alert_checkbox:checked + .alert {
+    display: none;
+}
+
+.alert_text {
+    margin: 0 auto;
+    color: #000000;
+}
+
+.successful {
+    background-color: #dff1d9;
+}
+
+.error {
+    background-color: red;
+}

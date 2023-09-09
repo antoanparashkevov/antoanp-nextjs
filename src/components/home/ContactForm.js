@@ -8,12 +8,13 @@ import useInput from "@/hooks/use-input";
 //UI components
 import {FilledButton} from "@/components/UI/BaseButton";
 import BaseSpinner from "@/components/UI/BaseSpinner";
+import Alert from "@/components/UI/Alert";
 
 const ContactForm = () => {
     let formIsValid;
 
     const [resolved, setResolved] = useState(false)
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const {
@@ -67,22 +68,16 @@ const ContactForm = () => {
 
             if (response.ok) {
                 setResolved(true)
-                console.log('response >>> ', response)
 
-                //TODO uncomment when everything works as usual
-                // emailReset();
-                // budgetReset();
-                // messageReset();
+                emailReset();
+                budgetReset();
+                messageReset();
             } else {
                 throw new Error('Something went wrong, please try again later!')
             }
 
-            const data = await response.json();
-            console.log('data >>> ', data)
-
         } catch (error) {
 
-            console.log('error >>> ', error.message)
             setError(error.message || 'Something went wrong!');
         }
 
@@ -113,8 +108,12 @@ const ContactForm = () => {
     return (
         <Fragment>
             {isLoading && <BaseSpinner/>}
+            {(error || resolved) && 
+                <Alert alertStatus={error ? 'error' : 'successful'}>
+                    {error ?? 'Message was successfully sent!'}
+                </Alert>
+            }
             <form className={styles['contact_form']} onSubmit={formSubmissionHandler}>
-                {isLoading.toString()}
                 <div className={formControlClasses(emailHasError)}>
                     {emailHasError && <p>Please enter a valid non-empty email address!</p>}
                     <input
