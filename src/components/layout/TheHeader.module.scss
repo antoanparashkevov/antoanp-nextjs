@@ -33,15 +33,6 @@
     font-weight: 700;
 }
 
-.cv_button_wrapper button {
-    width: 150px;
-    height: 50px;
-    box-shadow: variables.$box-shadow;
-    font-size: variables.$primary-font-size;
-    border: 1px solid variables.$primary-orange-color;
-    border-radius: 10px;
-}
-
 /* HAMBURGER MENU START */
 .toggle_buttons {
     position: absolute;
@@ -71,10 +62,6 @@
         padding-bottom: 15px;
     }
     
-    .cv_button_wrapper {
-        display: none;
-    }
-    
     .navbar_links .navbar_list {
         flex-direction: column;
         width: 100%;
@@ -84,8 +71,7 @@
         text-align: center;
     }
     
-    .navbar_mobile_height .navbar_links.activate_bar,
-    .navbar_mobile_height .cv_button_wrapper {
+    .navbar_mobile_height .navbar_links.activate_bar {
         display: flex;
     }
 

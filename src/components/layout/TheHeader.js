@@ -4,9 +4,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from 'next/link';
 
-//UI components
-import { Button } from "@/components/UI/BaseButton";
-
 const HamburgerBar = styled.span`
     display: block;
     cursor: pointer;
@@ -100,9 +97,6 @@ const TheHeader = () => {
                         </Link>
                     </li>
                 </ul>
-            </div>
-            <div className={styles['cv_button_wrapper']}>
-                <Button>Download CV</Button>
             </div>
         </nav>
     )
