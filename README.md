@@ -36,5 +36,11 @@ The amazing design was provided by <a href="https://www.figma.com/">Figma</a>
 # <p id="application-pictures">Application Pictures</p>
 
 ## Desktop
+<img width="1426" alt="home_page" src="https://github.com/antoanparashkevov/antoanp-nextjs/assets/80749603/2f5e7416-0ead-404c-b36e-9614ebe194cb">
+<img width="1423" alt="home_page_contact" src="https://github.com/antoanparashkevov/antoanp-nextjs/assets/80749603/7b5085b0-0b20-4db3-96e0-f6c9c5a7bc87">
+<img width="1422" alt="about_page" src="https://github.com/antoanparashkevov/antoanp-nextjs/assets/80749603/fe4f1caa-39b1-476e-8de0-6bd846877a13">
+<img width="1417" alt="skills_page" src="https://github.com/antoanparashkevov/antoanp-nextjs/assets/80749603/c62acbb9-670c-452e-be65-62490a99bbf0">
+<img width="1419" alt="portfolio_page" src="https://github.com/antoanparashkevov/antoanp-nextjs/assets/80749603/10a02d20-32da-4b29-afca-01376c032d9c">
 
-## Mobile
+
+
