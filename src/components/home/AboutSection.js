@@ -27,7 +27,7 @@ const AboutSection = () => {
     return (
         <section className={ styles['about_section'] }>
             <div className={ styles['about_section_main_content'] }>
-                <h1 className={styles['about_section_title']}>I have <span>Web Development</span> Experience</h1>
+                <h1 className={styles['about_section_title']}>Expert <span>Web-Design Services</span> For your Business</h1>
                 <p className={styles['about_section_desc']}>Hello everyone, I am Antoan! I have been helping businesses to solve their problems by making a web
                     application of their choice.</p>
                 <FilledButton onClick={HandleContactClick} className={styles['about_section_btn']}>Contact Me</FilledButton>
