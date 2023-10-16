@@ -18,7 +18,7 @@ const EducationSection = () => {
         <section className={ styles['education_section'] }>
             <div className={ styles['education_section_main_content'] }>
                 <h1 className={ styles['education_section_title'] }>
-                    I&apos;m graduated from <span>Software University</span>
+                    I&apos;ve graduated from <span>Software University</span>
                 </h1>
                 <p className={ styles['education_section_desc'] }>
                     During my studies there, I learned both the <span>basic</span> concepts and much
