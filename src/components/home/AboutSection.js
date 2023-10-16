@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './AboutSection.module.scss';
-import CoverImage from '../../../public/images/cover_new.JPG';
+import CoverImage from '../../../public/images/cover_new.jpg';
 
 //UI components
 import { FilledButton } from "@/components/UI/BaseButton";
