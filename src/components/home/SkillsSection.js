@@ -52,7 +52,7 @@ const SkillsSection = () => {
                     </div>
                     <div className={ styles['skills_section_backend_part_desc'] }>
                         <span>
-                            Create a reliable server with user authentication (sign up, sign in, logout)  
+                            Create a reliable server with user authentication (sign up, sign in, log out)  
                         </span>
                     </div>
                 </div>

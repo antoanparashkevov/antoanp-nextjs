@@ -11,7 +11,7 @@ const ContactSection = () => {
     return (
         <section className={styles['contact_section']}>
             <div className={styles['contact_section_title']}>
-                <h1>Lets discuss your <span>project</span></h1>
+                <h1>Let&apos;s discuss your <span>project</span></h1>
             </div>
             <div className={styles['contact_section_main_content']}>
                 <div className={styles['contact_section_badges']}>

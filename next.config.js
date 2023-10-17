@@ -4,9 +4,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  experimental: {
-    serverComponentsExternalPackages: ["mongoose"],
-  }
 }
 
 module.exports = nextConfig
