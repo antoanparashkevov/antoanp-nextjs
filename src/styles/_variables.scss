@@ -4,15 +4,15 @@ sans-serif;
 
 $primary-text-color: #000000;
 $primary-bg-color: #FFFFFF;
-$primary-font-size: 16px;
+$primary-font-size: 18px !default;
 $second-font-size: 14px;
-$h1-font-size: 58px;
+$h1-font-size: 40px !default;
 $project-min-width: 360px;
 $primary-font-weight: 400;
 
 //define colors
-
 $primary-orange-color: #FF9D01;
+$primary-green-color: #1FCC79;
 $primary-gray-color: #5E5E5E;
 $input-gray-color: #92929D;
 $box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
