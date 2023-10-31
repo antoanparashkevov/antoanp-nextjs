@@ -7,9 +7,9 @@ export const Button = styled.button`
     align-items: center;
     font-size: 16px;
     line-height: 1;
-    font-weight: 500;
     padding: 0.75rem;
     color: #000000;
+    font-weight: 700;
     background-color: transparent;
     border: 1px solid #FF9D01;
     border-radius: 15px;
@@ -32,5 +32,5 @@ export const FilledButton = styled(Button)`
     background-color: #FF9D01;
     border: none;
     color: #FFFFFF;
-    padding: 17px 14px;
+    padding: 20px 17px;
 `
