@@ -1,5 +1,7 @@
 @use '../../styles/mixins';
-@use '../../styles/variables';
+@use '../../styles/variables' with (
+    $primary-font-size: 19px,
+);
 
 .navbar {
     @include mixins.flexbox;
