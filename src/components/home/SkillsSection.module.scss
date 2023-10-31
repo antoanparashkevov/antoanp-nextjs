@@ -19,13 +19,18 @@
     font-weight: variables.$primary-font-weight;
 }
 
-.skills_section_title span {
+.skills_section_title > span,
+.skills_section_desc > span {
     color: variables.$primary-orange-color;
 }
 
 .skills_section_desc {
     margin-top: 40px;
     margin-bottom: 11px;
+}
+
+.skills_section_btn {
+    margin-top: 25px;
 }
 
 //Main content END
@@ -38,6 +43,8 @@
     flex-basis: calc(60% - 60px);
     height: 100%;
     gap: 15px;
+    align-items: flex-start;
+    margin-top: 80px;
 }
 
 .skills_section_frontend_part,
