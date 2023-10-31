@@ -1,5 +1,7 @@
 import styles from './ContactSection.module.scss';
-import EmailBadge from '../../../public/images/email_badge.svg';
+
+//static images
+import EmailBadge from '../../../public/icons/email_badge.svg';
 
 //UI components
 import Badge from "@/components/UI/Badge";

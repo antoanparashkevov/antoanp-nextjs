@@ -6,7 +6,7 @@ import JSBackend from "../../../public/images/certifications/jsbackend_certifica
 import AngularCertification from "../../../public/images/certifications/angular_certificate.png";
 import HTMLCSSCertification from "../../../public/images/certifications/html_css_certification.png";
 import ReactCertification from "../../../public/images/certifications/reactjs_certificate.png";
-import Diploma from "../../../public/images/diploma.png";
+import Diploma from "../../../public/images/certifications/diploma.png";
 
 const certificates = [
     {

@@ -7,69 +7,47 @@
     gap: 60px;
 }
 
-//Main content START
-
-.skills_section_main_content {
-    @include mixins.flexItem;
-    flex-basis: 40%;
-}
-
-.skills_section_title {
-    font-size: variables.$h1-font-size;
-    font-weight: variables.$primary-font-weight;
-}
-
-.skills_section_title > span,
-.skills_section_desc > span {
-    color: variables.$primary-orange-color;
-}
-
-.skills_section_desc {
-    margin-top: 40px;
-    margin-bottom: 11px;
-}
-
-.skills_section_btn {
-    margin-top: 25px;
-}
-
-//Main content END
-
-//Main description START
-
-.skills_section_main_desc {
-    @include mixins.flexItem;
-    @include mixins.flexbox;
-    flex-basis: calc(60% - 60px);
-    height: 100%;
-    gap: 15px;
-    align-items: flex-start;
-    margin-top: 80px;
-}
-
-.skills_section_frontend_part,
-.skills_section_backend_part {
-    @include mixins.flexbox;  
-    flex-direction: column;
+.skills_section_grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit,315px);
     justify-content: center;
-    align-items: flex-start;
-    row-gap: 10px;
-    flex-basis: 50%
+    flex-grow: 1;
+    gap: 30px;
 }
 
-//Main description END
+.skills_section_grid_item {
+    @include mixins.flexbox;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 16px
+}
 
-@media screen and (max-width: 490px) {
-    
-    .skills_section {
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 40px;
-    }
-    
-    .skills_section_main_content,
-    .skills_section_main_desc {
-        flex-shrink: 1;
-        flex-basis: unset;
-    }
+.skills_section_grid_item_icon {
+    position: absolute;
+    top: -15px;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.skills_section_grid_item_header {
+    @include mixins.flexbox;
+    font-size: variables.$h2-font-size;
+    font-weight: 700;
+    justify-content: center;
+    border: 1px solid variables.$primary-gray-color;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.skills_section_grid_item_para {
+    padding: 0.25rem;
 }

@@ -1,7 +1,7 @@
 
 import styles from './EducationSection.module.scss'
 import Image from "next/image";
-import Diploma from "../../../public/images/diploma.png";
+import Diploma from "../../../public/images/certifications/diploma.png";
 
 const EducationSection = () => {
 
