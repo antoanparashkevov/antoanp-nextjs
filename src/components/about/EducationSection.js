@@ -1,7 +1,9 @@
-
 import styles from './EducationSection.module.scss'
 import Image from "next/image";
+
+//static images
 import Diploma from "../../../public/images/certifications/diploma.png";
+import DiplomaEvent from '../../../public/images/diploma_pic.png'
 
 const EducationSection = () => {
 
@@ -30,12 +32,26 @@ const EducationSection = () => {
                     important thing</span> for one business to grow because it will dramatically <span>increase traffic to a site.</span>
                 </p>
             </div>
-            <div className={styles['education_section_image']}>
-                <Image
-                    onClick={handleDiplomaClick}
-                    src={Diploma}
-                    alt='Diploma'
-                />
+            <div className={styles['education_section_images']}>
+                <div className={styles['education_section_diploma_event']}>
+                    <Image
+                        src={DiplomaEvent}
+                        alt='Diploma'
+                        placeholder='blur'
+                        style={{objectFit: 'contain'}}
+                        fill
+                    />
+                </div>
+                <div className={styles['education_section_diploma']}>
+                    <Image
+                        onClick={handleDiplomaClick}
+                        src={Diploma}
+                        alt='Diploma'
+                        placeholder='blur'
+                        style={{objectFit: 'contain'}}
+                        fill
+                    />
+                </div>
             </div>
         </section>
     )

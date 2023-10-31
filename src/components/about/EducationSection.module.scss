@@ -3,14 +3,17 @@
 
 .education_section {
     @include mixins.flexbox;
+    flex-grow: 1;
     justify-content: center;
+    gap: 30px;
 }
 
 //Main content START 
 
 .education_section_main_content {
     @include mixins.flexItem;
-    flex-basis: 60%;
+    flex: 1 1 auto;
+    flex-basis: 40%;
 }
 
 .education_section_title {
@@ -33,40 +36,54 @@
 
 //Diploma Image START 
 
-.education_section_image {
+.education_section_images {
+    @include mixins.flexbox;
     @include mixins.flexItem;
-    flex-basis: 40%;
-    height: 300px;
+    justify-content: center;
+    flex: 1 1 auto;
+    flex-basis: 60%;
+    column-gap: 20px;
+    height: 100%;
 }
 
-.education_section_image > img {
+.education_section_images > img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.education_section_diploma_event,
+.education_section_diploma {
+    position: relative;
+    width: 250px;
+    height: 350px;
+}
+
+.education_section_diploma > img {
     filter: grayscale(100%);
     transition: transform .5s;
 }
 
-.education_section_image > img:hover {
+.education_section_diploma > img:hover {
     filter: grayscale(0);
-    cursor: pointer;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 //Diploma Image END
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 1100px) {
 
     .education_section {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .education_section_main_content,
-    .education_section_image {
+    .education_section_images {
         flex-basis: 100%;
     }
 
-    .education_section_image {
+    .education_section_images {
         margin-bottom: 20px;
     }
 }
