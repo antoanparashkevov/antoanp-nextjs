@@ -3,22 +3,25 @@
 import { Fragment } from "react";
 
 //section components
-import AboutSection from "@/components/home/AboutSection";
+import IntroSection from "@/components/home/IntroSection";
 import SkillsSection from "@/components/home/SkillsSection";
 import PortfolioSection from "@/components/home/PortfolioSection";
 import ContactSection from "@/components/home/ContactSection";
+import IntroductionSection from "@/components/home/IntroductionSection";
 import Badge from "@/components/UI/Badge";
 
 export default function HomePage () {
     
   return (
     <Fragment>
-        <Badge>About me</Badge>
-        <AboutSection />
-        <Badge>Skills</Badge>
+        <IntroductionSection />
+        <Badge>Who Am I?</Badge>
+        <IntroSection />
+        <Badge>How can I help you?</Badge>
         <SkillsSection />
-        <Badge>Portfolio</Badge>
-        <PortfolioSection />
+        {/*TODO, REMOVE THE Portfolio Section forever?*/}
+        {/*<Badge>Portfolio</Badge>*/}
+        {/*<PortfolioSection />*/}
         <Badge>Contact</Badge>
         <ContactSection />
     </Fragment>
