@@ -35,14 +35,9 @@
 
 .work_experience_image {
     @include mixins.flexItem;
+    position: relative;
     flex-basis: 45%;
     height: 450px;
-}
-
-.work_experience_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 //About Me Pic END

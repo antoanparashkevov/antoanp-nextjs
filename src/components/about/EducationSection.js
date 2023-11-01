@@ -20,35 +20,32 @@ const EducationSection = () => {
         <section className={ styles['education_section'] }>
             <div className={ styles['education_section_main_content'] }>
                 <h1 className={ styles['education_section_title'] }>
-                    I&apos;ve graduated from <span>Software University</span>
+                    Graduated from <span>The №1 Software University in Bulgaria</span>
                 </h1>
                 <p className={ styles['education_section_desc'] }>
-                    During my studies there, I learned both the <span>basic</span> concepts and much
-                    more <span>advanced</span> techniques to
-                    write better code, avoid errors and use modern technologies that improve the <span>User Interface (UI)</span> and <span>User Experience (UX)</span>.
-                    I also
-                    learned how to improve the <span>Search Engine Optimization (SEO)</span>, which is the
-                    <span> most
-                    important thing</span> for one business to grow because it will dramatically <span>increase traffic to a site.</span>
+                    During my studies there, I had the amazing/great opportunity to learn from <span>top experts and
+                    professors</span> with more than <span>10 years of experience</span> in the area. Besides mastering the basics, I’ve
+                    also learned <span>more advanced techniques</span> that will be the “secret sauce” when it comes to attracting
+                    new customers to your website and making tons of money from them.
                 </p>
             </div>
-            <div className={styles['education_section_images']}>
-                <div className={styles['education_section_diploma_event']}>
+            <div className={ styles['education_section_images'] }>
+                <div className={ styles['education_section_diploma_event'] }>
                     <Image
-                        src={DiplomaEvent}
+                        src={ DiplomaEvent }
                         alt='Diploma'
                         placeholder='blur'
-                        style={{objectFit: 'contain'}}
+                        style={ { objectFit : 'contain' } }
                         fill
                     />
                 </div>
-                <div className={styles['education_section_diploma']}>
+                <div className={ styles['education_section_diploma'] }>
                     <Image
-                        onClick={handleDiplomaClick}
-                        src={Diploma}
+                        onClick={ handleDiplomaClick }
+                        src={ Diploma }
                         alt='Diploma'
                         placeholder='blur'
-                        style={{objectFit: 'contain'}}
+                        style={ { objectFit : 'contain' } }
                         fill
                     />
                 </div>

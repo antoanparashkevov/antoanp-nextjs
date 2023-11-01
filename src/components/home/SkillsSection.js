@@ -21,7 +21,7 @@ const SkillsSection = () => {
                                 <div className={styles['skills_section_grid_item_icon']}>
                                     <Icon
                                         iconSrc={skillPart.iconSrc}
-                                        alt={skillPart.name}
+                                        iconAlt={skillPart.name}
                                         iconWidth={30}
                                         iconHeight={30}
                                     />
