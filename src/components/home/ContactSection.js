@@ -18,7 +18,7 @@ const ContactSection = () => {
             <div className={styles['contact_section_main_content']}>
                 <div className={styles['contact_section_badges']}>
                     <div className={styles['contact_section_email_badge']}>
-                        <Badge>
+                        <Badge onClick={() => window.location.href = 'mailto:antoanparashkevov@gmail.com'}>
                             <Icon iconSrc={EmailBadge} iconAlt='Email'/>
                         </Badge>
                         <div className={styles['contact_section_email_info']}>
