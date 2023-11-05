@@ -89,7 +89,7 @@ const SkillsSection = () => {
                     </li>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
                         <strong>
-                            Bonus 2: <span>Responsive Design</span> - [ short explanation of the service]
+                            Bonus 2: <span>Responsive Design</span>
                         </strong>
                         <p>
                             - This <span>special</span> service will make sure your customers can look at your

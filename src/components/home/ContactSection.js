@@ -23,7 +23,9 @@ const ContactSection = () => {
                         </Badge>
                         <div className={styles['contact_section_email_info']}>
                             <span>Email me</span>
-                            <span>antoanparashkevov@gmail.com</span>
+                            <a href="mailto:antoanparashkevov@gmail.com">
+                                <span>antoanparashkevov@gmail.com</span>
+                            </a>
                         </div>
                     </div>
                 </div>

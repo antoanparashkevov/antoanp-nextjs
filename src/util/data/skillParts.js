@@ -1,6 +1,13 @@
 //static images
-import FrontEndIcon from '../../../public/icons/diamond-outline.svg';
-import BackEndIcon from '../../../public/icons/pulse-outline.svg';
+import FrontEndIcon from '../../../public/icons/diamond.svg';
+import BackEndIcon from '../../../public/icons/server.svg';
+import UserFunctionalitiesIcon from '../../../public/icons/calculator.svg';
+import ValidationIcon from '../../../public/icons/code.svg';
+import UserExperienceIcon from '../../../public/icons/rocket.svg';
+import UIIcon from '../../../public/icons/monitor.svg';
+import AccessibilityIcon from '../../../public/icons/planet.svg'
+import ResponsiveIcon from '../../../public/icons/phone.svg';
+import SEOIcon from '../../../public/icons/globe.svg';
 
 export const skillParts = [
     {
@@ -39,7 +46,7 @@ export const skillParts = [
             'magic',
             'that makes your website a fun place to be.'
         ],
-        iconSrc : BackEndIcon
+        iconSrc : UserFunctionalitiesIcon
     },
     {
         name : [ 'Validation' ],
@@ -51,7 +58,7 @@ export const skillParts = [
             'and',
             'reliability.'
         ],
-        iconSrc : BackEndIcon
+        iconSrc : ValidationIcon
     },
     {
         name : [ 'User Experience (', 'UX', ')' ],
@@ -65,7 +72,7 @@ export const skillParts = [
             'interaction',
             'is a joy.'
         ],
-        iconSrc : BackEndIcon
+        iconSrc : UserExperienceIcon
     },
     {
         name : [ 'User Interface (', 'UI', ')' ],
@@ -78,7 +85,7 @@ export const skillParts = [
             'colors, fonts, and layouts',
             'that not only look fantastic but also guide users effortlessly.'
         ],
-        iconSrc : BackEndIcon
+        iconSrc : UIIcon
     },
     {
         name : [ 'Accessibility' ],
@@ -89,7 +96,7 @@ export const skillParts = [
             'every visitor, regardless of ability,',
             'can enjoy your website. It\'s about making the web an inclusive place for all.',
         ],
-        iconSrc : BackEndIcon
+        iconSrc : AccessibilityIcon
     },
     {
         name : [ 'Responsive design' ],
@@ -104,7 +111,7 @@ export const skillParts = [
             'fantastic experience',
             'no matter where they are.',
         ],
-        iconSrc : BackEndIcon
+        iconSrc : ResponsiveIcon
     },
     {
         name : [ 'Search Engine Optimization'],
@@ -116,6 +123,6 @@ export const skillParts = [
             'shows up at the top of search results. It\'s like having a spotlight on your website,',
             'attracting more visitors.',
         ],
-        iconSrc : BackEndIcon
+        iconSrc : SEOIcon
     }
 ]
