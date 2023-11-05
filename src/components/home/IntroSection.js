@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './IntoSection.module.scss';
 
 //static images
-import CoverImage from '../../../public/images/cover_new.jpg';
+import MyPic from '../../../public/images/about_pic.jpeg';
 
 //UI components
 import { FilledButton } from "@/components/UI/BaseButton";
@@ -43,7 +43,7 @@ const IntroSection = () => {
             </div>
             <div className={ styles['about_section_image'] }>
                 <Image 
-                    src={ CoverImage } 
+                    src={ MyPic } 
                     alt='Cover Image'
                     placeholder='blur'
                     style={{objectFit: 'contain'}}
