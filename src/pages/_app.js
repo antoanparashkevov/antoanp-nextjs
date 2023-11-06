@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
               <title>Expert Web-Development Services</title>
               <meta 
                   name='description' 
-                  content='Expert Web-Development Services! Let’s Create an Astonishing-Looking Website For Your Business'
+                  content="Let's Create Your Dream-Looking Website"
               />
               <meta name='viewport'  content='initial-scale=1.0, width=device-width'/>
           </Head>
