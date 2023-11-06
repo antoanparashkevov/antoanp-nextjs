@@ -1,5 +1,7 @@
 import styles from './WorkExperience.module.scss';
 import Image from 'next/image';
+
+//static images
 import MyPic from '../../../public/images/cover_new.jpg';
 
 const WorkExperience = () => {
@@ -12,8 +14,10 @@ const WorkExperience = () => {
                 <p className={ styles['work_experience_desc'] }>
                     I’m working in a sports company called Enetpulse for <span>2+ years</span> now as a
                     Software Engineer where I have
-                    one of the <span>most crucial and responsible</span> tasks which is managing <span>over 40 different widgets</span> for variety types of sports. 
-                    These widgets are used by <span>millions of users worldwide</span> and <span>a even single mistake</span> can be crucial.
+                    one of the <span>most crucial and responsible</span> tasks which is managing <span>over 40 different widgets</span> for
+                    variety types of sports.
+                    These widgets are used
+                    by <span>millions of users worldwide</span> and <span>a even single mistake</span> can be crucial.
                 </p>
             </div>
             <div className={ styles['work_experience_image'] }>

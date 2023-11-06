@@ -12,17 +12,20 @@
 .work_experience_title {
     font-size: variables.$h1-font-size;
     font-weight: variables.$primary-font-weight;
+    
+    & > span {
+        color: variables.$primary-orange-color;
+    }
 }
 
 .work_experience_desc {
-    font-weight: bold;
+    font-weight: variables.$font-weight-bold;
     margin-top: 40px;
     margin-bottom: 11px;
-}
-
-.work_experience_title > span,
-.work_experience_desc > span {
-    color: variables.$primary-orange-color;
+    
+    & > span {
+        color: variables.$primary-orange-color;
+    }
 }
 
 //Main content END 
@@ -45,12 +48,7 @@
         flex-wrap: wrap;
     }
 
-    .work_experience_main_content {
-        flex-basis: 100%;
-    }
-
     .work_experience_image {
-        margin-bottom: 10px;
         flex-grow: 0;
     }
 }

@@ -1,5 +1,5 @@
-import styles from './EducationSection.module.scss'
 import Image from "next/image";
+import styles from './EducationSection.module.scss'
 
 //static images
 import Diploma from "../../../public/images/certifications/diploma.png";
@@ -24,8 +24,10 @@ const EducationSection = () => {
                 </h1>
                 <p className={ styles['education_section_desc'] }>
                     During my studies there, I had the amazing/great opportunity to learn from <span>top experts and
-                    professors</span> with more than <span>10 years of experience</span> in the area. Besides mastering the basics, I’ve
-                    also learned <span>more advanced techniques</span> that will be the “secret sauce” when it comes to attracting
+                    professors</span> with more than <span>10 years of experience</span> in the area. Besides mastering
+                    the basics, I’ve
+                    also learned <span>more advanced techniques</span> that will be the “secret sauce” when it comes to
+                    attracting
                     new customers to your website and making tons of money from them.
                 </p>
             </div>
