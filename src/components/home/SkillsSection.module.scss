@@ -103,3 +103,9 @@
     justify-content: center;
     column-gap: 30px;
 }
+
+@media screen and (max-width: 560px) {
+    .skills_section_main_outro {
+        flex-direction: column;
+    }
+}

@@ -88,3 +88,23 @@
         transform: rotateX(0deg)
     }
 }
+
+@media screen and (max-width: 800px) {
+    .count_down {
+        font-size: 65px;
+    }
+    
+    .flip_card {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .count_down {
+        font-size: 35px;
+    }
+    
+    .flip_card {
+        width: 40px;
+    }
+}

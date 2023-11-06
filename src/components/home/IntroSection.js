@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './IntoSection.module.scss';
+import styles from './IntroSection.module.scss';
 
 //static images
 import MyPic from '../../../public/images/about_pic.jpeg';
