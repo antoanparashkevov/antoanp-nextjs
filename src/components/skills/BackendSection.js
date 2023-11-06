@@ -1,8 +1,8 @@
 import styles from './BackendSection.module.scss';
 import Image from 'next/image';
 
+//static images
 import NodeJS from '../../../public/images/nodejs.webp';
-
 
 const BackendSection = () => {
 
@@ -26,6 +26,7 @@ const BackendSection = () => {
                 <Image 
                     src={NodeJS}
                     alt='NodeJS Image'
+                    placeholder='blur'
                 />
             </div>
         </section>

@@ -50,7 +50,7 @@ const ScrollableListWrapper = ({ listData, className }) => {
                     return (
                         <li key={item.name} className={ styles['list_wrapper_item'] }>
                             <div className={ styles['list_wrapper_item_image'] } onClick={imageClickHandler.bind(this,item)}>
-                                <Image src={ item.source } alt={ item.name } width='350' />
+                                <Image src={ item.source } alt={ item.name } width='350' placeholder='blur' />
                             </div>
                         </li>
                     )

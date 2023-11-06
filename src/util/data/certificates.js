@@ -1,3 +1,4 @@
+//static images
 import ProgrammingBasics from "../../../public/images/certifications/programming_basics_certificate.png";
 import ProgrammingFund from "../../../public/images/certifications/programming_fund_certificate.png";
 import JSAdvanced from "../../../public/images/certifications/js_advanced_certificate.png";

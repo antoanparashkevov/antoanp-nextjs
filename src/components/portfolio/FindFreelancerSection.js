@@ -44,6 +44,7 @@ const FindFreelancerSection = () => {
                 <Image
                     src={ FindFreelancer }
                     alt='FindFreelancer Image'
+                    placeholder='blur'
                 />
             </div>
         </section>

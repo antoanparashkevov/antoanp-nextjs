@@ -42,6 +42,7 @@ const FindCoachesSection = () => {
                 <Image
                     src={ FindCoachesImage }
                     alt='FindCoaches Image'
+                    placeholder='blur'
                 />
             </div>
         </section>

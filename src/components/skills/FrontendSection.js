@@ -1,6 +1,7 @@
 import styles from './FrontendSection.module.scss';
 import Image from 'next/image';
 
+//static images
 import NextJSImg from '../../../public/images/nextjs.jpg';
 
 const FrontendSection = () => {
@@ -25,6 +26,7 @@ const FrontendSection = () => {
                 <Image 
                     src={NextJSImg}
                     alt='NextJS Image'
+                    placeholder='blur'
                 />
             </div>
         </section>

@@ -1,6 +1,7 @@
 import styles from './ITCommunitySection.module.scss';
 import Image from 'next/image'
 
+//static images
 import ITCommunity from "../../../public/images/itcommunity.png";
 
 const ITCommunitySection = () => {
@@ -52,6 +53,7 @@ const ITCommunitySection = () => {
                 <Image 
                     src={ITCommunity}
                     alt='ITCommunity Image'
+                    placeholder='blur'
                 />
             </div>
         </section>
