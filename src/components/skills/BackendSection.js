@@ -19,14 +19,17 @@ const BackendSection = () => {
                     <span>framework</span> for <span>NodeJS</span> which targets backend applications but I will use the
                     framework to build a <span>REST
                     API</span>. If you are wondering what exactly means REST API, this is an
-                    <span>architecture (pattern)</span> for <span>client-server</span> communication over <span>HTTP</span>. 
+                    <span>architecture (pattern)</span> for <span>client-server</span> communication
+                    over <span>HTTP</span>.
                 </p>
             </div>
             <div className={ styles['backend_section_image'] }>
-                <Image 
-                    src={NodeJS}
+                <Image
+                    src={ NodeJS }
                     alt='NodeJS Image'
                     placeholder='blur'
+                    style={ { objectFit : 'contain' } }
+                    fill
                 />
             </div>
         </section>

@@ -23,10 +23,12 @@ const FrontendSection = () => {
                 </p>
             </div>
             <div className={ styles['frontend_section_image'] }>
-                <Image 
-                    src={NextJSImg}
+                <Image
+                    src={ NextJSImg }
                     alt='NextJS Image'
                     placeholder='blur'
+                    style={ { objectFit : 'contain' } }
+                    fill
                 />
             </div>
         </section>

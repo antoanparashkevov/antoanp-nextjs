@@ -18,14 +18,16 @@ const CertificationSection = () => {
                     I admit that I learned the most from the <span>real environment</span>, and not so much from the
                     theory and the
                     partial practices in the
-                    academy. When developing a <span>real project</span> for a client, you face many obstacles. Only theory cannot
+                    academy. When developing a <span>real project</span> for a client, you face many obstacles. Only
+                    theory cannot
                     help you to solve all problems. But without theory you will not know how to describe the problem and
-                    find a solution for it. You can see my <span>certificates</span> obtained during my studies at the <span>academy</span> on
+                    find a solution for it. You can see my <span>certificates</span> obtained during my studies at
+                    the <span>academy</span> on
                     this section.
                 </p>
             </div>
             <div className={ styles['certification_section_certifications_list'] }>
-                <ScrollableListWrapper className='certification_section_certifications_list_wrapper' listData={ certificates }/>
+                <ScrollableListWrapper listData={ certificates }/>
             </div>
         </section>
     )

@@ -1,56 +1,62 @@
-import styles from "@/components/UI/ScrollableListWrapper.module.scss";
+import { useRef, useEffect } from "react";
 import Image from 'next/image';
-import { useRef } from "react";
-import { useEffect } from "react";
+import styles from "@/components/UI/ScrollableListWrapper.module.scss";
 
-const ScrollableListWrapper = ({ listData, className }) => {
-    
+const ScrollableListWrapper = ({ listData }) => {
+
     const unorderedListRef = useRef(null);
-    
+
     const triggerScrolling = (e) => {
-        // console.log('ev >>> ', e)
         // console.log('unorderedListRef.scrollLeft >>> ', unorderedListRef.current.scrollLeft)
-        
+
         e.preventDefault();
         e.stopPropagation();
-        
+
         unorderedListRef.current.scrollLeft += e.deltaY;
-        
+
     }
-    
+
     const imageClickHandler = (item) => {
-        
         window.open(
             item.url,
             '_blank'
         );
-        
+
     }
-    
+
     useEffect(() => {
-        
+
         const unorderedElement = unorderedListRef.current
 
-        unorderedElement.addEventListener('wheel', triggerScrolling, { passive: false })
-        
+        unorderedElement.addEventListener('wheel', triggerScrolling, { passive : false })
+
         return () => {
             unorderedElement.removeEventListener('wheel', triggerScrolling)
         }
     }, [])
-    
-    
+
+
     return (
-        <ul 
-            ref={unorderedListRef}
-            className={`${styles['list_wrapper']} ${styles[className]}`} 
+        <ul
+            ref={ unorderedListRef }
+            className={ styles['list_wrapper'] }
             role='list'
         >
             {
-                listData.map( item => {
+                listData.map(item => {
                     return (
-                        <li key={item.name} className={ styles['list_wrapper_item'] }>
-                            <div className={ styles['list_wrapper_item_image'] } onClick={imageClickHandler.bind(this,item)}>
-                                <Image src={ item.source } alt={ item.name } width='350' placeholder='blur' />
+                        <li key={ item.name } className={ styles['list_wrapper_item'] }>
+                            <div 
+                                onClick={ imageClickHandler.bind(this, item) }
+                                className={ styles['list_wrapper_item_image'] }
+                            >
+                                <Image
+                                    src={ item.source }
+                                    alt={ item.name }
+                                    placeholder='blur'
+                                    style={ { objectFit : 'contain' } }
+                                    fill
+                                />
                             </div>
                         </li>
                     )
