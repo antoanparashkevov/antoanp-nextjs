@@ -1,6 +1,7 @@
 import styles from "./FindFreelancerSection.module.scss"
 import Image from "next/image";
 
+//static images
 import FindFreelancer from "../../../public/images/findfreelancers.png";
 
 const FindFreelancerSection = () => {
@@ -8,14 +9,16 @@ const FindFreelancerSection = () => {
     return (
         <section className={ styles['findfreelancer_section'] }>
             <div className={ styles['findfreelancer_section_main_content'] }>
-                <h1 className={ styles['findfreelancer_section_title'] }><span>Find A Freelancer</span> Jobs Search Engine
+                <h1 className={ styles['findfreelancer_section_title'] }><span>Find A Freelancer</span> Jobs Search
+                    Engine
                 </h1>
                 <div className={ styles['findfreelancer_section_desc'] }>
                     <p>A <span>Full-Stack</span> web application for easily finding <span>a freelancer</span> that
                         allows users to contact them or to
                         register themselves as a freelancer. With its minimalistic design, the application is easy to
                         manage and accessible. Written on <span>Angular</span> and <span>TypeScript</span>. Other
-                        technologies are used such as <span>NodeJS</span> web server and <span>MongoDB</span> Database.</p>
+                        technologies are used such as <span>NodeJS</span> web server and <span>MongoDB</span> Database.
+                    </p>
 
                     <ul>
                         <li>
@@ -45,6 +48,8 @@ const FindFreelancerSection = () => {
                     src={ FindFreelancer }
                     alt='FindFreelancer Image'
                     placeholder='blur'
+                    style={ { objectFit : 'contain' } }
+                    fill
                 />
             </div>
         </section>
