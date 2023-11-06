@@ -2,10 +2,8 @@
 @use '../../styles/variables';
 
 .footer_container {
-    display: flex;
+    @include mixins.flexbox;
     justify-content: space-between;
-    align-items:center;
-    width: 100%;
     height: 100%;
     font-size: variables.$primary-font-size;
     margin: 0 10px;

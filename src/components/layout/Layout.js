@@ -6,14 +6,13 @@ import Image from 'next/image';
 import TheHeader from "@/components/layout/TheHeader";
 import Footer from "@/components/layout/Footer";
 
-//gradient image
+//static image
 import Gradient from '../../../public/images/gradient.svg';
 
-//styled-components
 const ImageWrapper = styled(Image)`
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: -1;
 `
 

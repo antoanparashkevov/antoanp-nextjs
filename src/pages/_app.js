@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import Head from 'next/head';
 
-import '../components/UI/CountDown.scss'
 import '@/styles/globals.scss'
 
 //layout component
@@ -16,7 +15,7 @@ export default function App({ Component, pageProps }) {
                   name='description' 
                   content="Let's Create Your Dream-Looking Website"
               />
-              <meta name='viewport'  content='initial-scale=1.0, width=device-width'/>
+              <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
           </Head>
           <Layout>
               <Component {...pageProps} />
