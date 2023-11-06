@@ -11,11 +11,6 @@
 
 //Main content START 
 
-.introduction_section_main_content {
-    @include mixins.flexItem;
-    flex-basis: 50%;
-}
-
 .introduction_section_title {
     text-align: center;
     font-size: variables.$h1-font-size;

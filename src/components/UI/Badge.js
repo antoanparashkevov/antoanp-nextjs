@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Badge = styled.span`
+    min-width: 50px;
     border-radius: 15px;
     border: 1px solid #FF9D01;
     color: #5E5E5E;

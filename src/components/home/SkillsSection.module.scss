@@ -18,7 +18,7 @@
     width: 100%;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit,315px);
+    grid-template-columns: repeat(auto-fit, 315px);
     justify-content: center;
     flex-grow: 1;
     gap: 30px;
@@ -63,6 +63,7 @@
 
 .skills_section_grid_item_para {
     padding: 0.25rem;
+    font-size: variables.$primary-font-size;
     font-weight: variables.$font-weight-bold;
     
     & > span {
@@ -72,7 +73,7 @@
 }
 
 .skills_section_main_desc {
-    @include mixins.flexbox();
+    @include mixins.flexbox;
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 20px;
@@ -84,6 +85,7 @@
 }
 
 .skills_section_main_desc_para {
+    font-size: variables.$h2-font-size;
     
     & > span {
         color: variables.$primary-orange-color;
@@ -93,13 +95,13 @@
 .skills_section_main_desc_list_item {
     margin: 20px 0;
     
-    &  span {
+    span {
         color: variables.$primary-orange-color;
     }
 }
 
 .skills_section_main_outro {
-    @include mixins.flexbox();
+    @include mixins.flexbox;
     justify-content: center;
     column-gap: 30px;
 }

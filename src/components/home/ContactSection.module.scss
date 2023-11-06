@@ -6,24 +6,26 @@
     flex-direction: column;
     row-gap: 30px;
     justify-content: center;
-    align-content: center;
 }
 
 //Title START
 
-.contact_section_title h1 {
-    font-size: variables.$h1-font-size;
-    color: variables.$primary-text-color;
-}
-
-.contact_section_title span {
-    color: variables.$primary-orange-color;
+.contact_section_title {
+    
+    h1 {
+        font-size: variables.$h1-font-size;
+    }
+    
+    span {
+        color: variables.$primary-orange-color;
+    }
 }
 
 //Title END
 
 .contact_section_main_content {
     @include mixins.flexbox;
+    gap: 20px;
 }
 
 //Main content START
@@ -32,9 +34,12 @@
 
 .contact_section_badges {
     @include mixins.flexbox;
-    width: 40%;
+    width: unset;
+    height: 100%;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 15px;
 }
 
 //Email START
@@ -44,26 +49,27 @@
     column-gap: 10px;
     align-content: center;
     justify-content: center;
-}
-
-.contact_section_email_badge > span {
-    margin: 0;
-    background-color: variables.$primary-orange-color;
-    padding: 8px 12px;
+    
+    & > span {
+        margin: 0;
+        background-color: variables.$primary-orange-color;
+        padding: 8px 12px;
+    }
 }
 
 .contact_section_email_info {
     @include mixins.flexbox;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.contact_section_email_info span:first-child {
-    color: variables.$primary-gray-color;
-}
-
-.contact_section_email_info span:nth-child(2) {
-    font-weight: 500;
+    
+    span,
+    a {
+        color: variables.$primary-gray-color;
+    }
+    
+    a {
+        font-weight: variables.$font-weight-bold;
+    }
 }
 
 //Email END
@@ -84,5 +90,9 @@
     .contact_section_badges,
     .contact_section_contact_form {
         width: 100%;
+    }
+    
+    .contact_section_badges {
+        flex-direction: row;
     }
 }

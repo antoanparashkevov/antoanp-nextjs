@@ -49,7 +49,7 @@ const CountDown = () => {
             const timeBetweenDatesInSeconds = Math.ceil((countToDate - currentDate) / 1000);
             
             if( previousTimeBetweenDatesInSeconds.current !== timeBetweenDatesInSeconds ) {
-                console.log('1 second passed...')
+                // console.log('1 second passed...')
                 flipAllCards(timeBetweenDatesInSeconds)//this will execute 1 time per second
             }
             
@@ -77,7 +77,7 @@ const CountDown = () => {
         const newSecondsTens = Math.floor(seconds / 10);//the same as hoursTens
         const newSecondsOnes = seconds % 10;//the same as hoursOnes
         
-        console.log(newHoursTens, newHoursOnes, newMinutesTens, newMinutesOnes, newSecondsTens, newSecondsOnes)
+        // console.log(newHoursTens, newHoursOnes, newMinutesTens, newMinutesOnes, newSecondsTens, newSecondsOnes)
         
         //hours
         flip(flipTopHoursTensRef.current, flipBottomHoursTensRef.current, newHoursTens, hoursTens, setHoursTens)

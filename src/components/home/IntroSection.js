@@ -24,13 +24,15 @@ const IntroSection = () => {
     }
 
     return (
-        <section className={ styles['about_section'] }>
-            <div className={ styles['about_section_main_content'] }>
-                <p className={ styles['about_section_desc'] }>
-                    Hi there, my name is Antoan and I’m a web designer and web development specialist (OR more simply said, I create top-tier websites for any type of business).
+        <section className={ styles['intro_section'] }>
+            <div className={ styles['intro_section_main_content'] }>
+                <p className={ styles['intro_section_desc'] }>
+                    Hi there, my name is Antoan and I’m a web designer and web development specialist (OR more simply
+                    said, I create top-tier websites for any type of business).
                     <br/><br/>
                     My goal is to create a remarkable and one-of-a-kind-looking website where people <span>on a global scale</span> can
-                    learn and take advantage of your products and services. <br/><br/> You see, we live in times when the Internet is an
+                    learn and take advantage of your products and services. <br/><br/> You see, we live in times when
+                    the Internet is an
                     irreplaceable part of our daily existence and it can be a HUGE “problem-solver” for different areas
                     of our lives if used correctly.&nbsp;
                 </p>
@@ -41,12 +43,12 @@ const IntroSection = () => {
                     Contact Me
                 </FilledButton>
             </div>
-            <div className={ styles['about_section_image'] }>
-                <Image 
-                    src={ MyPic } 
+            <div className={ styles['intro_section_image'] }>
+                <Image
+                    src={ MyPic }
                     alt='Cover Image'
                     placeholder='blur'
-                    style={{objectFit: 'contain'}}
+                    style={ { objectFit : 'contain' } }
                     fill
                 />
             </div>

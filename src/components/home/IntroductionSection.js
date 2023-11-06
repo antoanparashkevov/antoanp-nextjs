@@ -1,7 +1,6 @@
 import styles from "@/components/home/IntroductionSection.module.scss";
 
 const IntroductionSection = () => {
-
     return (
         <section className={ styles['introduction_section'] }>
             <div className={ styles['introduction_section_main_content'] }>

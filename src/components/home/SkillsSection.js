@@ -70,11 +70,14 @@ const SkillsSection = () => {
                 }
             </div>
             <div className={ styles['skills_section_main_desc'] }>
-                <CountDown />
-                <h1 className={ styles['skills_section_main_desc_title'] }><strong>But WAIT, that’s not
-                    everything!</strong></h1>
+                <CountDown/>
+                <h1 className={ styles['skills_section_main_desc_title'] }>
+                    <strong>
+                        But wait, that’s not everything...
+                    </strong>
+                </h1>
                 <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next
-                    24 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your website:</p>
+                    24 hours you will also get <span><strong>2 SPECIAL BONUSES</strong></span> in addition to your website:</p>
                 <ul>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
                         <strong>
@@ -107,7 +110,8 @@ const SkillsSection = () => {
                         placeholder='blur'
                     />
                     <p>
-                        And of course, If for some reason you are not satisfied with ANY of my services, you will get a&nbsp;
+                        And of course, If for some reason you are not satisfied with ANY of my services, you will get
+                        a&nbsp;
                         <strong>100% refund</strong> of your money in the blink of an eye.
                     </p>
                 </div>
