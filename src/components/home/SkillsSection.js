@@ -9,8 +9,8 @@ import MoneyBack from '../../../public/images/money_back.png';
 
 //UI components
 import Icon from "@/components/UI/Icon";
-import Badge from "@/components/UI/Badge";
 import Image from "next/image";
+import CountDown from "@/components/UI/CountDown";
 
 const SkillsSection = () => {
 
@@ -70,6 +70,7 @@ const SkillsSection = () => {
                 }
             </div>
             <div className={ styles['skills_section_main_desc'] }>
+                <CountDown />
                 <h1 className={ styles['skills_section_main_desc_title'] }><strong>But WAIT, that’s not
                     everything!</strong></h1>
                 <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next

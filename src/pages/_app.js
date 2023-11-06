@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Head from 'next/head';
 
+import '../components/UI/CountDown.scss'
 import '@/styles/globals.scss'
 
 //layout component
