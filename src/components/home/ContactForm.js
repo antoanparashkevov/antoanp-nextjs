@@ -57,7 +57,7 @@ const ContactForm = () => {
             setError(null);
             setIsLoading(true)
 
-            const response = await fetch(`${process.env['NEXT_PUBLIC_API_URL']}/api/apply`, {
+            const response = await fetch(`/api/apply`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
