@@ -84,11 +84,9 @@ const SkillsSection = () => {
                             Bonus 1: <span>SEO Optimization</span> or <span>SEO</span> in short
                         </strong>
                         <p>
-                            - This is a <span>unique</span> service that will improve the visibility and ranking of your
-                            website. The
-                            primary goal of SEO optimization is to <span>increase organic (non-paid) traffic</span> to
-                            your website
-                            by making it more appealing to search engines like Google, Bing, and Yahoo.
+                            - Want to shine in the vast web galaxy? <span>Our SEO service is your</span> guiding star. <span>We ensure your website</span>&nbsp;
+                            shows up at the top of search results. It&apos;s like having a spotlight on your website,
+                            <span> attracting more visitors</span>.
                         </p>
                     </li>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
@@ -96,8 +94,9 @@ const SkillsSection = () => {
                             Bonus 2: <span>Responsive Design</span>
                         </strong>
                         <p>
-                            - This <span>special</span> service will make sure your customers can look at your
-                            website <span>BOTH</span> on a <span>desktop</span> or <span>mobile</span> version.
+                            - In the digital age, your website needs to be a <span>chameleon</span>. 
+                            That&apos;s where responsive design <span>shines</span>. We ensure your website looks great on <span>desktops, tablets, and mobiles</span>,
+                            giving users a fantastic experience no matter where they are.
                         </p>
                     </li>
                 </ul>

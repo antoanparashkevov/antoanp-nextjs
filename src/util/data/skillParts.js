@@ -39,8 +39,8 @@ export const skillParts = [
     {
         name : [ 'User functionalities' ],
         description : [
-            'I’ll make your website', 'a user\'s paradise',
-            '. User functionalities are the',
+            'I’ll make your website', 'a user\'s paradise.',
+            'User functionalities are the',
             'cool features',
             'that keep visitors engaged. From sign-up forms to interactive tools, we create the',
             'magic',
@@ -52,8 +52,8 @@ export const skillParts = [
         name : [ 'Validation' ],
         description : [
             'Don\'t you hate it when forms fail or links lead nowhere? The validation service makes sure your website',
-            'runs like a Swiss watch',
-            '. No more errors; it\'s all about',
+            'runs like a Swiss watch.',
+            'No more errors; it\'s all about',
             'precision',
             'and',
             'reliability.'
@@ -80,8 +80,8 @@ export const skillParts = [
             'It\'s time to make your website not only',
             'stunning',
             'but incredibly',
-            'easy to use',
-            '. UI is our canvas, and we paint it with',
+            'easy to use.',
+            'UI is our canvas, and we paint it with',
             'colors, fonts, and layouts',
             'that not only look fantastic but also guide users effortlessly.'
         ],
@@ -98,31 +98,31 @@ export const skillParts = [
         ],
         iconSrc : AccessibilityIcon
     },
-    {
-        name : [ 'Responsive design' ],
-        description : [
-            'In the digital age, your website needs to be a',
-            'chameleon.',
-            'That\'s where responsive design',
-            'shines.',
-            'We ensure your website looks great on',
-            'desktops, tablets, and mobiles,',
-            'giving users a',
-            'fantastic experience',
-            'no matter where they are.',
-        ],
-        iconSrc : ResponsiveIcon
-    },
-    {
-        name : [ 'Search Engine Optimization'],
-        description : [
-            'Want to shine in the vast web galaxy?',
-            'Our SEO service is your',
-            'guiding star.',
-            'We ensure your website',
-            'shows up at the top of search results. It\'s like having a spotlight on your website,',
-            'attracting more visitors.',
-        ],
-        iconSrc : SEOIcon
-    }
+    // {
+    //     name : [ 'Responsive design' ],
+    //     description : [
+    //         'In the digital age, your website needs to be a',
+    //         'chameleon.',
+    //         'That\'s where responsive design',
+    //         'shines.',
+    //         'We ensure your website looks great on',
+    //         'desktops, tablets, and mobiles,',
+    //         'giving users a',
+    //         'fantastic experience',
+    //         'no matter where they are.',
+    //     ],
+    //     iconSrc : ResponsiveIcon
+    // },
+    // {
+    //     name : [ 'Search Engine Optimization'],
+    //     description : [
+    //         'Want to shine in the vast web galaxy?',
+    //         'Our SEO service is your',
+    //         'guiding star.',
+    //         'We ensure your website',
+    //         'shows up at the top of search results. It\'s like having a spotlight on your website,',
+    //         'attracting more visitors.',
+    //     ],
+    //     iconSrc : SEOIcon
+    // }
 ]
