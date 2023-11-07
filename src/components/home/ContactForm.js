@@ -57,7 +57,7 @@ const ContactForm = () => {
             setError(null);
             setIsLoading(true)
 
-            const response = await fetch(`${process.env['NEXT_PUBLIC_FIREBASE_URI']}/applications.json`, {
+            const response = await fetch(`${process.env['NEXT_PUBLIC_API_URL']}/api/apply`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const ContactForm = () => {
                 body: JSON.stringify(dataToSubmit)//send the data in JSON format
             });
 
-            if ( response.ok ) {
+            if ( response.ok || response.status === 200 ) {
                 setResolved(true)
 
                 emailReset();
@@ -88,28 +88,14 @@ const ContactForm = () => {
             return;
         }
 
-        const timeWhenSend = new Date()
-
-        const year = timeWhenSend.getFullYear();
-        const month = timeWhenSend.getMonth() + 1;
-        const dateOfMonth = timeWhenSend.getDate();
-        const hours = timeWhenSend.getHours();
-        const minutes = timeWhenSend.getMinutes();
-        
         // console.log('enteredEmail >>> ', enteredEmail)
         // console.log('enteredBudget >>> ', enteredBudget)
         // console.log('enteredMessage >>> ', enteredMessage)
-        // console.log('year >>> ', timeWhenSend.getFullYear())
-        // console.log('month >>> ', timeWhenSend.getMonth() + 1)
-        // console.log('date of month >>> ', timeWhenSend.getDate())
-        // console.log('getHours >>> ', timeWhenSend.getHours())
-        // console.log('minute >>> ', timeWhenSend.getMinutes())
 
         const dataToSubmit = {
             email : enteredEmail,
             budget : Number(enteredBudget),
-            message : enteredMessage,
-            date: `${year}y-${month}m-${dateOfMonth}d-${hours}h-${minutes}m`
+            message : enteredMessage
         }
         
         await postMessage(dataToSubmit);

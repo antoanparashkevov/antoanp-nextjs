@@ -12,10 +12,12 @@ export default async function getApplicant(req, res) {
     switch (req.method) {
         case 'GET':
             try {
+                console.log('req.query >>> ', req.query);
+                
                 const applicantId = req.query['applicantId'];
                 let applicant = await getById(applicantId);
 
-                res.json({
+                res.status(200).json({
                     status: res.statusCode,
                     applicantData: applicant
                 })
