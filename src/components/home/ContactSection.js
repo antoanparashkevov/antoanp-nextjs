@@ -13,7 +13,7 @@ const ContactSection = () => {
     return (
         <section className={ styles['contact_section'] }>
             <div className={ styles['contact_section_title'] }>
-                <h1>Sign Up <span>NOW</span> And Let&apos;s <span>Create</span> Your <span>Dream-Looking</span> Website!
+                <h1>Sign Up <span>NOW</span> And Let&apos;s <span>Build</span> Your <span>Dream-Looking</span> Website Together!
                 </h1>
             </div>
             <div className={ styles['contact_section_main_content'] }>

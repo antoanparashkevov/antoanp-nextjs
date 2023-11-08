@@ -12,6 +12,10 @@
 
 .skills_section_main_intro {
     font-size: variables.$h2-font-size;
+    
+    & > span {
+        color: variables.$primary-orange-color;
+    }
 }
 
 .skills_section_grid {

@@ -17,7 +17,7 @@ const SkillsSection = () => {
     return (
         <section className={ styles['skills_section'] }>
             <strong className={ styles['skills_section_main_intro'] }>
-                Besides building your website from SCRATCH, you will also get:
+                Besides <span>building</span> your website from <span>SCRATCH</span>, you will also get:
             </strong>
             <div className={ styles['skills_section_grid'] }>
                 {

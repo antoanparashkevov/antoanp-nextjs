@@ -28,13 +28,19 @@ const IntroSection = () => {
             <div className={ styles['intro_section_main_content'] }>
                 <p className={ styles['intro_section_desc'] }>
                     Hi there, my name is Antoan and I’m a web designer and web development specialist (OR more simply
-                    said, I create top-tier websites for any type of business).
-                    <br/><br/>
+                    said, I create <span>top-tier websites</span> for any type of business).
+                    <br/>
+                    <br/>
                     My goal is to create a remarkable and one-of-a-kind-looking website where people <span>on a global scale</span> can
                     learn and take advantage of your products and services. <br/><br/> You see, we live in times when
                     the Internet is an
                     irreplaceable part of our daily existence and it can be a HUGE “problem-solver” for different areas
                     of our lives if used correctly.&nbsp;
+                    <br/>
+                    <br/>
+                    <strong>The same is true with your business.</strong>&nbsp;
+                    Having a compelling well-ordered website can be the “game-changer” your enterprise needs in order to
+                    attract lots of new customers and make an unthinkable amount of money.
                 </p>
                 <FilledButton
                     onClick={ HandleContactClick }

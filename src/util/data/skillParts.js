@@ -28,11 +28,9 @@ export const skillParts = [
         description : [
             'Want to peek behind the curtain of your website? That\'s where the',
             'back-end part',
-            'comes in. It\'s the',
-            'powerhouse',
-            'that ensures everything runs',
-            'smoothly and securely',
-            '. From databases to application logic, this service is the', 'backbone element', 'of your website\'s success.'
+            'comes in. It\'s the powerhouse that ensures everything runs',
+            'smoothly and securely.',
+            'From databases to application logic, this service is the', 'backbone element', 'of your website\'s success.'
         ],
         iconSrc : BackEndIcon
     },
@@ -42,7 +40,7 @@ export const skillParts = [
             'I’ll make your website', 'a user\'s paradise.',
             'User functionalities are the',
             'cool features',
-            'that keep visitors engaged. From sign-up forms to interactive tools, we create the',
+            'that will keep visitors engaged. From sign up forms to interactive tools, this is where I will create the',
             'magic',
             'that makes your website a fun place to be.'
         ],
@@ -52,7 +50,7 @@ export const skillParts = [
         name : [ 'Validation' ],
         description : [
             'Don\'t you hate it when forms fail or links lead nowhere? The validation service makes sure your website',
-            'runs like a Swiss watch.',
+            'runs like a Swiss Watch.',
             'No more errors; it\'s all about',
             'precision',
             'and',
@@ -64,10 +62,13 @@ export const skillParts = [
         name : [ 'User Experience (', 'UX', ')' ],
         description : [
             'Welcome to the',
-            'heart', 'of your website\'s experience! UX is where I put on your user-centric thinking caps. I’ll create a website that\'s a',
+            'heart', 
+            'of your website\'s experience! UX is where I will put on your',
+            'user-centric thinking caps.',
+            'I’ll create a website that\'s a',
             '"breeze"',
-            'to navigate, ensuring',
-            'every click, scroll',
+            'to navigate, ensuring every',
+            'click, scroll',
             ', and',
             'interaction',
             'is a joy.'
@@ -92,7 +93,7 @@ export const skillParts = [
         description : [
             'We\'re all about opening digital doors to',
             'everyone.',
-            'Accessibility is our commitment to ensuring that',
+            'Accessibility is my commitment to ensuring that',
             'every visitor, regardless of ability,',
             'can enjoy your website. It\'s about making the web an inclusive place for all.',
         ],
