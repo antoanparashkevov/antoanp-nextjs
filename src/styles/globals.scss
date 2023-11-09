@@ -2,10 +2,6 @@
 //To use sass in NextJS project, first install the package 'sass'
 @use 'base';
 
-@import url(
-    'https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'
-);
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
