@@ -23,7 +23,7 @@ const EducationSection = () => {
                     Graduated from <span>The №1 Software University in Bulgaria</span>
                 </h1>
                 <p className={ styles['education_section_desc'] }>
-                    During my studies there, I had the amazing/great opportunity to learn from <span>top experts and
+                    During my studies there, I had the amazing opportunity to learn from <span>top experts and
                     professors</span> with more than <span>10 years of experience</span> in the area. Besides mastering
                     the basics, I’ve
                     also learned <span>more advanced techniques</span> that will be the “secret sauce” when it comes to
