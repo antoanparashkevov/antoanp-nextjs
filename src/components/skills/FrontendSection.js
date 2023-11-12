@@ -15,7 +15,7 @@ const FrontendSection = () => {
                     Step into the <span>future</span> of web development with <span>Next.js</span>,
                     where <span>innovation</span> meets <span>efficiency</span>. Picture
                     Next.js as the architectural marvel behind your web applications, providing
-                    a <span>seamless</span>, <span>fast</span>, and
+                    a <span>seamless</span>, <span>fast</span>, and&nbsp;
                     <span>responsive</span> experience for your users. What sets it apart? Next.js not only simplifies
                     the
                     complexities of server-side rendering and routing but also empowers your site with dynamic
@@ -29,7 +29,7 @@ const FrontendSection = () => {
                     text is not only visually <span>appealing</span> but loads <span>swiftly</span>, contributing to an
                     overall enhanced reading
                     experience. Simultaneously, <span>image optimization</span> guarantees that your visuals
-                    are <span>crisp</span> and <span>vibrant</span>
+                    are <span>crisp</span> and <span>vibrant</span>&nbsp;
                     without compromising on load times, creating a visually stunning yet efficiently performing website.
                 </p>
             </div>

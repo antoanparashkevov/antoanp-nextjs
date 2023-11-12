@@ -17,7 +17,7 @@ const SkillsSection = () => {
     return (
         <section className={ styles['skills_section'] }>
             <strong className={ styles['skills_section_main_intro'] }>
-                Besides <span>building</span> your website from <span>SCRATCH</span>, you will also get:
+                Besides building your website from <span>SCRATCH</span>, you will also get:
             </strong>
             <div className={ styles['skills_section_grid'] }>
                 {
@@ -77,7 +77,7 @@ const SkillsSection = () => {
                     </strong>
                 </h1>
                 <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next
-                    24 hours you will also get <span><strong>2 SPECIAL BONUSES</strong></span> in addition to your
+                    24 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your
                     website:</p>
                 <ul>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
