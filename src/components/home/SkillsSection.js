@@ -85,10 +85,9 @@ const SkillsSection = () => {
                             Bonus 1: <span>SEO Optimization</span> or <span>SEO</span> in short
                         </strong>
                         <p>
-                            - Want to shine in the vast web galaxy? <span>Our SEO service is your</span> guiding
-                            star. <span>We ensure your website</span>&nbsp;
-                            shows up at the top of search results. It&apos;s like having a spotlight on your website,
-                            <span> attracting more visitors</span>.
+                            - Your website will be the <span>star</span> in the digital arena, and the SEO service is the key to
+                            making it shine. The result? Improved online <span>visibility</span>, a surge in organic <span>traffic</span>, and a
+                            carefully crafted user experience that keeps visitors coming back for more.
                         </p>
                     </li>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
