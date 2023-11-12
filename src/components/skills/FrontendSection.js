@@ -12,14 +12,25 @@ const FrontendSection = () => {
                     My <span>Frontend</span> solution would be <span>NextJS</span>
                 </h1>
                 <p className={ styles['frontend_section_desc'] }>
-                    NextJS is an awesome tool for building web applications and I will tell you why in a second. Imagine
-                    you have both worlds: <span>Single-Page application</span> plus
-                    better <span>Search-Engine-Optimization</span>. This sounds
-                    great. The user is able to navigate between pages without even reloading the page and your web
-                    application will be more accessible by bringing search traffic to your site.
-                    With <span>NextJS</span> everything is possible! That&apos;s why I chose this framework. One more
-                    <span> advantage</span> is that we have both the <span>server code</span> and
-                    the <span>client code</span> in the same project.
+                    Step into the <span>future</span> of web development with <span>Next.js</span>,
+                    where <span>innovation</span> meets <span>efficiency</span>. Picture
+                    Next.js as the architectural marvel behind your web applications, providing
+                    a <span>seamless</span>, <span>fast</span>, and
+                    <span>responsive</span> experience for your users. What sets it apart? Next.js not only simplifies
+                    the
+                    complexities of server-side rendering and routing but also empowers your site with dynamic
+                    functionality, making it a go-to choice for
+                    building <span>modern</span> and <span>scalable</span> web applications.
+
+                    In this digital landscape, where user experience is paramount, I integrate cutting-edge <span>font and
+                    image optimization</span> techniques into your Next.js-powered
+                    site. <span>Font optimization</span> ensures that
+                    your
+                    text is not only visually <span>appealing</span> but loads <span>swiftly</span>, contributing to an
+                    overall enhanced reading
+                    experience. Simultaneously, <span>image optimization</span> guarantees that your visuals
+                    are <span>crisp</span> and <span>vibrant</span>
+                    without compromising on load times, creating a visually stunning yet efficiently performing website.
                 </p>
             </div>
             <div className={ styles['frontend_section_image'] }>

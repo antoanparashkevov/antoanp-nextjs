@@ -13,14 +13,11 @@ const BackendSection = () => {
                     My <span>Backend</span> solution would be <span>NodeJS</span>
                 </h1>
                 <p className={ styles['backend_section_desc'] }>
-                    <span>One</span> language - <span>Two</span> environments. That&apos;s why I love JavaScript because
-                    it can be executed
-                    both <span>on the server</span> and <span>on the client</span>. <span>Express.js</span> is just a
-                    <span>framework</span> for <span>NodeJS</span> which targets backend applications but I will use the
-                    framework to build a <span>REST
-                    API</span>. If you are wondering what exactly means REST API, this is an
-                    <span>architecture (pattern)</span> for <span>client-server</span> communication
-                    over <span>HTTP</span>.
+                    NodeJS is <span>amazing</span> for building web serves and I will tell you why I use exactly this
+                    approach in a second. It&apos;s the dynamic conductor that
+                    enables <span>smooth communication</span> between servers and clients. NodeJS propels <span>real-time updates</span>,&nbsp;
+                    <span>scalable server-side solutions</span>, and <span>blazing-fast performance</span>, making it
+                    the driving force for robust, data-intensive, and effortlessly expandable web applications.
                 </p>
             </div>
             <div className={ styles['backend_section_image'] }>

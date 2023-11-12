@@ -77,14 +77,16 @@ const SkillsSection = () => {
                     </strong>
                 </h1>
                 <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next
-                    24 hours you will also get <span><strong>2 SPECIAL BONUSES</strong></span> in addition to your website:</p>
+                    24 hours you will also get <span><strong>2 SPECIAL BONUSES</strong></span> in addition to your
+                    website:</p>
                 <ul>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
                         <strong>
                             Bonus 1: <span>SEO Optimization</span> or <span>SEO</span> in short
                         </strong>
                         <p>
-                            - Want to shine in the vast web galaxy? <span>Our SEO service is your</span> guiding star. <span>We ensure your website</span>&nbsp;
+                            - Want to shine in the vast web galaxy? <span>Our SEO service is your</span> guiding
+                            star. <span>We ensure your website</span>&nbsp;
                             shows up at the top of search results. It&apos;s like having a spotlight on your website,
                             <span> attracting more visitors</span>.
                         </p>
@@ -94,9 +96,11 @@ const SkillsSection = () => {
                             Bonus 2: <span>Responsive Design</span>
                         </strong>
                         <p>
-                            - In the digital age, your website needs to be a <span>chameleon</span>. 
-                            That&apos;s where responsive design <span>shines</span>. We ensure your website looks great on <span>desktops, tablets, and mobiles</span>,
-                            giving users a fantastic experience no matter where they are.
+                            - Unleash the <span>full potential</span> of your online presence with a website that not
+                            only looks <span>extraordinary</span> but also functions
+                            flawlessly <span>on every device</span>. This means your visitors can experience the same
+                            level of <span>visual appeal</span> and <span>user-friendliness</span> not only from their
+                            laptops and computers but also from their <span>smartphones</span> and <span>tablets</span>.
                         </p>
                     </li>
                 </ul>
