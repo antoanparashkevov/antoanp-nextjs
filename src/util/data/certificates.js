@@ -11,6 +11,11 @@ import Diploma from "../../../public/images/certifications/diploma.png";
 
 const certificates = [
     {
+        source: Diploma,
+        name: 'diploma',
+        url: 'https://softuni.bg/certificates/details/171618/f81a3d56'
+    },
+    {
         source: ProgrammingBasics,
         name: 'programming_basics',
         url: 'https://softuni.bg/certificates/details/118034/c360885d'
@@ -49,11 +54,6 @@ const certificates = [
         source: ReactCertification,
         name: 'react',
         url: 'https://softuni.bg/certificates/details/168565/5d8d822a'
-    },
-    {
-        source: Diploma,
-        name: 'diploma',
-        url: 'https://softuni.bg/certificates/details/171618/f81a3d56'
     },
 ]
 

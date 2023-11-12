@@ -13,11 +13,11 @@ const WorkExperience = () => {
                     a <span>Software Engineer</span> in a sports company</h1>
                 <p className={ styles['work_experience_desc'] }>
                     I’m working in a sports company called Enetpulse for <span>2+ years</span> now as a
-                    Software Engineer where I have
-                    one of the <span>most crucial and responsible</span> tasks which is managing <span>over 40 different widgets</span> for
+                    Software Engineer. I have
+                    one of the <span>most crucial</span> and <span>responsible</span> tasks which is managing over 40 different widgets for
                     variety types of sports.
                     These widgets are used
-                    by <span>millions of users worldwide</span> and <span>a even single mistake</span> can be crucial.
+                    by <span>millions of users worldwide</span> and even a single mistake can be crucial.
                 </p>
             </div>
             <div className={ styles['work_experience_image'] }>

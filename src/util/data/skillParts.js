@@ -15,11 +15,11 @@ export const skillParts = [
         description : [
             'Think of this service as the',
             'artistry',
-            'of your website. It\'s where I craft the',
+            'of your website. This is where I craft the',
             'visual charm',
             'and',
-            'user-friendly',
-            'features that\'ll keep your visitors coming back for more.'
+            'user-friendly features',
+            'that will keep your visitors coming back for more.'
         ],
         iconSrc : FrontEndIcon
     },
@@ -28,28 +28,30 @@ export const skillParts = [
         description : [
             'Want to peek behind the curtain of your website? That\'s where the',
             'back-end part',
-            'comes in. It\'s the powerhouse that ensures everything runs',
+            'comes in. It\'s the powerhouse that ensures your data flow runs',
             'smoothly and securely.',
-            'From databases to application logic, this service is the', 'backbone element', 'of your website\'s success.'
+            'That\'s why this service is the',
+            'backbone element',
+            'of your website\'s success.'
         ],
         iconSrc : BackEndIcon
     },
     {
-        name : [ 'User functionalities' ],
+        name : [ 'User', 'functionalities' ],
         description : [
-            'I’ll make your website', 'a user\'s paradise.',
-            'User functionalities are the',
-            'cool features',
-            'that will keep visitors engaged. From sign up forms to interactive tools, this is where I will create the',
-            'magic',
-            'that makes your website a fun place to be.'
+            'I will make your website', 'a user\'s paradise.',
+            'User functionalities are the cool features that makes visitors\' lifes much easier. From sign up forms to interactive tools, this is where I will create your website an',
+            'easy-to-use',
+            'and',
+            'exceptionally interactive',
+            'place.',
         ],
         iconSrc : UserFunctionalitiesIcon
     },
     {
-        name : [ 'Validation' ],
+        name : [ 'Error', 'Validation' ],
         description : [
-            'Don\'t you hate it when forms fail or links lead nowhere? The validation service makes sure your website',
+            'Don\'t you hate it when forms fail to send or links lead nowhere? The validation service makes sure your website',
             'runs like a Swiss Watch.',
             'No more errors; it\'s all about',
             'precision',
@@ -63,9 +65,7 @@ export const skillParts = [
         description : [
             'Welcome to the',
             'heart', 
-            'of your website\'s experience! UX is where I will put on your',
-            'user-centric thinking caps.',
-            'I’ll create a website that\'s a',
+            'of your website\'s experience! I will create a website that\'s a',
             '"breeze"',
             'to navigate, ensuring every',
             'click, scroll',
@@ -78,10 +78,10 @@ export const skillParts = [
     {
         name : [ 'User Interface (', 'UI', ')' ],
         description : [
-            'It\'s time to make your website not only',
+            'It\'s time to make your website',
             'stunning',
-            'but incredibly',
-            'easy to use.',
+            'and',
+            'unique.',
             'UI is our canvas, and we paint it with',
             'colors, fonts, and layouts',
             'that not only look fantastic but also guide users effortlessly.'
@@ -94,7 +94,7 @@ export const skillParts = [
             'We\'re all about opening digital doors to',
             'everyone.',
             'Accessibility is my commitment to ensuring that',
-            'every visitor, regardless of ability,',
+            'every visitor, including those with disabilities',
             'can enjoy your website. It\'s about making the web an inclusive place for all.',
         ],
         iconSrc : AccessibilityIcon

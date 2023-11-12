@@ -27,14 +27,14 @@ const IntroSection = () => {
         <section className={ styles['intro_section'] }>
             <div className={ styles['intro_section_main_content'] }>
                 <p className={ styles['intro_section_desc'] }>
-                    Hi there, my name is Antoan and I’m a web designer and web development specialist (OR more simply
+                    Hi there, my name is Antoan and I’m a passionate web development specialist (or more simply
                     said, I create <span>top-tier websites</span> for any type of business).
                     <br/>
                     <br/>
-                    My goal is to create a remarkable and one-of-a-kind-looking website where people <span>on a global scale</span> can
+                    My goal is to create a remarkable and one-of-a-kind-looking website where people on a global scale can
                     learn and take advantage of your products and services. <br/><br/> You see, we live in times when
                     the Internet is an
-                    irreplaceable part of our daily existence and it can be a HUGE “problem-solver” for different areas
+                    irreplaceable part of our daily existence and it can be a huge “problem-solver” for different areas
                     of our lives if used correctly.&nbsp;
                     <br/>
                     <br/>

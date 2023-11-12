@@ -10,11 +10,11 @@ const BackendSection = () => {
         <section className={ styles['backend_section'] }>
             <div className={ styles['backend_section_main_content'] }>
                 <h1 className={ styles['backend_section_title'] }>
-                    My <span>Backend</span> solution would be <span>NodeJS</span>
+                    My <span>Backend</span> solution is <span>NodeJS</span>
                 </h1>
                 <p className={ styles['backend_section_desc'] }>
-                    NodeJS is <span>amazing</span> for building web serves and I will tell you why I use exactly this
-                    approach in a second. It&apos;s the dynamic conductor that
+                    NodeJS is a &quot;<span>standout</span>&quot; for building web servers and I will tell you why in a second.
+                    It&apos;s the dynamic conductor that
                     enables <span>smooth communication</span> between servers and clients. NodeJS propels <span>real-time updates</span>,&nbsp;
                     <span>scalable server-side solutions</span>, and <span>blazing-fast performance</span>, making it
                     the driving force for robust, data-intensive, and effortlessly expandable web applications.
