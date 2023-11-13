@@ -41,7 +41,7 @@ const ContactForm = () => {
         reset : messageReset,
         onChangeHandler : messageChangeHandler,
         onBlurHandler : messageBlurHandler
-    } = useInput(value => value.trim() !== '' && value.length > 40)
+    } = useInput(() => true)
 
     formIsValid = useMemo(() => {
         return emailIsValid && budgetIsValid && messageIsValid
@@ -111,7 +111,7 @@ const ContactForm = () => {
             }
             <form className={ styles['contact_form'] } onSubmit={ formSubmissionHandler }>
                 <div className={ formControlClasses(emailHasError) }>
-                    { emailHasError && <p>Please enter a valid non-empty email address!</p> }
+                    { emailHasError && <p>Please enter a valid non-empty email address</p> }
                     <input
                         type="email"
                         id="email"
@@ -123,7 +123,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className={ formControlClasses(budgetHasError) }>
-                    { budgetHasError && <p>Please enter a non-negative budget bigger than 0!</p> }
+                    { budgetHasError && <p>Please enter a non-negative budget bigger than 0</p> }
                     <input
                         type='number'
                         id="budget"
@@ -135,7 +135,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className={ formControlClasses(messageHasError) }>
-                    { messageHasError && <p>Please enter a valid non-empty message with at least 40 characters!</p> }
+                    { messageHasError && <p>Please enter a valid non-empty message with at least 40 characters</p> }
                     <textarea
                         id="message"
                         name="message"

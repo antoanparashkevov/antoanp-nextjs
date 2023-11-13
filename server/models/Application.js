@@ -12,9 +12,6 @@ const applicationSchema = new Schema({
     },
     message: {
         type: String,
-        minLength: [20, 'The message must be at least 20 characters long!'],
-        maxLength: [300, 'You exceeded the maximum length for your message!'],
-        required: true
     }
 });
 
