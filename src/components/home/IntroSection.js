@@ -27,7 +27,7 @@ const IntroSection = () => {
         <section className={ styles['intro_section'] }>
             <div className={ styles['intro_section_main_content'] }>
                 <p className={ styles['intro_section_desc'] }>
-                    Hi there, my name is Antoan and I’m a passionate web development specialist (or more simply
+                    Hi there, my name is Antoan and I’m a web development specialist (or more simply
                     said, I create <span>top-tier websites</span> for any type of business).
                     <br/>
                     <br/>
