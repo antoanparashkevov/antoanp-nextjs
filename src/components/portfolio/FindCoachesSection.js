@@ -15,7 +15,7 @@ const FindCoachesSection = () => {
                         a <span>BaaS</span> (Backend as a Service).
                         Easy-to-use app to quickly and conveniently find the right <span>coach</span> for you. Each
                         authenticated
-                        user can register as a coach too. Almost identical as
+                        user can register as a coach too. Almost identical to
                         the <span>Find a Freelancer</span> project, but written
                         on <span>VueJS</span> and <span>JavaScript</span>.</p>
 

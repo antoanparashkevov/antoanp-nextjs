@@ -85,8 +85,8 @@ const SkillsSection = () => {
                             Bonus 1: <span>SEO Optimization</span> or <span>SEO</span> in short
                         </strong>
                         <p>
-                            - Your website will be the <span>star</span> in the digital arena, and the SEO service is the key to
-                            making it shine. The result? Improved online <span>visibility</span>, a surge in organic <span>traffic</span>, and a
+                            Your website will be the <span>star</span> in the digital arena, and the SEO service is the key to
+                            making it shine. The result? Improved <span>online visibility</span>, a surge in <span>organic traffic</span>, and a
                             carefully crafted user experience that keeps visitors coming back for more.
                         </p>
                     </li>
@@ -95,11 +95,11 @@ const SkillsSection = () => {
                             Bonus 2: <span>Responsive Design</span>
                         </strong>
                         <p>
-                            - Unleash the <span>full potential</span> of your online presence with a website that not
-                            only looks <span>extraordinary</span> but also functions
+                            Unleash the <span>full potential</span> of your online presence with a website that not
+                            only looks extraordinary but also functions
                             flawlessly <span>on every device</span>. This means your visitors can experience the same
                             level of <span>visual appeal</span> and <span>user-friendliness</span> not only from their
-                            laptops and computers but also from their <span>smartphones</span> and <span>tablets</span>.
+                            laptops and computers but also from their smartphones and tablets.
                         </p>
                     </li>
                 </ul>

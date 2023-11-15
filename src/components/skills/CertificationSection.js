@@ -15,7 +15,7 @@ const CertificationSection = () => {
                     <span>JavaScript</span> and <span>Node JS</span> knowledge
                 </h1>
                 <p className={ styles['certification_section_desc'] }>
-                    Think of <span>JavaScript</span> as the interactive tool in my kit that brings your website to live.
+                    Think of <span>JavaScript</span> as the interactive tool in my kit that brings your website to life.
                     It&apos;s like the <span>energy source of the web</span>, allowing me to
                     create <span>interactive</span>, <span>responsive</span>, and <span>functional features</span> for
                     your site. Whether it&apos;s a user-friendly design, real-time updates, or forms that work perfectly
