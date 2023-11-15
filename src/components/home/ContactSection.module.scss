@@ -25,6 +25,7 @@
 
 .contact_section_main_content {
     @include mixins.flexbox;
+    justify-content: center;
     gap: 20px;
 }
 
