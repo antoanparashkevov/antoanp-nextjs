@@ -12,7 +12,7 @@ import Icon from "@/components/UI/Icon";
 import Image from "next/image";
 import CountDown from "@/components/UI/CountDown";
 
-const SkillsSection = () => {
+const SkillsSection = ({currentTimestamp}) => {
 
     return (
         <section className={ styles['skills_section'] }>
@@ -70,14 +70,14 @@ const SkillsSection = () => {
                 }
             </div>
             <div className={ styles['skills_section_main_desc'] }>
-                <CountDown/>
+                <CountDown />
                 <h1 className={ styles['skills_section_main_desc_title'] }>
                     <strong>
                         But wait, that’s not everything...
                     </strong>
                 </h1>
                 <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next
-                    24 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your
+                    48 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your
                     website:</p>
                 <ul>
                     <li className={ styles['skills_section_main_desc_list_item'] }>

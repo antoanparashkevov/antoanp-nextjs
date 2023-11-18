@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import styles from './CountDown.module.scss';
 
-const countToDate = new Date().setHours(new Date().getHours() + 24);// we create a new Date which is 24 hours forward
 
 const CountDown = () => {
+    const [countToDate, setCountToDate] = useState(new Date().setHours(new Date().getHours() + 48));
     const previousTimeBetweenDatesInSeconds = useRef(0);
     
     const [hoursTens, setHoursTens] = useState(2);
@@ -35,11 +35,24 @@ const CountDown = () => {
     
     const flipBottomSecondsTensRef = useRef(null);
     const flipBottomSecondsOnesRef = useRef(null); 
-    
+
     useEffect(() => {
-        // console.log('countToDate >>> ', countToDate)
-        // console.log('currentDate >>> ', new Date())
-        // console.log('the difference >>> ', countToDate - new Date())
+        if( localStorage && typeof localStorage.getItem('d') === 'string' ) {
+            let timestamp = Number(localStorage.getItem('d'));
+
+            setCountToDate(
+                new Date(Number(timestamp))
+                    .setHours(
+                        new Date(timestamp)
+                            .getHours() + 48
+                    )
+            )
+        } else {
+            localStorage.setItem('d', Date.now());
+        }
+    }, [])
+
+    useEffect(() => {
         
         const intervalID = setInterval(() => {
             const currentDate = new Date();//returns current date in milliseconds
@@ -59,7 +72,7 @@ const CountDown = () => {
         
         //cleanup function
         return () => clearInterval(intervalID)
-    }, []);
+    }, [countToDate]);
     
     const flipAllCards = (timeBetweenDates) => {
         //timeBetweenDates is in seconds
