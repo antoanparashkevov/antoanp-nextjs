@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { Fragment, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import styles from "@/components/home/ContactForm.module.scss";
 
 //hooks
@@ -9,7 +9,13 @@ import { FilledButton } from "@/components/UI/BaseButton";
 import BaseSpinner from "@/components/UI/BaseSpinner";
 import Alert from "@/components/UI/Alert";
 
+//context
+import CountContext from "@/store/count-context";
+
 const ContactForm = () => {
+    //context
+    const { isExpired } = useContext(CountContext);//returns the context value determined as the value passed to the closest <SomeContext.Provider> parent component.
+
     let formIsValid;
 
     const [ resolved, setResolved ] = useState(false)
@@ -95,7 +101,8 @@ const ContactForm = () => {
         const dataToSubmit = {
             email : enteredEmail,
             budget : Number(enteredBudget),
-            message : enteredMessage
+            message : enteredMessage,
+            e: isExpired
         }
         
         await postMessage(dataToSubmit);

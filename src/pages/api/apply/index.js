@@ -22,19 +22,19 @@ export default async function applications(req, res) {
                 //already parsed body
                 console.log('req.body >>> ', req.body)
 
-                const { email, budget, message } = req.body;
+                const { email, budget, message, e } = req.body;
 
                 const item = await create({
                     email,
                     budget,
-                    message
+                    message,
+                    e
                 })
 
                 console.log('item that was created >>> ', item)
 
                 res.status(200).json({
                     status: res.statusCode,
-                    submittedData: item
                 });
                 
             } catch (error) {

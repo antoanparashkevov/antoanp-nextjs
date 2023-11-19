@@ -1,30 +1,35 @@
 'use client';
 
-import { Fragment } from "react";
+import { useState } from "react";
 
 //section components
 import IntroSection from "@/components/home/IntroSection";
 import SkillsSection from "@/components/home/SkillsSection";
-import PortfolioSection from "@/components/home/PortfolioSection";
 import ContactSection from "@/components/home/ContactSection";
 import IntroductionSection from "@/components/home/IntroductionSection";
 import Badge from "@/components/UI/Badge";
 
+//context
+import CountContext from "@/store/count-context";
+
 export default function HomePage () {
+    const [isExpired, setIsExpired] = useState(false);
+    
+    const countCtx = { 
+        isExpired,
+        setIsExpired
+    }
     
   return (
-    <Fragment>
+    <CountContext.Provider value={countCtx}>
         <IntroductionSection />
         <Badge>Who Am I?</Badge>
         <IntroSection />
         <Badge>How can I help you?</Badge>
         <SkillsSection />
-        {/*TODO, REMOVE THE Portfolio Section forever?*/}
-        {/*<Badge>Portfolio</Badge>*/}
-        {/*<PortfolioSection />*/}
         <Badge>Contact</Badge>
         <ContactSection />
-    </Fragment>
+    </CountContext.Provider>
   )
 }
 

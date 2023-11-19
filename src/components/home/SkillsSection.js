@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import styles from './SkillsSection.module.scss';
 
 //static text
@@ -8,11 +8,30 @@ import { skillParts } from "@/util/data/skillParts";
 import MoneyBack from '../../../public/images/money_back.png';
 
 //UI components
+import { FilledButton } from "@/components/UI/BaseButton";
 import Icon from "@/components/UI/Icon";
 import Image from "next/image";
 import CountDown from "@/components/UI/CountDown";
 
-const SkillsSection = ({currentTimestamp}) => {
+//context
+import CountContext from "@/store/count-context";
+
+const SkillsSection = () => {
+    const { isExpired } = useContext(CountContext)
+
+    const HandleContactClick = () => {
+        const footer = document.getElementById('footer-container');
+
+        let scrollPx = (document.body.scrollHeight - footer.offsetHeight) - document.body.clientHeight;
+        if ( footer && document.body && document.body.scrollHeight ) {
+
+            window.scrollTo({
+                top : scrollPx,
+                left : 0,
+                behavior : "smooth"
+            })
+        }
+    }
 
     return (
         <section className={ styles['skills_section'] }>
@@ -70,23 +89,44 @@ const SkillsSection = ({currentTimestamp}) => {
                 }
             </div>
             <div className={ styles['skills_section_main_desc'] }>
-                <CountDown />
+                <CountDown/>
                 <h1 className={ styles['skills_section_main_desc_title'] }>
                     <strong>
-                        But wait, that’s not everything...
+                        {
+                            !isExpired ? 'But wait, that’s not everything...' : 'Unfortunately, your time expired...'
+                        }
                     </strong>
                 </h1>
-                <p className={ styles['skills_section_main_desc_para'] }>If you sign up for a call with me over the next
-                    48 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your
-                    website:</p>
+                {
+                    !isExpired ?
+                        <p className={ styles['skills_section_main_desc_para'] }>
+                            If you sign up for a call with me over the next
+                            48 hours you will also get <span>2 SPECIAL BONUSES</span> in addition to your
+                            website:
+                        </p>
+                        :
+                        <div className={ styles['skills_section_main_desc_para_time_expired'] }>
+                            <p className={ styles['skills_section_main_desc_para'] }>
+                                But you still have a <span>chance</span> to get the bonuses if you contact me now
+                            </p>
+                            <FilledButton
+                                onClick={ HandleContactClick }
+                                className={ styles['introduction_section_btn'] }
+                            >
+                                Contact Me
+                            </FilledButton>
+                        </div>
+                }
                 <ul>
                     <li className={ styles['skills_section_main_desc_list_item'] }>
                         <strong>
                             Bonus 1: <span>SEO Optimization</span> or <span>SEO</span> in short
                         </strong>
                         <p>
-                            Your website will be the <span>star</span> in the digital arena, and the SEO service is the key to
-                            making it shine. The result? Improved <span>online visibility</span>, a surge in <span>organic traffic</span>, and a
+                            Your website will be the <span>star</span> in the digital arena, and the SEO service is the
+                            key to
+                            making it shine. The result? Improved <span>online visibility</span>, a surge in <span>organic traffic</span>,
+                            and a
                             carefully crafted user experience that keeps visitors coming back for more.
                         </p>
                     </li>

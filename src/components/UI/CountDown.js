@@ -1,10 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from './CountDown.module.scss';
+
+//context
+import CountContext from "@/store/count-context";
 
 
 const CountDown = () => {
     const [countToDate, setCountToDate] = useState(new Date().setHours(new Date().getHours() + 48));
-    const [isExpired, setIsExpired] = useState(false);
+    const { setIsExpired } = useContext(CountContext);
     
     const previousTimeBetweenDatesInSeconds = useRef(0);
     

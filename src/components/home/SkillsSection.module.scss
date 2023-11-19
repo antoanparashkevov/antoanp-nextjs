@@ -96,6 +96,12 @@
     }
 }
 
+.skills_section_main_desc_para_time_expired {
+    @include mixins.flexbox();
+    flex-direction: column;
+    row-gap: 25px;
+}
+
 .skills_section_main_desc_list_item {
     margin: 20px 0;
     
