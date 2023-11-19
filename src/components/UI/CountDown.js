@@ -4,10 +4,12 @@ import styles from './CountDown.module.scss';
 
 const CountDown = () => {
     const [countToDate, setCountToDate] = useState(new Date().setHours(new Date().getHours() + 48));
+    const [isExpired, setIsExpired] = useState(false);
+    
     const previousTimeBetweenDatesInSeconds = useRef(0);
     
-    const [hoursTens, setHoursTens] = useState(2);
-    const [hoursOnes, setHoursOnes] = useState(4);
+    const [hoursTens, setHoursTens] = useState(0);
+    const [hoursOnes, setHoursOnes] = useState(0);
     
     const [minutesTens, setMinutesTens] = useState(0);
     const [minutesOnes, setMinutesOnes] = useState(0);
@@ -48,6 +50,7 @@ const CountDown = () => {
                     )
             )
         } else {
+            //now() is a static method that returns the number of milliseconds elapsed since the epoch, which is defined at the beginning of the 1 January 1970
             localStorage.setItem('d', Date.now());
         }
     }, [])
@@ -61,10 +64,17 @@ const CountDown = () => {
             //Since one second has 1000 milliseconds, if we divide (countToDate - currentDate) by 1000
             //we will have the seconds number
             const timeBetweenDatesInSeconds = Math.ceil((countToDate - currentDate) / 1000);
-            
-            if( previousTimeBetweenDatesInSeconds.current !== timeBetweenDatesInSeconds ) {
+
+            //this will execute 1 time per second since previousTimeBetweenDatesInSeconds would be different from timeBetweenDatesInSeconds for every one second 
+            if( previousTimeBetweenDatesInSeconds.current !== timeBetweenDatesInSeconds && timeBetweenDatesInSeconds > 0) {
                 // console.log('1 second passed...')
-                flipAllCards(timeBetweenDatesInSeconds)//this will execute 1 time per second
+                flipAllCards(timeBetweenDatesInSeconds);
+            }
+            
+            if( timeBetweenDatesInSeconds <= 0 ) {
+                flipAllCards(0);
+                setIsExpired(true);
+                clearInterval(intervalID);
             }
             
             previousTimeBetweenDatesInSeconds.current = timeBetweenDatesInSeconds
@@ -72,9 +82,9 @@ const CountDown = () => {
         
         //cleanup function
         return () => clearInterval(intervalID)
-    }, [countToDate]);
+    }, [countToDate, flipAllCards]);
     
-    const flipAllCards = (timeBetweenDates) => {
+    function flipAllCards(timeBetweenDates) {
         //timeBetweenDates is in seconds
 
         const seconds = timeBetweenDates % 60;//the exact remain seconds
