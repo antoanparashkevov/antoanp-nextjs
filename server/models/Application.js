@@ -12,6 +12,10 @@ const applicationSchema = new Schema({
     },
     message: {
         type: String,
+    },
+    e: {
+        type: Boolean,
+        required: true
     }
 });
 
