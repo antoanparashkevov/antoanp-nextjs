@@ -107,7 +107,7 @@ const SkillsSection = () => {
                         :
                         <div className={ styles['skills_section_main_desc_para_time_expired'] }>
                             <p className={ styles['skills_section_main_desc_para'] }>
-                                But you still have a <span>chance</span> to get the bonuses if you contact me now
+                                But don’t worry, you still have a <span>chance</span> to get the bonuses if you contact me now
                             </p>
                             <FilledButton
                                 onClick={ HandleContactClick }
