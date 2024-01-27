@@ -212,15 +212,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         box-shadow: theme('boxShadow.xl');
     }
 
-    .flex-center {
-        @apply flex justify-center items-center;
-    }
-
-    //ellipsis
-    .ellipsis {
-        @apply overflow-hidden text-ellipsis whitespace-nowrap;
-    }
-
     //validation
     .invalid {
         & > p { @apply font-bold text-red-500; }
@@ -278,6 +269,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 @layer utilities {
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    //ellipsis
+    .ellipsis {
+        @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    }
 
     .animation-timeline-scroll {
       animation-timeline: scroll();
