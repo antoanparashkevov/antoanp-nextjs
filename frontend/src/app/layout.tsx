@@ -25,15 +25,15 @@ export default function RootLayout({
   
   return (
     <html lang="en" className={`${source_sans_3.variable} font-sans`}>
-      <body className='container min-w-[360px] w-full min-h-screen flex flex-col text-main text-base'>
-        <header className="flex w-full min-h-[130px] mb-1">
+      <body className='min-w-[360px] w-full min-h-screen flex flex-col text-main text-base'>
+        <header className="container flex w-full min-h-[130px] mb-1">
           <TheHeader />
         </header>
-        <main>
+        <main className='container flex flex-col flex-grow justify-start items-center'>
           {children}
         </main>
-        <footer>
-
+        <footer className='min-h-[90px] flex items-end'>
+          <span className='block w-full h-1 bg-blue-600'></span>
         </footer>
       </body>
     </html>
