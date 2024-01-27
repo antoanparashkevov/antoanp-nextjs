@@ -1,0 +1,117 @@
+/* Global CSS file (must be imported in the Root Layout  */
+
+/* Add the Tailwind CSS layers that Tailwind will use to inject its generated styles and classes to a Global Stylesheet */
+
+/* for things like reset rules or default styles applied to plain HTML elements */
+@tailwind base;
+
+/* for class-based styles that you want to be able to override with utilities */
+@tailwind components;
+
+/* for small, single-purpose classes that should always take precedence over any other styles (for ex: .flex) */
+@tailwind utilities;
+
+@layer base {
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    /* using Tailwind's @apply directive to extract repeated utility classes to custom CSS class */
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h4 {
+        @apply text-lg;
+    }
+
+    h5 {
+        @apply text-base;
+    }
+
+    h6 {
+        @apply text-sm;
+    }
+}
+
+@layer components {
+
+    .card {
+        background-color: theme('colors.white');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+        box-shadow: theme('boxShadow.xl');
+    }
+
+    /* validation */
+    .invalid {
+        & > p { @apply font-bold text-red-500; }
+
+        input,
+        textarea {
+            border-color: theme('colors.red.500') !important;
+        }
+    }
+
+    /* Container layout system which is Mobile-first */
+    .container,
+    .container-fluid,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        @apply w-full mx-auto px-3
+    }
+
+    @media screen and (min-width: theme('screens.sm')) {
+        .container,
+        .container-sm {
+            max-width: calc(theme('screens.sm') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.md')) {
+        .container,
+        .container-sm,
+        .container-md {
+            max-width: calc(theme('screens.md') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.lg')) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg {
+            max-width: calc(theme('screens.lg') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.xl')) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl {
+            max-width: calc(theme('screens.xl') - 30px);
+        }
+    }
+}
+
+@layer utilities {
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    /* TODO button */
+}

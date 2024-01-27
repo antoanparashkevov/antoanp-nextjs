@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 } from 'next/font/google';
 
-import '../styles/globals.scss';
+import '../styles/globals.css';
 
 const source_sans_3 = Source_Sans_3({
   weight: ["400", "600", "700"],
@@ -23,7 +23,7 @@ export default function RootLayout({
   
   return (
     <html lang="en" className={`${source_sans_3.variable} font-sans`}>
-      <body className='text-paraText'>{children}</body>
+      <body className='text-paraText min-w-[360px] min-h-screen'>{children}</body>
     </html>
   );
 }
