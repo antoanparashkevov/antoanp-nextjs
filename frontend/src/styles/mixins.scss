@@ -1,0 +1,8 @@
+//SASS Interpolation
+@mixin flexbox($j-content, $a-items, $flex-flow, $flex-grow, $flex-shrink) {
+    display: flex;
+    flex-flow: #{$flex-flow};
+    flex: #{$flex-grow $flex-shrink} auto;
+    justify-content: #{$j-content};
+    align-items: #{$a-items};
+}

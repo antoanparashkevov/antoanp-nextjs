@@ -1,0 +1,39 @@
+//font family
+$default-font-family: 'Inter', arial, helvetica, sans-serif;
+$secondary-font-family: 'Raleway', arial, helvetica, sans-serif;
+
+//fonts
+$html-font-size: 16px;
+$body-font-size: 12px !default;
+$font-weight-light: 300;
+$font-weight-regular: 500;
+$font-weight-bold: 700 !default;
+$font-size-small: 12px;
+$font-size-normal: 15px;
+$font-size-bigger: 17px !default;
+$font-size-biggest: 22px !default;
+$line-height-normal: 25px;
+$line-height-bigger: 27px;
+$line-height-biggest: 32px;
+$font-style: normal;
+$default-letter-spacing: 0.5px;
+
+//colors
+$main-text-color: #2E3E5C;
+$secondary-text-color: #9FA5C0;
+$outline: #D0DBEA;
+$form: #F4F5F7;
+$primary-green: #1FCC79;
+$secondary-red: #FF6464;
+$black: #000;
+$grey: #424242;
+$light-grey: #f2f2f2;
+$mid-grey: #bfbfbf;
+$outlet: #a63b00;
+$white: #fff;
+$dark-green: #154c3f;
+
+//borders
+$border-color: #ddd;
+$border-radius: 0.25rem !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;

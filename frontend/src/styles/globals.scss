@@ -1,0 +1,309 @@
+/* Global CSS file (must be imported in the Root Layout  */
+
+//Sass global variables (the @use rule must be written before any other rules)
+@use 'variables' with (
+    $body-font-size: 15px
+);
+
+/* Add the Tailwind CSS layers that Tailwind will use to inject its generated styles and classes to a Global Stylesheet */
+@tailwind base;//for things like reset rules or default styles applied to plain HTML elements
+@tailwind components;//for class-based styles that you want to be able to override with utilities
+@tailwind utilities;//for small, single-purpose classes that should always take precedence over any other styles (for ex: .flex)
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    IMPORTANT NOTE: Every css rule is defined with rem unit
+    REM unit is relative to the font size of the html tag, not the body tag.
+    If the font size of the html is 15px, then 1 rem will be 15px.
+ */
+html {
+    font-size: variables.$html-font-size;
+
+    /* Set core root defaults */
+    &:focus-within {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    font-size: variables.$body-font-size;
+    color: variables.$main-text-color;
+    min-width: 360px;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*
+    IMPORTANT NOTE: If you plan to animate an image, make sure you've added the .animate class
+*/
+
+.animate_fade-in {
+    animation: fade-in linear;
+
+    /*
+        Notes about the way we animate with fade-in
+        1. view() - looks when an element is inside of the viewport. 
+            - Accepts either one argument that combines top offet and bottom offset
+            - Or two separate arguments: the first one is for the top offset, the second one is for the bottom offset
+        2. animation-range - combines both properties: animation-range-start and animation-range-end
+            - animation-range-start - Accepts either an offset in pixels or cover/contain. For ex. cover means the animation will start when an element becomes visible in the viewport
+            - animation-range-end - Accepts either an offset in pixels or cover/contain. For ex. contain means the animation will end when the image is entirely visible in the viewport
+    */
+    // animation-timeline: view(10px 10px);//look when it's inside of the viewport. First arg - top offset, second arg - bottom offset
+    animation-timeline: view();
+
+    // animation-range-start: cover;//the animation will start when the image becomes visible on the viewport
+    // animation-range-end: contain;//the animation will end when the image is entirely visible on the viewport
+    animation-range: entry;//combines both properties above
+}
+
+.animate_fade-out {
+
+    /*
+        Notes about the way we animte with fade out
+        The animation will start as soon as we start exiting the viewport when scrolling.
+        We set 200px offset so the animation will start 200px before we start exiting the viewport.
+    */
+
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -200px;
+}
+
+// global keyframes
+@keyframes fade-in {
+    from {
+        scale: .8;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+//@layer directive to add our own default base styles for specific HTML elements
+@layer base {
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    //using Tailwind's @apply directive to extract repeated utility classes to custom CSS class
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h4 {
+        @apply text-lg;
+    }
+
+    h5 {
+        @apply text-base;
+    }
+
+    h6 {
+        @apply text-sm;
+    }
+}
+
+//@layer directive to add our class-based styles that use Tailwind Utilities
+@layer components {
+    .card {
+        background-color: theme('colors.white');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+        box-shadow: theme('boxShadow.xl');
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    //ellipsis
+    .ellipsis {
+        @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    }
+
+    //validation
+    .invalid {
+        & > p { @apply font-bold text-red-500; }
+
+        input,
+        textarea {
+            border-color: theme('colors.red.500') !important;
+        }
+    }
+
+    //Container layout system (similar to the Bootstrap, but using Tailwind)
+    //MOBILE FIRST
+    .container,
+    .container-fluid,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        @apply w-full mx-auto px-3
+    }
+
+    @media screen and (min-width: theme('screens.sm')) {
+        .container,
+        .container-sm {
+            max-width: calc(theme('screens.sm') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.md')) {
+        .container,
+        .container-sm,
+        .container-md {
+            max-width: calc(theme('screens.md') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.lg')) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg {
+            max-width: calc(theme('screens.lg') - 30px);
+        }
+    }
+
+    @media screen and (min-width: theme('screens.xl')) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl {
+            max-width: calc(theme('screens.xl') - 30px);
+        }
+    }
+}
+
+@layer utilities {
+
+    .animation-timeline-scroll {
+      animation-timeline: scroll();
+    }
+
+    .animation-timeline-scroll-y {
+      animation-timeline: scroll(y);
+    }
+
+    .animation-timeline-scroll-x {
+      animation-timeline: scroll();
+    }
+
+    .scale-property-x {
+      scale: 1 0;
+    }
+
+    .scale-property-y {
+      scale: 0 1;
+    }
+
+    .scale-property-both {
+      scale: 1 1;
+    }
+
+    .btn-primary {
+        @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+}
