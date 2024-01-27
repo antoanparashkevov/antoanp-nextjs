@@ -7,7 +7,7 @@ import colors from "tailwindcss/colors";
 
 //configure Tailwind
 const config: Config = {
-	important: true, //this option lets you control whether Tailwind"s utility classes should be marked with !important
+	important: false, //this option lets you control whether Tailwind"s utility classes should be marked with !important
 	content: [
 		//here we configure the paths to all HTML templates (in our case React Components)
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",

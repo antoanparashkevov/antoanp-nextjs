@@ -23,7 +23,7 @@ export default function RootLayout({
   
   return (
     <html lang="en" className={`${source_sans_3.variable} font-sans`}>
-      <body>{children}</body>
+      <body className='text-paraText'>{children}</body>
     </html>
   );
 }

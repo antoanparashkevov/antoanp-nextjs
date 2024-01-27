@@ -1,9 +1,7 @@
 /* Global CSS file (must be imported in the Root Layout  */
 
 //Sass global variables (the @use rule must be written before any other rules)
-@use 'variables' with (
-    $body-font-size: 15px
-);
+@use 'variables';
 
 /* Add the Tailwind CSS layers that Tailwind will use to inject its generated styles and classes to a Global Stylesheet */
 @tailwind base;//for things like reset rules or default styles applied to plain HTML elements
@@ -60,11 +58,9 @@ ol[role='list'] {
 /* Set core body defaults */
 body {
     font-size: variables.$body-font-size;
-    color: variables.$main-text-color;
     min-width: 360px;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
@@ -303,7 +299,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
       scale: 1 1;
     }
 
-    .btn-primary {
-        @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
-    }
+    //TODO btn
+    // .btn-primary {
+    //     @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    // }
 }
