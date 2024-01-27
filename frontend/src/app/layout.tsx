@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Source_Sans_3 } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+import '../styles/globals.scss';
+
+const source_sans_3 = Source_Sans_3({
+  weight: ["400", "600", "700"],
+  style: "normal",
+  subsets: ["latin", "cyrillic"],
+  variable: '--font-source-sans-3'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +20,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${source_sans_3.variable} font-sans`}>
+      <body>{children}</body>
     </html>
   );
 }

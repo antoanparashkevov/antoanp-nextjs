@@ -19,7 +19,7 @@ const config: Config = {
 	darkMode: "class",
 	theme: {
 		fontFamily: {
-			sans: ["var(--font-inter)"]
+			sans: ["var(--font-source-sans-3)"]
 		},
 		screens: {
 			sm: "500px",
