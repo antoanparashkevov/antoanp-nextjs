@@ -19,27 +19,31 @@
 
     /* using Tailwind's @apply directive to extract repeated utility classes to custom CSS class */
     h1 {
-        @apply text-3xl;
-    }
-
-    h2 {
         @apply text-2xl;
     }
 
-    h3 {
+    h2 {
         @apply text-xl;
     }
 
-    h4 {
+    h3 {
         @apply text-lg;
     }
 
-    h5 {
+    h4 {
         @apply text-base;
+    }
+
+    h5 {
+        @apply text-sm;
     }
 
     h6 {
         @apply text-sm;
+    }
+
+    p {
+        @apply text-base;
     }
 }
 
@@ -50,16 +54,6 @@
         border-radius: theme('borderRadius.lg');
         padding: theme('spacing.6');
         box-shadow: theme('boxShadow.xl');
-    }
-
-    /* validation */
-    .invalid {
-        & > p { @apply font-bold text-red-500; }
-
-        input,
-        textarea {
-            border-color: theme('colors.red.500') !important;
-        }
     }
 
     /* Container layout system which is Mobile-first */
@@ -105,6 +99,8 @@
             max-width: calc(theme('screens.xl') - 30px);
         }
     }
+
+    /* TODO buttons class-based styles */
 }
 
 @layer utilities {
@@ -112,6 +108,4 @@
     .flex-center {
         @apply flex justify-center items-center;
     }
-
-    /* TODO button */
 }
