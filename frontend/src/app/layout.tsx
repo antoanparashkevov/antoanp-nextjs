@@ -3,6 +3,8 @@ import { Source_Sans_3 } from 'next/font/google';
 
 import '../styles/globals.css';
 
+import TheHeader from "@/components/layout/TheHeader";
+
 const source_sans_3 = Source_Sans_3({
   weight: ["400", "600", "700"],
   style: "normal",
@@ -23,7 +25,17 @@ export default function RootLayout({
   
   return (
     <html lang="en" className={`${source_sans_3.variable} font-sans`}>
-      <body className='text-paraText min-w-[360px] min-h-screen text-base'>{children}</body>
+      <body className='container min-w-[360px] w-full min-h-screen flex flex-col text-main text-base'>
+        <header className="flex w-full min-h-[130px] mb-1">
+          <TheHeader />
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+
+        </footer>
+      </body>
     </html>
   );
 }

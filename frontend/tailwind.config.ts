@@ -78,7 +78,7 @@ const config: Config = {
 				"950": "#172a54"
 			},
 			"headerText": "#111827",
-			"paraText": "#4B5563"
+			"main": "#4B5563"
 		},
 		spacing: {
 			px: "1px",
