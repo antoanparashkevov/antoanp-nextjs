@@ -8,8 +8,9 @@ import FeaturesSection from '@/components/sections/FeaturesSection';
 import AboutMeSection from '@/components/sections/AboutMeSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import TicketsSection from '@/components/sections/TicketsSection';
+import ContactSection from '@/components/sections/ContactSection';
 
-import CountContext from '@/store/count-context';
+// import CountContext from '@/store/count-context';
 
 const Home: React.FC = () => {
     // const [isExpired, setIsExpired] = useState(false);
@@ -36,6 +37,7 @@ const Home: React.FC = () => {
             <SeparationLine/>
             <TicketsSection/>
             <SeparationLine/>
+            <ContactSection/>
         </React.Fragment>
         // </CountContext.Provider>
     );

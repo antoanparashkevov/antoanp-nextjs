@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
 				/>
 			</div>
 			<figure className='rounded-[40px] opacity-75 backdrop-blur-lg p-8' style={{"background": "linear-gradient(130deg, #676767 26.91%, rgba(0, 0, 0, 0.00) 100%)"}}>
-                <p className='stars'>5 out of 5</p>
+                <p className='accessibility'>5 out of 5</p>
                 <div className='flex gap-x-1'>
                     <Icon
                         src={StarIcon}
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
                 </figcaption>
 			</figure>
 			<figure className='rounded-[40px] opacity-75 backdrop-blur-lg p-8' style={{"background": "linear-gradient(130deg, #676767 26.91%, rgba(0, 0, 0, 0.00) 100%)"}}>
-                <p className='stars'>5 out of 5</p>
+                <p className='accessibility'>5 out of 5</p>
                 <div className='flex gap-x-1'>
                     <Icon
                         src={StarIcon}
@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
                 </figcaption>
 			</figure>
 			<figure className='rounded-[40px] opacity-75 backdrop-blur-lg p-8' style={{"background": "linear-gradient(130deg, #676767 26.91%, rgba(0, 0, 0, 0.00) 100%)"}}>
-                <p className='stars'>5 out of 5</p>
+                <p className='accessibility'>5 out of 5</p>
                 <div className='flex gap-x-1'>
                     <Icon
                         src={StarIcon}

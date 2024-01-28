@@ -5,10 +5,6 @@ type textAreaProps = {
     name: string,
     placeholder?: string,
     value: string | number,
-    onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void,
-    onBlur: (event: FocusEvent<HTMLTextAreaElement>) => void,
-    rows: number,
-    cols: number,
 }
 
 const TextArea: React.FC<textAreaProps> = ({
@@ -16,10 +12,6 @@ const TextArea: React.FC<textAreaProps> = ({
     name,
     placeholder,
     value,
-    onChange,
-    onBlur,
-    rows,
-cols
 }) => {
     
     return (
@@ -30,12 +22,8 @@ cols
             '
             name={name}
             id={id}
-            cols={cols}
-            rows={rows}
             placeholder={placeholder}
             value={value}
-            onChange={onChange}
-            onBlur={onBlur}
         />
     );
 };

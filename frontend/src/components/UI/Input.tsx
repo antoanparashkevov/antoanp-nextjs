@@ -1,3 +1,5 @@
+"use client";
+
 import Icon from "@/components/UI/Icon";
 import { ChangeEvent, FocusEvent } from "react";
 
@@ -7,7 +9,7 @@ const Input = (
             id: string,
             type: string,
             name: string,
-            placeholder: string,
+            placeholder?: string,
             showRemoveIcon?: boolean,
             inputDisabled?: boolean,
             iconSrc?: string,
@@ -15,14 +17,14 @@ const Input = (
             iconWidth?: number,
             iconHeight?: number,
             enteredValue: string | number,
-            onChangeHandler: (event:ChangeEvent<(HTMLInputElement)>) => void,
+            onChangeHandler?: (event:ChangeEvent<(HTMLInputElement)>) => void,
             onBlurHandler?: (event: FocusEvent<(HTMLInputElement)>) => void,
             reset: () => void
         }
 ) => {
     return (
         <div
-            className='w-80 max-sm:w-60 relative inline-flex justify-start items-center gap-x-2.5 mb-4'
+            className='w-full relative inline-flex justify-start items-center gap-x-2.5 mb-4'
         >
             {iconSrc &&
                 <div className='w-6 h-full absolute left-2 top-0 flex justify-center items-center text-black'>
