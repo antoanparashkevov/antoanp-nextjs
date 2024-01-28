@@ -8,11 +8,12 @@ import HappyImage from '../../../public/images/happy.jpg';
 const HeroSection: React.FC = () => {
     return (
         <section className='flex flex-grow flex-wrap justify-start items-start w-full'>
-            <div className='w-1/2'>
+            <div className='flex flex-col flex-grow justify-start items-center w-1/2'>
                 <h1 className='text-2xl mb-16'>
                     How To <span className='text-orange-500'>“Unstuck”</span> Your Starting Business From Having 0 or FEW Clients To 10x <span className='text-orange-500'>In Less Than 60 Days</span>
                 </h1>
-                <p className='text-lg'>Let&apos;s Fix This Once And For All By Building You An <span className='text-orange-500'>Affordable High-Performing Website</span> That Will Steal Your Competitors&apos; Clients</p>
+                <p className='text-lg mb-8'>Let&apos;s Fix This Once And For All By Building You An <span className='text-orange-500'>Affordable High-Performing Website</span> That Will Steal Your Competitors&apos; Clients</p>
+                <button className='base-btn'>Testimonials</button>
             </div>
             <div className='relative w-1/2 h-[600px]'>
                 <Image 

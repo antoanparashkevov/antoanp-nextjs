@@ -100,7 +100,9 @@
         }
     }
 
-    /* TODO buttons class-based styles */
+    .base-btn {
+        @apply bg-orange-500 text-white text-sm font-bold py-[10px] px-[42px] rounded-[10px] shadow-md;
+    }
 }
 
 @layer utilities {
