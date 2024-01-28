@@ -49,7 +49,7 @@ const config: Config = {
 			pink: colors.pink,
 			rose: colors.rose,
 			white: "#FFFFFF",
-			black: "#000000",
+			black: "#111827",
 			transparent: "transparent",
 			orange: {
 				"50": "#fffcea",

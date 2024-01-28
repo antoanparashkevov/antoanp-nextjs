@@ -14,7 +14,7 @@
 @layer base {
 
     h1, h2, h3, h4, h5, h6 {
-        @apply font-bold;
+        @apply font-bold text-black;
     }
 
     /* using Tailwind's @apply directive to extract repeated utility classes to custom CSS class */

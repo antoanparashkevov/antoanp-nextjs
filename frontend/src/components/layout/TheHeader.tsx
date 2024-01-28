@@ -6,8 +6,8 @@ import ArrowIcon from '../../../public/icons/arrow.svg';
 const TheHeader: React.FC = () => {
 
     return (
-        <nav className='flex justify-between items-center w-full min-h-full text-orange-500'>
-            <h3 className='cursor-pointer'>AntoanP</h3>
+        <nav className='flex justify-between items-center w-full min-h-full'>
+            <h3 className='cursor-pointer text-orange-500'>AntoanP</h3>
             <ul role='list'>
                 <li>
                     <Link href='/' className='flex gap-x-1 text-sm font-bold text-orange-500'>
