@@ -1,20 +1,11 @@
 import React from "react";
 
-type separationLineProps = {
-    maxWidth?: string,
-    vertical?: boolean,
-    className?: string
-}
-
-const SeparationLine: React.FC<separationLineProps> = ({maxWidth, vertical, className}) => {
+const SeparationLine: React.FC = () => {
 
     return (
         <span
             className={`
-                block bg-[#BFBFBF] my-8 rounded
-                ${maxWidth ? `max-w-[${maxWidth}px]` : ""}
-                ${vertical ? "w-[3px] h-full" : "w-full h-[3px]"}
-                ${className}
+                block bg-main my-10 w-[85%] h-[1px]
             `}
         />
     );
