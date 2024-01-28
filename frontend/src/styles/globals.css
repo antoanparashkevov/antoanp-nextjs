@@ -103,6 +103,11 @@
     .base-btn {
         @apply bg-orange-500 text-white text-sm font-bold py-[10px] px-[42px] rounded-[10px] shadow-md;
     }
+
+    .stars {
+        clip: rect(0, 0, 0, 0);
+        @apply absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden whitespace-nowrap border-0;
+    }
 }
 
 @layer utilities {
