@@ -1,9 +1,9 @@
 import React from "react";
 
-const Circle: React.FC = () => {
+const Circle: React.FC<{ className?: string }> = ({ className }) => {
 
   return (
-    <span className='inline-block w-[16px] h-[16px] bg-[#dbe4c7] rounded-full'/>
+    <span className={`inline-block w-[10px] h-[10px] bg-main rounded-full ${className || ''}`}/>
   );
 };
 

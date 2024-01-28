@@ -1,0 +1,110 @@
+.count_down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #f2f1ed;
+    font-size: 80px;
+    column-gap: 1em;
+}
+
+.count_down_segment {
+    display: flex;
+    flex-direction: column;
+}
+
+.count_down_segment span {
+    font-size: 16px;
+}
+
+.count_down_flip_cards {
+    display: flex;
+    column-gap: .1em;
+}
+
+.flip_card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    color: #DE4848;
+    width: 85px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 50%);
+}
+
+.top,
+.bottom,
+.top_flip,
+.bottom_flip {
+    height: .75em;/*half of the parent, half, because we have .25em of padding!*/
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+}
+
+.top,
+.top_flip {
+    background-color: #F7F7F7;
+    border-top-left-radius: .10em;
+    border-top-right-radius: .10em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.bottom_flip {
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    border-bottom-left-radius: .10em;
+    border-bottom-right-radius: .10em;
+}
+
+.top_flip,
+.bottom_flip {
+    position: absolute;
+    width: 100%;
+}
+
+.top_flip {
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+}
+
+@keyframes flip-top {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.bottom_flip {
+    bottom: 0;
+    animation: flip-bottom 250ms ease-out 250ms;/*delay 250ms to wait for the top_flip to finish*/
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+    100% {
+        transform: rotateX(0deg)
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .count_down {
+        font-size: 65px;
+    }
+    
+    .flip_card {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .count_down {
+        font-size: 35px;
+    }
+    
+    .flip_card {
+        width: 40px;
+    }
+}
