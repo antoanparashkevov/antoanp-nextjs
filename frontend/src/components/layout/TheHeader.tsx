@@ -8,7 +8,7 @@ const TheHeader: React.FC = () => {
             <h3 className='cursor-pointer text-orange-500'>AntoanP</h3>
             <ul role='list'>
                 <li>
-                    <ActionButton className='text-orange-500'>Go to prices</ActionButton>
+                    <ActionButton className='text-orange-500' href='#prices'>Go to prices</ActionButton>
                 </li>
             </ul>
         </nav>

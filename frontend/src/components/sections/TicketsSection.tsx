@@ -7,7 +7,7 @@ import MoneyBack from '../../../public/images/money_back.png';
 
 const TicketsSection: React.FC = () => {
 	return (
-		<section className="flex flex-col justify-start items-center w-full">
+		<section className="flex flex-col justify-start items-center w-full" id='prices'>
 			<div className="flex flex-col justify-start items-center gap-y-16">
 				<h3 className="text-xl">But WAIT that&apos;s not everything…</h3>
 				<p className="text-lg text-black w-1/2">
