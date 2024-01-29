@@ -24,20 +24,20 @@ const Home: React.FC = () => {
         // <CountContext.Provider value={countCtx}>
         <React.Fragment>
             <HeroSection />
-            <SeparationLine />
-            <IntroductionSection/>
-            <SeparationLine/>
-            <BenefitsSection/>
-            <SeparationLine/>
-            <AboutMeSection/>
-            <SeparationLine/>
-            <FeaturesSection/>
-            <SeparationLine/>
-            <TestimonialsSection/>
-            <SeparationLine/>
-            <TicketsSection/>
-            <SeparationLine/>
-            <ContactSection/>
+            {/* <SeparationLine /> */}
+            {/* <IntroductionSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <BenefitsSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <AboutMeSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <FeaturesSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <TestimonialsSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <TicketsSection/> */}
+            {/* <SeparationLine/> */}
+            {/* <ContactSection/> */}
         </React.Fragment>
         // </CountContext.Provider>
     );
