@@ -6,7 +6,7 @@ import Icon from '../UI/Icon';
 
 const TestimonialsSection = () => {
 	return (
-		<section className="relative grid grid-cols-1 justify-center items-center w-full h-full py-20 px-10 gap-8 lg:grid-cols-3 lg:py-40 lg:px-10 lg:gap-12">
+		<section id='testimonials' className="relative grid grid-cols-1 justify-center items-center w-full h-full py-20 px-10 gap-8 lg:grid-cols-3 lg:py-40 lg:px-10 lg:gap-12">
 			<div className="absolute inset-0">
 				<Image
 					src={CommunityIcon}
