@@ -4,7 +4,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import styles from './CountDown.module.css';
 
 //context
-import CountContext from "@/store/count-context";
+import CountContext from "@/context/count-context";
 
 
 const CountDown = () => {

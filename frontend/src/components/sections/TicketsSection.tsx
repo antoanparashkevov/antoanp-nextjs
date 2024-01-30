@@ -5,6 +5,9 @@ import Ticket from "../UI/Ticket";
 
 import MoneyBack from "../../../public/images/money_back.png";
 
+import { ticket, tickets } from "@/data/tickets";
+import ActionButton from "../UI/ActionButton";
+
 const TicketsSection: React.FC = () => {
 	return (
 		<section id="prices" className="w-full">
@@ -19,16 +22,22 @@ const TicketsSection: React.FC = () => {
 				</p>
 				<h2 className="text-[45px]">Plans</h2>
 				<CountDown />
-				<p className="text-black">
+				<p className="text-black underline">
 					<strong>No additional</strong> and <strong>hidden fees</strong> - pay
 					once and get full access to your website
 				</p>
 			</div>
 			<div className="grid grid-cols-1 mt-4 gap-8 lg:grid-cols-3">
-				<Ticket />
-				<Ticket />
-				<Ticket />
+				{ tickets.map((ticket: ticket) => {
+					return (
+						<Ticket
+							key={ticket.id}
+							ticket={ticket}
+						/>
+					)
+				})}
 			</div>
+			<ActionButton href='#contact' className='text-orange-500 justify-center mt-4'>Send message</ActionButton>
 			<div className="lg:flex lg:gap-x-3 lg:justify-between lg:items-center mt-10 w-full">
 				<h2 className="font-semibold max-w-[33rem] w-full">
 					And of course, if you are not satisfied with ANY of my services, you

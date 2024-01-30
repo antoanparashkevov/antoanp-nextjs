@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useContext } from 'react';
 
 import Circle from './Circle';
 import Icon from './Icon';
@@ -6,40 +8,84 @@ import Icon from './Icon';
 import MarkIcon from '../../../public/icons/mark.svg';
 import DocumentIcon from '../../../public/icons/document.svg';
 
-const Ticket: React.FC = () => {
+import { ticket } from '@/data/tickets';
+import { TicketContext } from '@/context/ticket-context';
+
+type ticketProps = {
+	ticket: ticket,
+}
+
+const Ticket: React.FC<ticketProps> = ({ ticket }) => {
+	const ticketCtx = useContext(TicketContext);
+
+	const activateTicket = (): void => {
+		ticketCtx.updateTicket(ticket.code);
+	}
+
 	return (
-		<div className="flex flex-col justify-start items-start gap-[25px] p-8 rounded-[1.5rem] border border-solid border-main">
+		<div
+			className={`flex flex-col justify-start items-start gap-[25px] p-8 rounded-[1.5rem] border border-solid ${
+				ticketCtx.activeTicket === ticket.code
+					? "border-blue-600"
+					: "border-main"
+			}`}>
 			<div className="flex gap-x-[2px]">
-				<Circle />
-				<h2>Basic</h2>
+				<Circle
+					className={
+						ticketCtx.activeTicket === ticket.code ? "!bg-blue-600" : "bg-main"
+					}
+				/>
+				<h2
+					className={
+						ticketCtx.activeTicket === ticket.code
+							? "text-blue-600"
+							: "text-black"
+					}>
+					{ticket.name}
+				</h2>
 			</div>
-			<p>Build a web application. Front End or Backend.</p>
+			<p>{ticket.intro}</p>
 			<div className="flex items-end h-[64px]">
 				<p className="relative flex items-baseline">
 					<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[100px] h-[3px] bg-black" />
-					<span className="text-[36px] font-extralight">$150</span>
+					<span className="text-[36px] font-extralight">
+						${ticket.price.defaultPrice}
+					</span>
 					<span className="text-[18px] font-semibold">/once</span>
 				</p>
 				<p className="flex self-start items-baseline">
-					<span className="text-[36px] text-red-800 font-bold">$100</span>
+					<span className="text-[36px] text-red-800 font-bold">
+						${ticket.price.discountedPrice}
+					</span>
 					<span className="text-[18px] font-semibold">/once</span>
 				</p>
 			</div>
 			<button
-				className="
-                    self-center cursor-pointer py-2.5 px-20 border border-solid border-main text-sm text-blue-600 font-bold
-                ">
+				onClick={activateTicket}
+				className={`
+                    self-center cursor-pointer py-2.5 px-20 border border-solid rounded-1 border-main text-sm font-bold
+					focus:shadow-lg
+					${
+						ticketCtx.activeTicket === ticket.code
+							? "bg-blue-600 text-white hover:bg-blue-700 border-none"
+							: "bg-white text-blue-600 hover:bg-slate-100"
+					}
+                `}>
 				Claim the offer
 			</button>
 			<ul role="list" className="flex flex-col gap-y-[25px] w-full">
-				<li className="flex items-center text-sm text-main">
-					<Icon
-						src={MarkIcon}
-						alt="Mark Icon"
-						className="text-orange-500 mr-1"
-					/>
-					Up to 2 pages
-				</li>
+				{ticket.features.map((feature: string, index: number) => {
+					return (
+						<li key={index} className="flex items-center text-sm text-main">
+							<Icon
+								src={MarkIcon}
+								alt="Mark Icon"
+								className="text-orange-500 mr-1"
+							/>
+							{feature}
+						</li>
+					);
+				})}
 				<li className="flex items-center text-sm text-main">
 					<Icon
 						src={DocumentIcon}
@@ -48,9 +94,13 @@ const Ticket: React.FC = () => {
 					/>
 					<p className="relative flex items-end text-sm h-8">
 						<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[2.5rem] h-[3px] bg-black" />
-						<span className="font-extralight">+$75&nbsp;</span>
+						<span className="font-extralight">
+							+{ticket.pricePerPage.defaultPrice}&nbsp;
+						</span>
 						for each additional page
-						<span className="absolute top-0 left-3 text-red-800 font-bold">$50</span>
+						<span className="absolute top-0 left-3 text-red-800 font-bold">
+							{ticket.pricePerPage.discountedPrice}
+						</span>
 					</p>
 				</li>
 			</ul>

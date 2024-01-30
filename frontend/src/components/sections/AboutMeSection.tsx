@@ -10,10 +10,10 @@ const AboutMeSection: React.FC = () => {
     return (
 			<section className="lg:flex lg:gap-x-8 lg:items-center w-full">
 				<div className="lg:flex-shrink-0 max-w-[30rem] w-full">
-					<h2>A little about me</h2>
+					<h2 className='mb-4'>A little about me</h2>
 					<p>
 						Graduated from
-						<span className="text-orange-500"> The №1 Software University in Bulgaria</span>.
+						<span className="text-orange-500"> The #1 Software University in Bulgaria</span>.
 						<br />
 						During my studies there, I had the amazing opportunity to learn from
 						<span className="text-orange-500"> top experts and professors </span>

@@ -21,10 +21,8 @@ const HeroSection: React.FC = () => {
 				</h1>
 
 				<p className="text-lg mb-8">
-					Let&apos;s Fix This Once And For All By Building You An{" "}
-					<span className="text-orange-500">
-						Affordable High-Performing Website
-					</span>{" "}
+					Let&apos;s Fix This Once And For All By Building You An
+					<span className="text-orange-500"> Affordable High-Performing Website </span>
 					That Will Steal Your Competitors&apos; Clients
 				</p>
 

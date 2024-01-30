@@ -10,37 +10,30 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import TicketsSection from '@/components/sections/TicketsSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-// import CountContext from '@/store/count-context';
+// import CountContext from '@/context/count-context';
+import { TicketContextProvider } from '@/context/ticket-context';
 
 const Home: React.FC = () => {
-    // const [isExpired, setIsExpired] = useState(false);
-    
-    const countCtx = { 
-        isExpired: false,
-        setIsExpired: (value: boolean): void => {}
-    };
 
 	return (
-        // <CountContext.Provider value={countCtx}>
-        <React.Fragment>
-            <HeroSection />
-            <SeparationLine />
-            <IntroductionSection/>
-            <SeparationLine/>
-            <BenefitsSection/>
-            <SeparationLine/>
-            <AboutMeSection/>
-            <SeparationLine/>
-            <FeaturesSection/>
-            <SeparationLine/>
-            <TestimonialsSection/>
-            <SeparationLine/>
-            <TicketsSection/>
-            <SeparationLine/>
-            <ContactSection/>
-        </React.Fragment>
-        // </CountContext.Provider>
-    );
+		<TicketContextProvider>
+			<HeroSection />
+			<SeparationLine />
+			<IntroductionSection />
+			<SeparationLine />
+			<BenefitsSection />
+			<SeparationLine />
+			<AboutMeSection />
+			<SeparationLine />
+			<FeaturesSection />
+			<SeparationLine />
+			<TestimonialsSection />
+			<SeparationLine />
+			<TicketsSection />
+			<SeparationLine />
+			<ContactSection />
+		</TicketContextProvider>
+	);
 };
 
 export default Home;
