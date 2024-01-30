@@ -9,8 +9,8 @@ const TicketsSection: React.FC = () => {
 	return (
 		<section id="prices" className="w-full">
 			<div className="flex flex-col justify-start items-center gap-y-16">
-				<h3 className="text-xl">But WAIT that&apos;s not everything…</h3>
-				<p className="text-lg text-black w-1/2">
+				<h3 className="text-xl text-center">But WAIT that&apos;s not everything…</h3>
+				<p className="text-lg text-black lg:w-[80%]">
 					Making it this far only shows me/proves you are TRULY serious about
 					10x your clients and for this reason, I will give you a
 					<strong className="inline"> unique/special discount </strong>if you
