@@ -24,7 +24,7 @@ const TicketsSection: React.FC = () => {
 				<Ticket />
 			</div>
 			<div className="flex gap-x-3 items-center mt-10">
-				<h2 className="text-[32px] font-semibold">
+				<h2 className="font-semibold">
 					And of course, if you are not satisfied with ANY of my services, you
 					will get a 100% refund of your money in the blink of an eye.
 				</h2>

@@ -10,7 +10,7 @@ const Ticket: React.FC = () => {
 		<div className="flex flex-col justify-start items-start gap-[25px] p-8 rounded-[1.5rem] border border-solid border-main">
 			<div className="flex gap-x-[2px]">
 				<Circle />
-				<h2 className="text-[32px]">Basic</h2>
+				<h2>Basic</h2>
 			</div>
 			<p>Simple web application. Front End or Backend.</p>
 			<div className='flex gap-x-1 items-end h-[64px]'>

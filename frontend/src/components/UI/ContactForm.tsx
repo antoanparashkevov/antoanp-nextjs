@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
 	return (
 		<section className="grid grid-cols-1 lg:grid-cols-2">
 			<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
-				<h2 className="text-[32px]">Get in touch</h2>
+				<h2>Get in touch</h2>
 				<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12">
 					<div className="flex gap-x-4">
 						<dt>

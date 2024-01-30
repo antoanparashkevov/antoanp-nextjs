@@ -28,9 +28,9 @@ const Home: React.FC = () => {
             <IntroductionSection/>
             <SeparationLine/>
             <BenefitsSection/>
-            {/* <SeparationLine/> */}
-            {/* <AboutMeSection/> */}
-            {/* <SeparationLine/> */}
+            <SeparationLine/>
+            <AboutMeSection/>
+            <SeparationLine/>
             {/* <FeaturesSection/> */}
             {/* <SeparationLine/> */}
             {/* <TestimonialsSection/> */}

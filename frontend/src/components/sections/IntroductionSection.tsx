@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import DiplomaImage from "../../../public/images/diploma.png";
-import PortraitDiplomaImage from "../../../public/images/portrait_diploma_pic.png";
+import PortraitDiplomaImage from "../../../public/images/portrait_diploma_pic_1.png";
 
 import PortraitImage1 from "../../../public/images/portrait_pic_1.jpeg";
 import PortraitImage2 from "../../../public/images/portrait_pic_2.jpg";
