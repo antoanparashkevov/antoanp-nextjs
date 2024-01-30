@@ -35,9 +35,9 @@ const Home: React.FC = () => {
             <SeparationLine/>
             <TestimonialsSection/>
             <SeparationLine/>
-            {/* <TicketsSection/> */}
-            {/* <SeparationLine/> */}
-            {/* <ContactSection/> */}
+            <TicketsSection/>
+            <SeparationLine/>
+            <ContactSection/>
         </React.Fragment>
         // </CountContext.Provider>
     );
