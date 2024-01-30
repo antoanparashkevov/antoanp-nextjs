@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import DiplomaImage from "../../../public/images/diploma.png";
 import PortraitDiplomaImage from "../../../public/images/portrait_diploma_pic_1.png";
@@ -44,7 +45,7 @@ const IntroductionSection: React.FC = () => {
 					website that even your competitors will appreciate how professional
 					and well-ordered it looks.
 				</p>
-				<button className="base-btn">Testimonials</button>
+				<Link href='#testimonials' className="base-btn">Testimonials</Link>
 			</div>
 			<div className="flex gap-8">
 				<div className="w-[11rem] pt-[4rem]">
