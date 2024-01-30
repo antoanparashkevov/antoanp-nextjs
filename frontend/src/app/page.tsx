@@ -26,8 +26,8 @@ const Home: React.FC = () => {
             <HeroSection />
             <SeparationLine />
             <IntroductionSection/>
-            {/* <SeparationLine/> */}
-            {/* <BenefitsSection/> */}
+            <SeparationLine/>
+            <BenefitsSection/>
             {/* <SeparationLine/> */}
             {/* <AboutMeSection/> */}
             {/* <SeparationLine/> */}

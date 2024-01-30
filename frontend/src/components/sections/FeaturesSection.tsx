@@ -5,7 +5,7 @@ import MarkIcon from '../../../public/icons/mark.svg';
 
 const FeaturesSection: React.FC = () => {
 	return (
-		<section className="grid grid-cols-1 lg:grid-cols-3 items-start gap-x-8 gap-y-16">
+		<section id='offers' className="grid grid-cols-1 lg:grid-cols-3 items-start gap-x-8 gap-y-16">
 			<div className="flex flex-col items-start justify-center gap-y-4">
 				<h2 className="text-orange-500 font-bold">
 					Since I am a generous person and want to provide my clients with as
