@@ -1,9 +1,16 @@
 import React from 'react';
+import Image from 'next/image';
+
+import DiplomaImage from '../../../public/images/diploma.png';
+import PortraitDiplomaImage from '../../../public/images/portrait_diploma_pic.png';
+
+import PortraitImage1 from '../../../public/images/portrait_pic_1.jpeg';
+import PortraitImage2 from '../../../public/images/portrait_pic_2.jpg';
 
 const IntroductionSection: React.FC = () => {
 	return (
-		<section className="flex flex-wrap justify-start items-start w-full">
-			<div className='flex flex-col flex-grow justify-start items-center w-1/2'>
+		<section className="lg:flex lg:gap-x-14 lg:items-center w-full">
+			<div className='flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full'>
 				<p className='my-8'>
 					Right now you might think:
 					<br />
@@ -37,7 +44,36 @@ const IntroductionSection: React.FC = () => {
 				</p>
 				<button className="base-btn">Testimonials</button>
 			</div>
-            <div className='w-1/2 h-[600px]'></div>
+            <div className='flex gap-8'>
+				<div className='w-[11rem] pt-[4rem]'>
+					<Image
+						src={PortraitImage1}
+						alt="Portrait"
+						placeholder='blur'
+						className='rounded-xl'
+					/>
+					<Image
+						src={PortraitImage2}
+						alt="Portrait"
+						placeholder='blur'
+						className='rounded-xl mt-4'
+					/>
+				</div>
+				<div className='w-[11rem] pt-[1rem]'>
+					<Image
+						src={PortraitDiplomaImage}
+						alt="Portrait Diploma Software Engineer"
+						placeholder='blur'
+						className='rounded-xl'
+					/>
+					<Image
+						src={DiplomaImage}
+						alt="Diploma Software Engineer"
+						placeholder='blur'
+						className='rounded-xl mt-4'
+					/>
+				</div>
+			</div>
 		</section>
 	);
 };

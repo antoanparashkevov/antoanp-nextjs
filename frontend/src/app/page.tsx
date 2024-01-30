@@ -24,8 +24,8 @@ const Home: React.FC = () => {
         // <CountContext.Provider value={countCtx}>
         <React.Fragment>
             <HeroSection />
-            {/* <SeparationLine /> */}
-            {/* <IntroductionSection/> */}
+            <SeparationLine />
+            <IntroductionSection/>
             {/* <SeparationLine/> */}
             {/* <BenefitsSection/> */}
             {/* <SeparationLine/> */}
