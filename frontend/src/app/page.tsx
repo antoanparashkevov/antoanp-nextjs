@@ -33,8 +33,8 @@ const Home: React.FC = () => {
             <SeparationLine/>
             <FeaturesSection/>
             <SeparationLine/>
-            {/* <TestimonialsSection/> */}
-            {/* <SeparationLine/> */}
+            <TestimonialsSection/>
+            <SeparationLine/>
             {/* <TicketsSection/> */}
             {/* <SeparationLine/> */}
             {/* <ContactSection/> */}
