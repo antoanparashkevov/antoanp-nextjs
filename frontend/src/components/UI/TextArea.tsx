@@ -4,14 +4,12 @@ type textAreaProps = {
     id: string,
     name: string,
     placeholder?: string,
-    value: string | number,
 }
 
 const TextArea: React.FC<textAreaProps> = ({
     id,
     name,
     placeholder,
-    value,
 }) => {
     
     return (
@@ -23,7 +21,6 @@ const TextArea: React.FC<textAreaProps> = ({
             name={name}
             id={id}
             placeholder={placeholder}
-            value={value}
         />
     );
 };
