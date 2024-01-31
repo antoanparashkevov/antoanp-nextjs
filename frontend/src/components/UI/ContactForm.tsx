@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useContext } from "react";
-import { useFormStatus } from "react-dom";
+import React, { Fragment, useContext } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import Icon from "@/components/UI/Icon";
 
 import EmailIcon from "../../../public/icons/email.svg";
@@ -15,128 +15,156 @@ import PersonIcon from "../../../public/icons/user.svg";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import Circle from "./Circle";
+import Notification from "./Notification";
 
 import { create } from "../../app/actions";
 import { TicketContext } from "@/context/ticket-context";
 
+const initialState = {
+	errors: null,
+	message: '',
+}
+
 const ContactForm: React.FC = () => {
 	const ticketCtx = useContext(TicketContext);
+
 	const { pending } = useFormStatus();
+	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket), initialState);
 
-	const submitForm = create.bind(null, ticketCtx.activeTicket);
-
+	// console.log(pending)
+	// console.log(formState)
+	
 	return (
-		<section id="contact" className="grid grid-cols-1 lg:grid-cols-3">
-			<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
-				<h2>Get in touch</h2>
-				<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12 text-[1rem]">
-					<div className="flex gap-x-4">
-						<dt>
-							<p className="accessibility">Email</p>
-							<Icon src={EmailIcon} alt="Email icon" />
-						</dt>
-						<dd className="font-sm font-bold text-main">
-							<a href="mailto:antoanparashkevov@gmail.com">
-								antoanparashkevov@gmail.com
-							</a>
-						</dd>
-					</div>
-					<div className="flex gap-x-4">
-						<dt>
-							<p className="accessibility">Linkedin</p>
-							<Icon src={LinkedinIcon} alt="LinkedIn icon" />
-						</dt>
-						<dd className="font-sm font-bold text-main">Antoan Parashkevov</dd>
-					</div>
-					<div className="flex gap-x-4">
-						<dt>
-							<p className="accessibility">Instagram</p>
-							<Icon src={InstagramIcon} alt="Instagram icon" />
-						</dt>
-						<dd className="font-sm font-bold text-main">antoanp15</dd>
-					</div>
-					<div className="flex gap-x-4">
-						<dt>
-							<p className="accessibility">TikTok</p>
-							<Icon src={TikTokIcon} alt="TikTok icon" />
-						</dt>
-						<dd className="font-sm font-bold text-main">antoanp15</dd>
-					</div>
-					<div className="flex gap-x-4">
-						<dt>
-							<p className="accessibility">Github</p>
-							<Icon src={GithubIcon} alt="Github icon" />
-						</dt>
-						<dd className="font-sm font-bold text-main">@antoanparashkevov</dd>
-					</div>
-				</dl>
-			</div>
-			<form
-				action={submitForm}
-				className="grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-x-8 gap-y-6 py-20 px-6 lg:py-48 lg:px-8"
-			>
-				<p className="col-span-2 flex text-sm text-black font-bold">
-					Picked plan:&nbsp;
-					<span className="inline-flex gap-x-[1px] text-blue-600">
-						<Circle className="bg-blue-600" />
-						{ticketCtx.activeTicket.charAt(0).toUpperCase() +
-							ticketCtx.activeTicket.slice(1)}
-					</span>
-				</p>
-				<div className="flex flex-col justify-start items-start gap-y-[10px]">
-					<label htmlFor="firstName" className="block text-sm font-bold">
-						First name
-					</label>
-					<Input
-						id="firstName"
-						type="text"
-						name="firstName"
-						showRemoveIcon
-						iconSrc={PersonIcon}
-						iconAlt="Person Icon"
-					/>
+		<Fragment>
+			{formState.errors && (
+				<Notification notificationStatus="error">
+					{formState.errors.firstName}
+				</Notification>
+			)}
+			{formState.message && (
+				<Notification notificationStatus="success">
+					{formState.message}
+				</Notification>
+			)}
+			<section id="contact" className="grid grid-cols-1 lg:grid-cols-3">
+				<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
+					<h2>Get in touch</h2>
+					<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12 text-[1rem]">
+						<div className="flex gap-x-4">
+							<dt>
+								<p className="accessibility">Email</p>
+								<Icon src={EmailIcon} alt="Email icon" />
+							</dt>
+							<dd className="font-sm font-bold text-main">
+								<a href="mailto:antoanparashkevov@gmail.com">
+									antoanparashkevov@gmail.com
+								</a>
+							</dd>
+						</div>
+						<div className="flex gap-x-4">
+							<dt>
+								<p className="accessibility">Linkedin</p>
+								<Icon src={LinkedinIcon} alt="LinkedIn icon" />
+							</dt>
+							<dd className="font-sm font-bold text-main">
+								Antoan Parashkevov
+							</dd>
+						</div>
+						<div className="flex gap-x-4">
+							<dt>
+								<p className="accessibility">Instagram</p>
+								<Icon src={InstagramIcon} alt="Instagram icon" />
+							</dt>
+							<dd className="font-sm font-bold text-main">antoanp15</dd>
+						</div>
+						<div className="flex gap-x-4">
+							<dt>
+								<p className="accessibility">TikTok</p>
+								<Icon src={TikTokIcon} alt="TikTok icon" />
+							</dt>
+							<dd className="font-sm font-bold text-main">antoanp15</dd>
+						</div>
+						<div className="flex gap-x-4">
+							<dt>
+								<p className="accessibility">Github</p>
+								<Icon src={GithubIcon} alt="Github icon" />
+							</dt>
+							<dd className="font-sm font-bold text-main">
+								@antoanparashkevov
+							</dd>
+						</div>
+					</dl>
 				</div>
-				<div className="flex flex-col justify-start items-start gap-y-[10px]">
-					<label htmlFor="lastName" className="block text-sm font-bold">
-						Last name
-					</label>
-					<Input
-						id="lastName"
-						type="text"
-						name="lastName"
-						showRemoveIcon
-						iconSrc={PersonIcon}
-						iconAlt="Person Icon"
-					/>
-				</div>
-				<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
-					<label htmlFor="email" className="block text-sm font-bold mb-[10px]">
-						Email
-					</label>
-					<Input
-						id="email"
-						type="email"
-						name="email"
-						showRemoveIcon
-						iconSrc={PersonIcon}
-						iconAlt="Person Icon"
-					/>
-				</div>
-				<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
-					<label
-						htmlFor="message"
-						className="block text-sm font-bold mb-[10px]">
-						Message
-					</label>
-					<TextArea id="message" name="message" />
-				</div>
-				<div className="flex justify-end md:col-span-2">
-					<button className="base-btn" type="submit" aria-disabled={pending}>
-						Send a message
-					</button>
-				</div>
-			</form>
-		</section>
+				<form
+					action={formAction}
+					className="grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-x-8 gap-y-6 py-20 px-6 lg:py-48 lg:px-8">
+					<p className="col-span-2 flex text-sm text-black font-bold">
+						Picked plan:&nbsp;
+						<span className="inline-flex gap-x-[1px] text-blue-600">
+							<Circle className="bg-blue-600" />
+							{ticketCtx.activeTicket.charAt(0).toUpperCase() +
+								ticketCtx.activeTicket.slice(1)}
+						</span>
+					</p>
+					<div className="flex flex-col justify-start items-start gap-y-[10px]">
+						<label htmlFor="firstName" className="block text-sm font-bold">
+							First name
+						</label>
+						<Input
+							id="firstName"
+							type="text"
+							name="firstName"
+							showRemoveIcon
+							iconSrc={PersonIcon}
+							iconAlt="Person Icon"
+						/>
+					</div>
+					<div className="flex flex-col justify-start items-start gap-y-[10px]">
+						<label htmlFor="lastName" className="block text-sm font-bold">
+							Last name
+						</label>
+						<Input
+							id="lastName"
+							type="text"
+							required
+							name="lastName"
+							showRemoveIcon
+							iconSrc={PersonIcon}
+							iconAlt="Person Icon"
+						/>
+					</div>
+					<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
+						<label
+							htmlFor="email"
+							className="block text-sm font-bold mb-[10px]">
+							Email
+						</label>
+						<Input
+							id="email"
+							type="email"
+							required
+							name="email"
+							showRemoveIcon
+							iconSrc={PersonIcon}
+							iconAlt="Person Icon"
+						/>
+					</div>
+					<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
+						<label
+							htmlFor="message"
+							className="block text-sm font-bold mb-[10px]">
+							Message
+						</label>
+						<TextArea id="message" name="message" />
+					</div>
+					<div className="flex justify-end md:col-span-2">
+						<button className="base-btn" type="submit" aria-disabled={pending}>
+							Send a message
+						</button>
+					</div>
+				</form>
+			</section>
+		</Fragment>
 	);
 };
 

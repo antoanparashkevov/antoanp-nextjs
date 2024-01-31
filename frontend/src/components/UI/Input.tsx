@@ -4,6 +4,7 @@ import React from "react";
 type inputProps = {
 	id: string;
 	type: string;
+	required?: boolean;
 	name: string;
 	placeholder?: string;
 	showRemoveIcon?: boolean;
@@ -18,6 +19,7 @@ const Input: React.FC<inputProps> = ({
 	id,
 	type,
 	name,
+	required,
 	placeholder,
 	inputDisabled,
 	iconAlt,
@@ -48,6 +50,7 @@ const Input: React.FC<inputProps> = ({
 				id={id}
 				type={type}
 				name={name}
+				required={required || false}
 				placeholder={placeholder}
 				disabled={inputDisabled}
 			/>

@@ -17,20 +17,20 @@ const Home: React.FC = () => {
 
 	return (
 		<TicketContextProvider>
-			<HeroSection />
-			<SeparationLine />
-			<IntroductionSection />
-			<SeparationLine />
-			<BenefitsSection />
-			<SeparationLine />
-			<AboutMeSection />
-			<SeparationLine />
-			<FeaturesSection />
-			<SeparationLine />
-			<TestimonialsSection />
-			<SeparationLine />
-			<TicketsSection />
-			<SeparationLine />
+			{/* <HeroSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <IntroductionSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <BenefitsSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <AboutMeSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <FeaturesSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <TestimonialsSection /> */}
+			{/* <SeparationLine /> */}
+			{/* <TicketsSection /> */}
+			{/* <SeparationLine /> */}
 			<ContactSection />
 		</TicketContextProvider>
 	);
