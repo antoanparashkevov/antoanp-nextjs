@@ -31,6 +31,7 @@ const config: Config = {
 		colors: {
 			slate: colors.slate,
 			gray: colors.gray,
+			green: colors.green,
 			zinc: colors.zinc,
 			neutral: colors.neutral,
 			stone: colors.stone,
