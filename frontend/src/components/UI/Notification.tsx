@@ -1,77 +1,80 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { Fragment, ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { setTimeout } from "timers";
 
-const createWrapperElement = (wrapperId: string) => {
-
-	if( !document ) {
-		return null;
-	}
-
-	const wrapperElement = document.createElement('div');
-	wrapperElement.setAttribute('id', wrapperId);
-	document.body.appendChild(wrapperElement);
-	return wrapperElement;
-}
-
-type alertProps = {
-	children: React.ReactNode | string;
-	notificationStatus: string;
+type notificationProps = {
+	status: string;
+	timeout?: number;
+	children: ReactNode | string;
 };
 
-const Notification: React.FC<alertProps> = ({ children, notificationStatus }) => {
-	const [isVisible, setIsVisible] = useState<boolean>(true);
-	const [wrapperElement, setWrapperElement] = useState<HTMLElement>();
-
-	useLayoutEffect(() => {
-		let element = document.getElementById('overlay');
-		let systemCreated = false;
-
-		if( !element ) {
-			systemCreated = true;
-			element = createWrapperElement('overlay');
-		}
-
-		setWrapperElement(element!);
-
-		return () => {
-
-			// delete the programatically created element
-			if( systemCreated && element!.parentNode) {
-				element?.parentNode.removeChild(element);
-			}
-		}
-	}, []);
+const NotificationTemplate: React.FC<notificationProps> = ({
+	status,
+	timeout,
+	children
+}): ReactNode | null => {
+	const [show, setShow] = useState<boolean>(true);
 
 	useEffect(() => {
-		const timeoutId = setTimeout(() => {
-			setIsVisible(false);
-		}, 4000);
+		const timeoutID = setTimeout(() => {
+			setShow(false);
+		}, timeout);
 
-		return () => clearTimeout(timeoutId);
-	}, []);
+		return () => clearTimeout(timeoutID);
+	}, [timeout]);
 
-	if( !wrapperElement || isVisible === false ) {
+	if (!show) {
 		return null;
 	}
 
-	return createPortal(
-		<label>
-			<input type="checkbox" className='hidden' />
+	return (
+		<label htmlFor="popup" className="relative">
+			<input type="checkbox" id="popup" className='absolute opacity-0 w-0 h-0' onChange={() => setShow(false)} />
 			<div className={`
-				${notificationStatus === "success" ? 'bg-green-500' : 'bg-red-600'}
-				fixed right-1/2 top-8 translate-x-1/2 z-50 p-6 rounded-xl pointer
-			`}
+					${status === 'success' ? 'bg-green-600' : 'bg-red-600'}
+					fixed top-8 right-1/2 translate-x-1/2 min-w-[250px] p-8 rounded-xl z-100 cursor-pointer text-center
+				`}
 			>
-				<span className='my-0 mx-auto text-white font-bold text-base'>
+				<span className='text-base text-white font-bold'>
 					{children}
 				</span>
 			</div>
-		</label>,
-		wrapperElement
+		</label>
 	);
+};
+
+const Notification: React.FC<notificationProps> = ({
+	status,
+	timeout = 5000,
+	children
+}): ReactNode | null => {
+	const [mounted, setMounted] = useState<boolean>(false);
+
+	useEffect(() => {
+		//since useEffect is called only on the client side and only when the component is mounted
+		setMounted(true);
+
+		//cleanup function
+		return () => setMounted(false);
+	}, []);
+
+	let overlay;
+
+	if (typeof document !== "undefined") {
+		overlay = document.querySelector("#overlay");
+	}
+
+	return mounted && overlay ? (
+		<Fragment>
+			{createPortal(
+				<NotificationTemplate status={status} timeout={timeout}>
+					{children}
+				</NotificationTemplate>,
+				overlay
+			)}
+		</Fragment>
+	) : null;
 };
 
 export default Notification;
