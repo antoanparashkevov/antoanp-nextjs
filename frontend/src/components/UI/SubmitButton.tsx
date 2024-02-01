@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Fragment } from "react";
 import { useFormStatus } from "react-dom";
 
-import Notification from "./Notification";
+const Notification = dynamic(() => import('./Notification'));
 
 import type { ZodIssue } from "zod";
 import type { initialStateType } from "./ContactForm";

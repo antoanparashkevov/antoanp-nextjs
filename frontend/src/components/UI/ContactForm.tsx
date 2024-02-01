@@ -9,7 +9,7 @@ import PersonIcon from "../../../public/icons/user.svg";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import Circle from "./Circle";
-import SubmitButton from "./SubmitButton";
+const SubmitButton = dynamic(() => import("./SubmitButton"));
 
 import { create } from "../../app/actions";
 import { TicketContext } from "@/context/ticket-context";
@@ -18,6 +18,7 @@ import { CountContext } from "@/context/count-context";
 import type { ZodIssue } from "zod";
 
 import { social, socials } from "@/data/social";
+import dynamic from "next/dynamic";
 
 export type initialStateType = {
 	message: string,
@@ -41,8 +42,7 @@ const ContactForm: React.FC = () => {
 				<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
 					<h2>Get in touch</h2>
 					<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12 text-[1rem]">
-						{ socials.map((social: social) => {
-
+						{socials.map((social: social) => {
 							return (
 								<div className="flex gap-x-4" key={social.id}>
 									<dt>
@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
 										<Icon src={social.icon} alt={`${social.name} icon`} />
 									</dt>
 									<dd className="font-sm font-bold text-main">
-										<a target='_blank' href={social.link}>
+										<a target="_blank" href={social.link}>
 											{social.name}
 										</a>
 									</dd>
@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
 				<form
 					action={formAction}
 					className="grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-x-8 gap-y-6 py-20 px-6 lg:py-48 lg:px-8">
-					<p className="col-span-2 flex text-sm text-black font-bold">
+					<p className="flex text-sm text-black font-bold md:col-span-2">
 						Picked plan:&nbsp;
 						<span className="inline-flex gap-x-[1px] text-blue-600">
 							<Circle className="bg-blue-600" />
@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
 						<TextArea id="message" name="message" />
 					</div>
 					<div className="flex justify-end md:col-span-2">
-						<SubmitButton formState={formState}/>
+						<SubmitButton formState={formState} />
 					</div>
 				</form>
 			</section>
