@@ -1,6 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import YoanaImage from '../../public/images/person.jpg';
+import SlaviImage from '../../public/images/Slavi.jpg';
 import NikiImage from '../../public/images/Niki.jpeg';
 
 export type testimonial = {
@@ -26,14 +27,14 @@ export const testimonials: testimonial[] = [
 		author: "Slavi Dimchev",
 		authorInfo: "Business owner",
 		// projectLink: "https://naves4e.bg",
-		authorImage: YoanaImage
+		authorImage: SlaviImage
 	},
 	{
 		id: 3,
 		quote: `"The website you made for my shed business is unique! I will definitely recommend you!"`,
 		author: "Nikolay Panayotov",
 		authorInfo: "Business owner",
-		// projectLink: "https://itcommunity.vercel.app",
+		projectLink: "https://itcommunity.vercel.app",
 		authorImage: NikiImage
 	}
 ];
