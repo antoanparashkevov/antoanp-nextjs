@@ -21,7 +21,7 @@ const TicketsSection: React.FC = () => {
 					hours
 				</p>
 				<h2 className="text-[45px]">Plans</h2>
-				<CountDown />
+				<CountDown hours={24} />
 				<p className="text-black underline">
 					<strong>No additional</strong> and <strong>hidden fees</strong> - pay
 					once and get full access to your website

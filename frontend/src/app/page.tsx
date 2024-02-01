@@ -21,21 +21,20 @@ const Home: React.FC = () => {
 	return (
 		<TicketContextProvider>
 			<CountContextProvider>
-				{/* <HeroSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <IntroductionSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <BenefitsSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <AboutMeSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <FeaturesSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <TestimonialsSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <TicketsSection /> */}
-				{/* <SeparationLine /> */}
-				{/* <CountDown hours={24} /> */}
+				<HeroSection />
+				<SeparationLine />
+				<IntroductionSection />
+				<SeparationLine />
+				<BenefitsSection />
+				<SeparationLine />
+				<AboutMeSection />
+				<SeparationLine />
+				<FeaturesSection />
+				<SeparationLine />
+				<TestimonialsSection />
+				<SeparationLine />
+				<TicketsSection />
+				<SeparationLine />
 				<ContactSection />
 			</CountContextProvider>
 		</TicketContextProvider>
