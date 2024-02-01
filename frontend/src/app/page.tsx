@@ -12,26 +12,32 @@ import ContactSection from '@/components/sections/ContactSection';
 
 // import CountContext from '@/context/count-context';
 import { TicketContextProvider } from '@/context/ticket-context';
+import { CountContextProvider } from '@/context/count-context';
+
+import CountDown from '@/components/UI/CountDown';
 
 const Home: React.FC = () => {
 
 	return (
 		<TicketContextProvider>
-			{/* <HeroSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <IntroductionSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <BenefitsSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <AboutMeSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <FeaturesSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <TestimonialsSection /> */}
-			{/* <SeparationLine /> */}
-			{/* <TicketsSection /> */}
-			{/* <SeparationLine /> */}
-			<ContactSection />
+			<CountContextProvider>
+				{/* <HeroSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <IntroductionSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <BenefitsSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <AboutMeSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <FeaturesSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <TestimonialsSection /> */}
+				{/* <SeparationLine /> */}
+				{/* <TicketsSection /> */}
+				{/* <SeparationLine /> */}
+				<CountDown hours={24} />
+				{/* <ContactSection /> */}
+			</CountContextProvider>
 		</TicketContextProvider>
 	);
 };
