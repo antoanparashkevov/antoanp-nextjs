@@ -25,13 +25,14 @@ const schema = z.object({
 });
 
 //Server Action - async functions that are executed on the server
-export async function create(ticketCode: string, initialState: any, formData: FormData) {
+export async function create(ticketCode: string, isExpired: boolean, initialState: any, formData: FormData) {
 	const fields: applicationItem = {
 		firstName: formData.get("firstName") as string || '',
 		lastName: formData.get("lastName") as string || '',
 		email: formData.get("email") as string || '',
 		message: formData.get("message") as string || '',
-		ticketCode
+		ticketCode,
+		isExpired
 	}
 
 	const validateFields = schema.safeParse({

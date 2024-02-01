@@ -6,6 +6,7 @@ export type applicationItem = {
     email: string,
     message?: string,
     ticketCode: string,
+    isExpired: boolean
 }
 
 export const create = (item: applicationItem) => {

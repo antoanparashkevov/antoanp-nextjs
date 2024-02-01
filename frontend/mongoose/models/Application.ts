@@ -21,6 +21,10 @@ const applicationSchema = new Schema({
     ticketCode: {
         type: String,
         required: true
+    },
+    isExpired: {
+        type: Boolean,
+        required: true,
     }
 })
 

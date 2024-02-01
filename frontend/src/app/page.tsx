@@ -36,7 +36,7 @@ const Home: React.FC = () => {
 				{/* <TicketsSection /> */}
 				{/* <SeparationLine /> */}
 				<CountDown hours={24} />
-				{/* <ContactSection /> */}
+				<ContactSection />
 			</CountContextProvider>
 		</TicketContextProvider>
 	);

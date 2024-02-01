@@ -9,13 +9,15 @@ import PersonIcon from "../../../public/icons/user.svg";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import Circle from "./Circle";
+import SubmitButton from "./SubmitButton";
 
 import { create } from "../../app/actions";
 import { TicketContext } from "@/context/ticket-context";
-import type { ZodIssue } from "zod";
-import SubmitButton from "./SubmitButton";
-import { social, socials } from "@/data/social";
+import { CountContext } from "@/context/count-context";
 
+import type { ZodIssue } from "zod";
+
+import { social, socials } from "@/data/social";
 
 export type initialStateType = {
 	message: string,
@@ -29,8 +31,9 @@ const initialState: initialStateType = {
 
 const ContactForm: React.FC = () => {
 	const ticketCtx = useContext(TicketContext);
+	const { isExpired } = useContext(CountContext);
 
-	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket), initialState);
+	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket, isExpired), initialState);
 
 	return (
 		<Fragment>
