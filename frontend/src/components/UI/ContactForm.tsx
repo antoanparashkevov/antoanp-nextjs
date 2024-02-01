@@ -4,12 +4,6 @@ import React, { Fragment, useContext } from "react";
 import { useFormState } from "react-dom";
 import Icon from "@/components/UI/Icon";
 
-import EmailIcon from "../../../public/icons/email.svg";
-import LinkedinIcon from "../../../public/icons/linkedin.svg";
-import InstagramIcon from "../../../public/icons/instagram.svg";
-import TikTokIcon from "../../../public/icons/tiktok.svg";
-import GithubIcon from "../../../public/icons/github.svg";
-
 import PersonIcon from "../../../public/icons/user.svg";
 
 import Input from "./Input";
