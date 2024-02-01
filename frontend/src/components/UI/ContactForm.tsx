@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Fragment, useContext } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormState } from "react-dom";
 import Icon from "@/components/UI/Icon";
 
 import EmailIcon from "../../../public/icons/email.svg";
@@ -15,12 +15,19 @@ import PersonIcon from "../../../public/icons/user.svg";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import Circle from "./Circle";
-import Notification from "./Notification";
 
 import { create } from "../../app/actions";
 import { TicketContext } from "@/context/ticket-context";
+import type { ZodIssue } from "zod";
+import SubmitButton from "./SubmitButton";
 
-const initialState = {
+
+export type initialStateType = {
+	message: string,
+	errors: ZodIssue[] | null
+}
+
+const initialState: initialStateType = {
 	errors: null,
 	message: '',
 }
@@ -28,24 +35,10 @@ const initialState = {
 const ContactForm: React.FC = () => {
 	const ticketCtx = useContext(TicketContext);
 
-	const { pending } = useFormStatus();
 	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket), initialState);
 
-	// console.log(pending)
-	// console.log(formState)
-	
 	return (
 		<Fragment>
-			{formState.errors && (
-				<Notification notificationStatus="error">
-					{formState.errors.firstName}
-				</Notification>
-			)}
-			{formState.message && (
-				<Notification notificationStatus="success">
-					{formState.message}
-				</Notification>
-			)}
 			<section id="contact" className="grid grid-cols-1 lg:grid-cols-3">
 				<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
 					<h2>Get in touch</h2>
@@ -114,7 +107,6 @@ const ContactForm: React.FC = () => {
 							id="firstName"
 							type="text"
 							name="firstName"
-							showRemoveIcon
 							iconSrc={PersonIcon}
 							iconAlt="Person Icon"
 						/>
@@ -126,9 +118,7 @@ const ContactForm: React.FC = () => {
 						<Input
 							id="lastName"
 							type="text"
-							required
 							name="lastName"
-							showRemoveIcon
 							iconSrc={PersonIcon}
 							iconAlt="Person Icon"
 						/>
@@ -142,9 +132,7 @@ const ContactForm: React.FC = () => {
 						<Input
 							id="email"
 							type="email"
-							required
 							name="email"
-							showRemoveIcon
 							iconSrc={PersonIcon}
 							iconAlt="Person Icon"
 						/>
@@ -158,9 +146,7 @@ const ContactForm: React.FC = () => {
 						<TextArea id="message" name="message" />
 					</div>
 					<div className="flex justify-end md:col-span-2">
-						<button className="base-btn" type="submit" aria-disabled={pending}>
-							Send a message
-						</button>
+						<SubmitButton formState={formState}/>
 					</div>
 				</form>
 			</section>
