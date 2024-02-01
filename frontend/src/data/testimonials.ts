@@ -31,8 +31,8 @@ export const testimonials: testimonial[] = [
 	},
 	{
 		id: 3,
-		quote: `"The website you made for my shed business is unique! I will definitely recommend you!"`,
-		author: "Nikolay Panayotov",
+		quote: `"I had the pleasure of working with Antoan on our IT Job Board, and the experience was nothing short of exceptional."`,
+		author: "Nikolay Yordanov",
 		authorInfo: "Business owner",
 		projectLink: "https://itcommunity.vercel.app",
 		authorImage: NikiImage
