@@ -20,6 +20,7 @@ import { create } from "../../app/actions";
 import { TicketContext } from "@/context/ticket-context";
 import type { ZodIssue } from "zod";
 import SubmitButton from "./SubmitButton";
+import { social, socials } from "@/data/social";
 
 
 export type initialStateType = {
@@ -43,49 +44,22 @@ const ContactForm: React.FC = () => {
 				<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
 					<h2>Get in touch</h2>
 					<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12 text-[1rem]">
-						<div className="flex gap-x-4">
-							<dt>
-								<p className="accessibility">Email</p>
-								<Icon src={EmailIcon} alt="Email icon" />
-							</dt>
-							<dd className="font-sm font-bold text-main">
-								<a href="mailto:antoanparashkevov@gmail.com">
-									antoanparashkevov@gmail.com
-								</a>
-							</dd>
-						</div>
-						<div className="flex gap-x-4">
-							<dt>
-								<p className="accessibility">Linkedin</p>
-								<Icon src={LinkedinIcon} alt="LinkedIn icon" />
-							</dt>
-							<dd className="font-sm font-bold text-main">
-								Antoan Parashkevov
-							</dd>
-						</div>
-						<div className="flex gap-x-4">
-							<dt>
-								<p className="accessibility">Instagram</p>
-								<Icon src={InstagramIcon} alt="Instagram icon" />
-							</dt>
-							<dd className="font-sm font-bold text-main">antoanp15</dd>
-						</div>
-						<div className="flex gap-x-4">
-							<dt>
-								<p className="accessibility">TikTok</p>
-								<Icon src={TikTokIcon} alt="TikTok icon" />
-							</dt>
-							<dd className="font-sm font-bold text-main">antoanp15</dd>
-						</div>
-						<div className="flex gap-x-4">
-							<dt>
-								<p className="accessibility">Github</p>
-								<Icon src={GithubIcon} alt="Github icon" />
-							</dt>
-							<dd className="font-sm font-bold text-main">
-								@antoanparashkevov
-							</dd>
-						</div>
+						{ socials.map((social: social) => {
+
+							return (
+								<div className="flex gap-x-4" key={social.id}>
+									<dt>
+										<p className="accessibility">{social.code}</p>
+										<Icon src={social.icon} alt={`${social.name} icon`} />
+									</dt>
+									<dd className="font-sm font-bold text-main">
+										<a target='_blank' href={social.link}>
+											{social.name}
+										</a>
+									</dd>
+								</div>
+							);
+						})}
 					</dl>
 				</div>
 				<form

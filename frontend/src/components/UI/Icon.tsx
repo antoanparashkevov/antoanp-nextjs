@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type tooltipPlace = "top" | "top-start" | "top-end" | "right" | "right-start" | "right-end" | "bottom" | "bottom-start" | "bottom-end" | "left" | "left-start" | "left-end"
 type tooltipVariant = "dark" | "light" | "success" | "warning" | "error" | "info";
@@ -16,7 +17,7 @@ type tooltipOptions = {
 export type iconProps = {
     parentClassName?: string | [] | {},
     className?: string,
-    src: string,
+    src: string | StaticImport,
     width?: number,
     height?: number,
     alt: string,
