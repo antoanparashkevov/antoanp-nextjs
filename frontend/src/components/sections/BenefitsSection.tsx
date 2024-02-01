@@ -50,7 +50,7 @@ const BenefitsSection: React.FC = () => {
 						User Bliss: Where Functionality Meets Friendliness!
 					</h4>
 					<p className="flex-grow">
-						Most websites lack a<strong> good user experience </strong> for their clients. Imagine
+						Most websites lack a good user experience for their clients. Imagine
 						you enter a website and you see the bad structure, saturated colors,
 						and scattered text all over the place. It&apos;s an unpleasant
 						experience, isn&apos;t it? That&apos;s why we will be professionals
@@ -65,7 +65,7 @@ const BenefitsSection: React.FC = () => {
 					<CircleSeparationLine className="mb-4" />
 					<h4 className="flex-grow">Your Domain, Your Rules!</h4>
 					<p className="flex-grow">
-						Privacy is <strong>sacret</strong> for most people. Unfortunately, many big companies
+						Privacy is <strong>sacred</strong> for most people. Unfortunately, many big companies
 						ignore this crucial fact and use their clients&apos; data
 						information for their own marketing purposes which in my opinion is
 						<strong> pathetic</strong>! But don&apos;t worry, once your website is finished, you

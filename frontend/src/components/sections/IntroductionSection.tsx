@@ -15,7 +15,9 @@ const IntroductionSection: React.FC = () => {
 				<p className="my-8">
 					Right now you might think:
 					<br />
+					<br />
 					“How is this guy going to get a lot of clients for my business?”
+					<br />
 					<br />
 					That&apos;s a good question, but before we dive in I want to ask you
 					something important:
@@ -36,6 +38,7 @@ const IntroductionSection: React.FC = () => {
 					<br />
 					Someone who is committed to making his business №1 and blowing away
 					the competition, and most importantly:
+					<br />
 					<br />
 					Someone who will not quit and run away when things get difficult. I
 					might be a little direct but there&apos;s a specific reason for that.

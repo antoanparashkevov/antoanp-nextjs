@@ -10,7 +10,7 @@ const FeaturesSection: React.FC = () => {
 			className="grid grid-cols-1 items-start gap-y-16 lg:grid-cols-3 lg:gap-x-8">
 			<div className="flex flex-col items-start justify-center gap-y-4">
 				<h2 className="text-orange-500 font-bold">
-					Since I am a generous person and want to provide my clients with as
+					Since I am a generous person and want to provide you as
 					much value as possible
 				</h2>
 				<CircleSeparationLine />
@@ -40,7 +40,7 @@ const FeaturesSection: React.FC = () => {
 						<span className="text-orange-500">design</span>,&nbsp;
 						<span className="text-orange-500">buttons</span>,&nbsp;
 						<span className="text-orange-500">forms</span>, and any other visual
-						element. For this part, I&apos;m using one of the latest
+						element. For this part, I&apos;m using one of the most efficient
 						technologies right now - &nbsp;
 						<a
 							target="_blank"
@@ -121,7 +121,7 @@ const FeaturesSection: React.FC = () => {
 						designed to deliver multiple ways for people to reach your website
 						across <span className="text-orange-500">ALL devices</span>.&nbsp;
 						Witness a stunning and seamless user experience as your site
-						dynamically adapts to
+						dynamically adapts to&nbsp;
 						<span className="text-orange-500">desktops</span>,&nbsp;
 						<span className="text-orange-500">tablets</span>, and&nbsp;
 						<span className="text-orange-500">smartphones</span>.
