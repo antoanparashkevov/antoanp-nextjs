@@ -9,7 +9,9 @@ import MarkIcon from '../../../public/icons/mark.svg';
 import DocumentIcon from '../../../public/icons/document.svg';
 
 import { ticket } from '@/data/tickets';
+
 import { TicketContext } from '@/context/ticket-context';
+import { CountContext } from '@/context/count-context';
 
 type ticketProps = {
 	ticket: ticket,
@@ -17,6 +19,7 @@ type ticketProps = {
 
 const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 	const ticketCtx = useContext(TicketContext);
+	const { isExpired } = useContext(CountContext);
 
 	const activateTicket = (): void => {
 		ticketCtx.updateTicket(ticket.code);
@@ -47,18 +50,22 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 			<p>{ticket.intro}</p>
 			<div className="flex items-end h-[64px]">
 				<p className="relative flex items-baseline">
-					<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[100px] h-[3px] bg-black" />
+					{!isExpired && (
+						<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[100px] h-[3px] bg-black" />
+					)}
 					<span className="text-[36px] font-extralight">
 						${ticket.price.defaultPrice}
 					</span>
 					<span className="text-[18px] font-semibold">/once</span>
 				</p>
-				<p className="flex self-start items-baseline">
-					<span className="text-[36px] text-red-800 font-bold">
-						${ticket.price.discountedPrice}
-					</span>
-					<span className="text-[18px] font-semibold">/once</span>
-				</p>
+				{!isExpired && (
+					<p className="flex self-start items-baseline">
+						<span className="text-[36px] text-red-800 font-bold">
+							${ticket.price.discountedPrice}
+						</span>
+						<span className="text-[18px] font-semibold">/once</span>
+					</p>
+				)}
 			</div>
 			<button
 				onClick={activateTicket}
@@ -92,15 +99,21 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 						alt="Document Icon"
 						className="text-orange-500 mr-1"
 					/>
-					<p className="relative flex items-end text-sm h-8">
-						<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[2.5rem] h-[3px] bg-black" />
+					<p
+						className={`relative flex ${isExpired ? "items-center" : "items-end"} text-sm h-8`}
+					>
+						{!isExpired && (
+							<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[2.5rem] h-[3px] bg-black" />
+						)}
 						<span className="font-extralight">
 							+{ticket.pricePerPage.defaultPrice}&nbsp;
 						</span>
 						for each additional page
-						<span className="absolute top-0 left-3 text-red-800 font-bold">
-							{ticket.pricePerPage.discountedPrice}
-						</span>
+						{!isExpired && (
+							<span className="absolute top-0 left-3 text-red-800 font-bold">
+								{ticket.pricePerPage.discountedPrice}
+							</span>
+						)}
 					</p>
 				</li>
 			</ul>

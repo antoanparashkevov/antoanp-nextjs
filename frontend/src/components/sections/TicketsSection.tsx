@@ -1,7 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
 import CountDown from "../UI/CountDown";
-import Ticket from "../UI/Ticket";
+const Ticket = dynamic(() => import("../UI/Ticket"));
 
 import MoneyBack from "../../../public/images/money_back.png";
 

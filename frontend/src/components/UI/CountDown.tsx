@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState, Fragment } from "react";
 import styles from "./CountDown.module.css";
 
 //context
 import { CountContext } from "@/context/count-context";
+import Link from "next/link";
 
 const CountDown: React.FC<{ hours: number }> = ({ hours = 24 }) => {
+	const { isExpired } = useContext(CountContext);
+
 	const [countToDate, setCountToDate] = useState(
 		new Date().setHours(new Date().getHours() + hours)
 	);
@@ -103,115 +106,133 @@ const CountDown: React.FC<{ hours: number }> = ({ hours = 24 }) => {
 	}
 
 	return (
-		<section className={styles["count_down"]}>
-			<div className={styles["count_down_segment"]}>
-				<span>Hours</span>
-				<div className={styles["count_down_flip_cards"]}>
-					<div className={styles["flip_card"]}>
-						<div key={hoursTens + "_top1"} className={styles["top"]}>
-							{hoursTens}
+		<Fragment>
+			<section className={styles["count_down"]}>
+				<div className={styles["count_down_segment"]}>
+					<span>Hours</span>
+					<div className={styles["count_down_flip_cards"]}>
+						<div className={styles["flip_card"]}>
+							<div key={hoursTens + "_top1"} className={styles["top"]}>
+								{hoursTens}
+							</div>
+							<div key={hoursTens + "_top2"} className={styles["top_flip"]}>
+								{hoursTens}
+							</div>
+							<div key={hoursTens + "_bottom1"} className={styles["bottom"]}>
+								{hoursTens}
+							</div>
+							<div
+								key={hoursTens + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{hoursTens}
+							</div>
 						</div>
-						<div key={hoursTens + "_top2"} className={styles["top_flip"]}>
-							{hoursTens}
-						</div>
-						<div key={hoursTens + "_bottom1"} className={styles["bottom"]}>
-							{hoursTens}
-						</div>
-						<div key={hoursTens + "_bottom2"} className={styles["bottom_flip"]}>
-							{hoursTens}
-						</div>
-					</div>
-					<div className={styles["flip_card"]}>
-						<div key={hoursOnes + "_top"} className={styles["top"]}>
-							{hoursOnes}
-						</div>
-						<div key={hoursOnes + "_top2"} className={styles["top_flip"]}>
-							{hoursOnes}
-						</div>
-						<div key={hoursOnes + "_bottom1"} className={styles["bottom"]}>
-							{hoursOnes}
-						</div>
-						<div key={hoursOnes + "_bottom2"} className={styles["bottom_flip"]}>
-							{hoursOnes}
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className={styles["count_down_segment"]}>
-				<span>Minutes</span>
-				<div className={styles["count_down_flip_cards"]}>
-					<div className={styles["flip_card"]}>
-						<div key={minutesTens + "_top1"} className={styles["top"]}>
-							{minutesTens}
-						</div>
-						<div key={minutesTens + "_top2"} className={styles["top_flip"]}>
-							{minutesTens}
-						</div>
-						<div key={minutesTens + "_bottom1"} className={styles["bottom"]}>
-							{minutesTens}
-						</div>
-						<div
-							key={minutesTens + "_bottom2"}
-							className={styles["bottom_flip"]}>
-							{minutesTens}
-						</div>
-					</div>
-					<div className={styles["flip_card"]}>
-						<div key={minutesOnes + "_top1"} className={styles["top"]}>
-							{minutesOnes}
-						</div>
-						<div key={minutesOnes + "_top2"} className={styles["top_flip"]}>
-							{minutesOnes}
-						</div>
-						<div key={minutesOnes + "_bottom1"} className={styles["bottom"]}>
-							{minutesOnes}
-						</div>
-						<div
-							key={minutesOnes + "_bottom2"}
-							className={styles["bottom_flip"]}>
-							{minutesOnes}
+						<div className={styles["flip_card"]}>
+							<div key={hoursOnes + "_top"} className={styles["top"]}>
+								{hoursOnes}
+							</div>
+							<div key={hoursOnes + "_top2"} className={styles["top_flip"]}>
+								{hoursOnes}
+							</div>
+							<div key={hoursOnes + "_bottom1"} className={styles["bottom"]}>
+								{hoursOnes}
+							</div>
+							<div
+								key={hoursOnes + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{hoursOnes}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className={styles["count_down_segment"]}>
-				<span>Seconds</span>
-				<div className={styles["count_down_flip_cards"]}>
-					<div className={styles["flip_card"]}>
-						<div key={secondsTens + "_top1"} className={styles["top"]}>
-							{secondsTens}
+				<div className={styles["count_down_segment"]}>
+					<span>Minutes</span>
+					<div className={styles["count_down_flip_cards"]}>
+						<div className={styles["flip_card"]}>
+							<div key={minutesTens + "_top1"} className={styles["top"]}>
+								{minutesTens}
+							</div>
+							<div key={minutesTens + "_top2"} className={styles["top_flip"]}>
+								{minutesTens}
+							</div>
+							<div key={minutesTens + "_bottom1"} className={styles["bottom"]}>
+								{minutesTens}
+							</div>
+							<div
+								key={minutesTens + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{minutesTens}
+							</div>
 						</div>
-						<div key={secondsTens + "_top2"} className={styles["top_flip"]}>
-							{secondsTens}
-						</div>
-						<div key={secondsTens + "_bottom1"} className={styles["bottom"]}>
-							{secondsTens}
-						</div>
-						<div
-							key={secondsTens + "_bottom2"}
-							className={styles["bottom_flip"]}>
-							{secondsTens}
-						</div>
-					</div>
-					<div className={styles["flip_card"]}>
-						<div key={secondsOnes + "_top1"} className={styles["top"]}>
-							{secondsOnes}
-						</div>
-						<div key={secondsOnes + "_top2"} className={styles["top_flip"]}>
-							{secondsOnes}
-						</div>
-						<div key={secondsOnes + "_bottom1"} className={styles["bottom"]}>
-							{secondsOnes}
-						</div>
-						<div
-							key={secondsOnes + "_bottom2"}
-							className={styles["bottom_flip"]}>
-							{secondsOnes}
+						<div className={styles["flip_card"]}>
+							<div key={minutesOnes + "_top1"} className={styles["top"]}>
+								{minutesOnes}
+							</div>
+							<div key={minutesOnes + "_top2"} className={styles["top_flip"]}>
+								{minutesOnes}
+							</div>
+							<div key={minutesOnes + "_bottom1"} className={styles["bottom"]}>
+								{minutesOnes}
+							</div>
+							<div
+								key={minutesOnes + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{minutesOnes}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+				<div className={styles["count_down_segment"]}>
+					<span>Seconds</span>
+					<div className={styles["count_down_flip_cards"]}>
+						<div className={styles["flip_card"]}>
+							<div key={secondsTens + "_top1"} className={styles["top"]}>
+								{secondsTens}
+							</div>
+							<div key={secondsTens + "_top2"} className={styles["top_flip"]}>
+								{secondsTens}
+							</div>
+							<div key={secondsTens + "_bottom1"} className={styles["bottom"]}>
+								{secondsTens}
+							</div>
+							<div
+								key={secondsTens + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{secondsTens}
+							</div>
+						</div>
+						<div className={styles["flip_card"]}>
+							<div key={secondsOnes + "_top1"} className={styles["top"]}>
+								{secondsOnes}
+							</div>
+							<div key={secondsOnes + "_top2"} className={styles["top_flip"]}>
+								{secondsOnes}
+							</div>
+							<div key={secondsOnes + "_bottom1"} className={styles["bottom"]}>
+								{secondsOnes}
+							</div>
+							<div
+								key={secondsOnes + "_bottom2"}
+								className={styles["bottom_flip"]}>
+								{secondsOnes}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{isExpired && (
+				<section className="text-center">
+					<h1 className="text-xl mb-4">Unfortunately, your time expired...</h1>
+					<p className="mb-4">
+						But don&apos;t worry, you still have a chance to get the discounts if
+						you contact me now
+					</p>
+					<Link href="#contact" className="base-btn">
+						Contact Me
+					</Link>
+				</section>
+			)}
+		</Fragment>
 	);
 };
 
