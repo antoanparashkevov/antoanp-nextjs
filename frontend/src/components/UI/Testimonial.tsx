@@ -12,8 +12,10 @@ import { testimonial } from "@/data/testimonials";
 const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 	return (
 		<figure
-			key={testimonial.id}
-			className="rounded-[40px] opacity-75 backdrop-blur-lg p-4 lg:p-8"
+			className={
+				`rounded-[40px] opacity-75 backdrop-blur-lg p-4 lg:p-8 animate 
+				${testimonial.id === 1 ? 'fade-left' : (testimonial.id === 2 ? 'fade-in' : 'fade-right')}
+			`}
 			style={{
 				background:
 					"linear-gradient(130deg, #676767 26.91%, rgba(0, 0, 0, 0.00) 100%)"
@@ -28,33 +30,21 @@ const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 			</div>
 			<blockquote
 				className={`text-white mt-8 lg:min-h-[155px] ${
-					(testimonial.projectLink || testimonial.githubLink) ? "mb-[calc(2rem_-_20px)]" : "mb-8"
+					testimonial.projectLink || testimonial.githubLink
+						? "mb-[calc(2rem_-_20px)]"
+						: "mb-8"
 				}`}>
 				{testimonial.quote}
 			</blockquote>
 			<div className="flex justify-end items-center gap-x-2">
 				{testimonial.projectLink && (
-					<a
-						href={testimonial.projectLink}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<Icon 
-							src={GlobeIcon}
-							alt="Globe Icon"
-						/>
+					<a href={testimonial.projectLink} target="_blank" rel="noreferrer">
+						<Icon src={GlobeIcon} alt="Globe Icon" />
 					</a>
 				)}
 				{testimonial.githubLink && (
-					<a 
-						href={testimonial.githubLink}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<Icon
-							src={GithubIcon}
-							alt="Github Icon"
-						/>
+					<a href={testimonial.githubLink} target="_blank" rel="noreferrer">
+						<Icon src={GithubIcon} alt="Github Icon" />
 					</a>
 				)}
 			</div>

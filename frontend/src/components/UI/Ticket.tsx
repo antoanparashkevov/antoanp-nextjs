@@ -27,11 +27,14 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 
 	return (
 		<div
-			className={`flex flex-col justify-start items-start gap-[25px] p-8 rounded-[1.5rem] border border-solid ${
+			className={`flex flex-col justify-start items-start gap-[25px] p-8 rounded-[1.5rem] border border-solid animate ${
 				ticketCtx.activeTicket === ticket.code
 					? "border-blue-600"
 					: "border-main"
-			}`}>
+				}
+				${ticket.id === 1 ? "fade-left" : (ticket.id === 2 ? "fade-in" : "fade-right")}
+			`}
+		>
 			<div className="flex gap-x-[2px]">
 				<Circle
 					className={

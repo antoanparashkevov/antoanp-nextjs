@@ -8,7 +8,7 @@ const FeaturesSection: React.FC = () => {
 		<section
 			id="offers"
 			className="grid grid-cols-1 items-start gap-y-16 lg:grid-cols-3 lg:gap-x-8">
-			<div className="flex flex-col items-start justify-center gap-y-4">
+			<div className="flex flex-col items-start justify-center gap-y-4 animate fade-left">
 				<h2 className="text-orange-500 font-bold">
 					Since I am a generous person and want to provide you as
 					much value as possible
@@ -20,7 +20,7 @@ const FeaturesSection: React.FC = () => {
 			</div>
 
 			<dl className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 col-span-2">
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}
@@ -52,7 +52,7 @@ const FeaturesSection: React.FC = () => {
 						<strong>Images</strong> and <strong>Fonts</strong>.
 					</dd>
 				</div>
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}
@@ -82,7 +82,7 @@ const FeaturesSection: React.FC = () => {
 						.
 					</dd>
 				</div>
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}
@@ -103,7 +103,7 @@ const FeaturesSection: React.FC = () => {
 						search engines.
 					</dd>
 				</div>
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}
@@ -127,7 +127,7 @@ const FeaturesSection: React.FC = () => {
 						<span className="text-orange-500">smartphones</span>.
 					</dd>
 				</div>
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}
@@ -147,7 +147,7 @@ const FeaturesSection: React.FC = () => {
 						<span className="text-orange-500">reliability</span>.
 					</dd>
 				</div>
-				<div className="relative pl-12">
+				<div className="relative pl-12 animate fade-right">
 					<dt className="font-bold text-black mb-2">
 						<Image
 							src={MarkIcon}

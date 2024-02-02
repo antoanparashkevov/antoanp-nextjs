@@ -14,8 +14,8 @@ const TicketsSection: React.FC = () => {
 	return (
 		<section id="prices" className="w-full">
 			<div className="flex flex-col justify-start items-center gap-y-16">
-				<h3 className="text-xl text-center">But WAIT that&apos;s not everything…</h3>
-				<p className="text-lg text-black lg:w-[80%]">
+				<h3 className="text-xl text-center animate fade-in">But WAIT that&apos;s not everything…</h3>
+				<p className="text-lg text-black lg:w-[80%] animate fade-in">
 					Making it this far only shows me you are TRULY serious about
 					10x your clients and for this reason, I will give you a
 					<strong className="inline"> special discount </strong>if you
@@ -41,11 +41,11 @@ const TicketsSection: React.FC = () => {
 			</div>
 			<ActionButton href='#contact' className='text-orange-500 justify-center mt-4'>Send message</ActionButton>
 			<div className="lg:flex lg:gap-x-3 lg:justify-between lg:items-center mt-10 w-full">
-				<h2 className="font-semibold max-w-[33rem] w-full">
+				<h2 className="font-semibold max-w-[33rem] w-full animate fade-left">
 					And of course, if you are not satisfied with ANY of my services, you
 					will get a 100% refund of your money in the blink of an eye.
 				</h2>
-				<div className='flex w-[15rem]'>
+				<div className='flex w-[15rem] animate fade-right'>
 					<Image src={MoneyBack} alt="Money Back" placeholder="blur" />
 				</div>
 			</div>

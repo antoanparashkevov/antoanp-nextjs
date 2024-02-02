@@ -15,6 +15,60 @@ body, html {
     scroll-behavior: smooth;
 }
 
+.animate {
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-range-start: cover;
+    animation-range-end: contain 20%;
+    animation-timeline: view();
+    animation-timing-function: linear;
+}
+
+.fade-in {
+    animation-name: fade-in;
+}
+
+.fade-left {
+    animation-name: fade-left;
+}
+
+.fade-right {
+    animation-name: fade-right;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fade-left {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-right {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @layer base {
 
     h1, h2, h3, h4, h5, h6 {

@@ -12,7 +12,7 @@ const IntroductionSection: React.FC = () => {
 	return (
 		<section className="lg:flex lg:gap-x-14 lg:items-center w-full">
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
-				<p className="my-8">
+				<p className="my-8 animate fade-in">
 					Right now you might think:
 					<br />
 					<br />
@@ -23,10 +23,10 @@ const IntroductionSection: React.FC = () => {
 					something important:
 					<br />
 				</p>
-				<h3 className="text-main">
+				<h3 className="text-main animate fade-in">
 					How badly do you want your business to succeed?
 				</h3>
-				<p className="my-8">
+				<p className="my-8 animate fade-in">
 					You see, as a professional full-stack web developer dedicated to his
 					craft for over 3 years now, I want to make sure I will work with a
 					<i> serious ambitious individual</i> who wants
@@ -43,8 +43,8 @@ const IntroductionSection: React.FC = () => {
 					Someone who will not quit and run away when things get difficult. I
 					might be a little direct but there&apos;s a specific reason for that.
 				</p>
-				<h3 className="text-main">I want the best possible results for you!</h3>
-				<p className="my-8">
+				<h3 className="text-main animate fade-in">I want the best possible results for you!</h3>
+				<p className="my-8 animate fade-in">
 					To achieve that, I must ensure you are thinking as a winner. And if
 					you&apos;re still reading this, I can confidentially tell
 					<strong>&nbsp;you are</strong>.
@@ -60,12 +60,12 @@ const IntroductionSection: React.FC = () => {
 					<br />A website that even your competitors will appreciate how
 					<strong>&nbsp;professional</strong> and <strong>&nbsp;well-ordered</strong> it looks.
 				</p>
-				<Link href="#testimonials" className="base-btn">
+				<Link href="#testimonials" className="base-btn animate fade-left">
 					Testimonials
 				</Link>
 			</div>
 			<div className="flex gap-8">
-				<div className="w-[11rem] pt-[4rem]">
+				<div className="w-[11rem] pt-[4rem] animate fade-right">
 					<Image
 						src={PortraitImage1}
 						alt="Portrait"
@@ -79,7 +79,7 @@ const IntroductionSection: React.FC = () => {
 						className="rounded-xl mt-4"
 					/>
 				</div>
-				<div className="w-[11rem] pt-[1rem]">
+				<div className="w-[11rem] pt-[1rem] animate fade-right">
 					<Image
 						src={PortraitDiplomaImage}
 						alt="Portrait Diploma Software Engineer"

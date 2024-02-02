@@ -10,8 +10,8 @@ const AboutMeSection: React.FC = () => {
     return (
 			<section className="lg:flex lg:gap-x-8 lg:items-center w-full">
 				<div className="lg:flex-shrink-0 max-w-[30rem] w-full">
-					<h2 className='mb-4'>A little about me</h2>
-					<p>
+					<h2 className='mb-4 animate fade-left'>A little about me</h2>
+					<p className='animate fade-left'>
 						Graduated from
 						<span className="text-orange-500"> The #1 Software University in Bulgaria</span>.
 						<br />
@@ -28,7 +28,7 @@ const AboutMeSection: React.FC = () => {
 
 				<div className="flex gap-6">
 					<div className="w-[22rem] flex gap-4">
-						<div className="w-1/2 pt-[3rem] pb-[5rem]">
+						<div className="w-1/2 pt-[3rem] pb-[5rem] animate fade-in">
 							<Image
 								src={PortraitDiplomaImage3}
 								alt="Portrait Diploma Software Engineer"
@@ -36,7 +36,7 @@ const AboutMeSection: React.FC = () => {
 								className="rounded-xl"
 							/>
 						</div>
-						<div className=" w-1/2 pt-[12rem]">
+						<div className="w-1/2 pt-[12rem] animate fade-in">
 							<Image
 								src={PortraitDiplomaImage2}
 								alt="Portrait Diploma Software Engineer"
@@ -45,7 +45,7 @@ const AboutMeSection: React.FC = () => {
 							/>
 						</div>
 					</div>
-                    <div className='w-[22rem]'>
+                    <div className='w-[22rem] animate fade-right'>
                         <Image
                             src={PortraitImage}
                             alt='Portrait Software Engineer'

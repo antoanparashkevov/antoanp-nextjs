@@ -6,7 +6,7 @@ const BenefitsSection: React.FC = () => {
 	return (
 		<section className="flex flex-col justify-start items-center gap-y-8 w-full">
 			<div className="flex justify-center items-center w-[70%]">
-				<h3 className="text-main font-normal">
+				<h3 className="text-main font-normal animate fade-in">
 					So in the past few months, I&apos;ve done detailed research about my
 					competitors&apos; performance and picked the <i>4 most crucial elements </i>
 					they miss in their services. And of course, as a competitive
@@ -17,7 +17,7 @@ const BenefitsSection: React.FC = () => {
 			</div>
 
 			<div className="grid grid-cols-[repeat(auto-fit,_minmax(210px,_250px))] justify-center gap-6 w-full">
-				<div className="flex flex-col justify-between items-start h-[550px]">
+				<div className="flex flex-col justify-between items-start h-[550px] animate fade-left">
 					<CircleSeparationLine className="mb-4" />
 					<h4 className="flex-grow">Start Strong, Spend Smart</h4>
 					<p className="flex-grow">
@@ -30,7 +30,7 @@ const BenefitsSection: React.FC = () => {
 						Go to prices
 					</ActionButton>
 				</div>
-				<div className="flex flex-col justify-between items-start h-[550px]">
+				<div className="flex flex-col justify-between items-start h-[550px] animate fade-in">
 					<CircleSeparationLine className="mb-4" />
 					<h4 className="flex-grow">Your Website, Your Vision, Your Way!</h4>
 					<p className="flex-grow">
@@ -44,7 +44,7 @@ const BenefitsSection: React.FC = () => {
 						Go to offers
 					</ActionButton>
 				</div>
-				<div className="flex flex-col justify-between items-start h-[550px]">
+				<div className="flex flex-col justify-between items-start h-[550px] animate fade-in">
 					<CircleSeparationLine className="mb-4" />
 					<h4 className="flex-grow">
 						User Bliss: Where Functionality Meets Friendliness!
@@ -61,7 +61,7 @@ const BenefitsSection: React.FC = () => {
 						Go to offers
 					</ActionButton>
 				</div>
-				<div className="flex flex-col justify-between items-start h-[550px]">
+				<div className="flex flex-col justify-between items-start h-[550px] animate fade-right">
 					<CircleSeparationLine className="mb-4" />
 					<h4 className="flex-grow">Your Domain, Your Rules!</h4>
 					<p className="flex-grow">
