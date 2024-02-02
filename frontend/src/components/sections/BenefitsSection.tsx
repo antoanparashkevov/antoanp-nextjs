@@ -26,7 +26,7 @@ const BenefitsSection: React.FC = () => {
 						much as possible for you and provide you with a high-quality website
 						for a <strong>very affordable starting price</strong>.
 					</p>
-					<ActionButton href="#testimonials" className="text-orange-500 mt-3">
+					<ActionButton href="#prices" className="text-orange-500 mt-3">
 						Go to prices
 					</ActionButton>
 				</div>
