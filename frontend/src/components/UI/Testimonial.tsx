@@ -2,7 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 import Icon from "../UI/Icon";
+
 import StarIcon from "../../../public/icons/star.svg";
+import GithubIcon from '../../../public/icons/github_black.svg';
+import GlobeIcon from '../../../public/icons/globe.svg';
+
 import { testimonial } from "@/data/testimonials";
 
 const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
@@ -22,20 +26,38 @@ const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 				<Icon src={StarIcon} alt="Star Icon" />
 				<Icon src={StarIcon} alt="Star Icon" />
 			</div>
-			<blockquote 
-				className={`text-white mt-8 ${testimonial.projectLink ? 'mb-[calc(2rem_-_26px)]' : 'mb-8'}`}
-			>
+			<blockquote
+				className={`text-white mt-8 lg:min-h-[155px] ${
+					(testimonial.projectLink || testimonial.githubLink) ? "mb-[calc(2rem_-_20px)]" : "mb-8"
+				}`}>
 				{testimonial.quote}
 			</blockquote>
-			{testimonial.projectLink && (
-				<a
-					href={testimonial.projectLink}
-					target="_blank"
-					rel="noreferrer"
-					className="block truncate text-orange-500 hover:underline">
-					{testimonial.projectLink}
-				</a>
-			)}
+			<div className="flex justify-end items-center gap-x-2">
+				{testimonial.projectLink && (
+					<a
+						href={testimonial.projectLink}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon 
+							src={GlobeIcon}
+							alt="Globe Icon"
+						/>
+					</a>
+				)}
+				{testimonial.githubLink && (
+					<a 
+						href={testimonial.githubLink}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon
+							src={GithubIcon}
+							alt="Github Icon"
+						/>
+					</a>
+				)}
+			</div>
 			<figcaption className="flex gap-x-3 justify-start items-center py-4">
 				<div className="relative w-[65px] h-[65px] rounded-full overflow-hidden">
 					<Image
