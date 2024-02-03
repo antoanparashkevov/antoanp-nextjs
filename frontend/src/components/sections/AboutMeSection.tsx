@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import PortraitImage from '../../../public/images/portrait_pic_3.png';
-import PortraitDiplomaImage2 from '../../../public/images/portrait_diploma_pic_2.png';
-import PortraitDiplomaImage3 from '../../../public/images/portrait_diploma_pic_3.png';
+import PortraitImage from '../../../public/images/portrait_pic_3.webp';
+import PortraitDiplomaImage2 from '../../../public/images/portrait_diploma_pic_2.webp';
+import PortraitDiplomaImage3 from '../../../public/images/portrait_diploma_pic_3.webp';
 
 const AboutMeSection: React.FC = () => {
 

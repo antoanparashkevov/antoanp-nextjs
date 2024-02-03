@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import HandshakeImage from "../../../public/images/handshake.jpg";
+import HandshakeImage from "../../../public/images/handshake.webp";
 
-import HappyImage from "../../../public/images/happy.jpg";
-import ThumbsUpImage from "../../../public/images/thumbs-up.jpg";
+import HappyImage from "../../../public/images/happy.webp";
+import HappyMoneyImage from "../../../public/images/happy_money.jpg";
 
-import DepressedImage from "../../../public/images/depressed.jpg";
-import TiredImage from "../../../public/images/tired.jpg";
+import DepressedImage from "../../../public/images/depressed.webp";
+import TiredImage from "../../../public/images/tired.webp";
 
 const HeroSection: React.FC = () => {
 	return (
@@ -51,8 +51,8 @@ const HeroSection: React.FC = () => {
 						className="rounded-xl"
 					/>
 					<Image
-						src={ThumbsUpImage}
-						alt="Thumbs up"
+						src={HappyMoneyImage}
+						alt="Happy money"
 						placeholder="blur"
 						className="rounded-xl mt-8"
 					/>

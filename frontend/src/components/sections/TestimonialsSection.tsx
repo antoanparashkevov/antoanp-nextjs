@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import CommunityIcon from '../../../public/images/community.jpg';
+import CommunityIcon from '../../../public/images/community.webp';
 
 import { testimonials, testimonial } from '../../data/testimonials';
 import Testimonial from '../UI/Testimonial';
