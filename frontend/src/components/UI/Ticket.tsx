@@ -9,7 +9,7 @@ import MarkIcon from '../../../public/icons/mark.svg';
 import DocumentIcon from '../../../public/icons/document.svg';
 import InfoIcon from '../../../public/icons/info.svg';
 
-import { ticket } from '@/data/tickets';
+import { feature, ticket } from '@/data/tickets';
 
 import { TicketContext } from '@/context/ticket-context';
 import { CountContext } from '@/context/count-context';
@@ -52,22 +52,22 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 				</h2>
 			</div>
 			<p>{ticket.intro}</p>
-			<div className="flex items-end h-[64px]">
+			<div className="flex items-end h-[64px] w-full">
 				<p className="relative flex items-baseline">
 					{!isExpired && (
-						<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[100px] h-[3px] bg-black" />
+						<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[85px] md:w-[100px] h-[3px] bg-black" />
 					)}
-					<span className="text-[36px] font-extralight">
+					<span className="text-[28px] md:text-[36px] font-extralight">
 						${ticket.price.defaultPrice}
 					</span>
-					<span className="text-[18px] font-semibold">/once</span>
+					<span className="text-sm md:text-[18px] font-semibold">/once</span>
 				</p>
 				{!isExpired && (
 					<p className="flex self-start items-baseline">
-						<span className="text-[36px] text-red-800 font-bold">
+						<span className="text-[33px] md:text-[36px] text-red-800 font-bold">
 							${ticket.price.discountedPrice}
 						</span>
-						<span className="text-[18px] font-semibold">/once</span>
+						<span className="text-sm md:text-[18px] font-semibold">/once</span>
 					</p>
 				)}
 			</div>
@@ -85,7 +85,7 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 				Claim the offer
 			</button>
 			<ul role="list" className="flex flex-col gap-y-[25px] w-full">
-				{ticket.features.map((feature: string | { name: string, tooltip: string}, index: number) => {
+				{ticket.features.map((feature: feature, index: number) => {
 					return (
 						<li key={index} className="flex items-center text-sm text-main">
 							<Icon
@@ -93,13 +93,13 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 								alt="Mark Icon"
 								className="text-orange-500 mr-1"
 							/>
-							<span>{typeof feature === 'string' ? feature : feature.name}</span>
-							{typeof feature === 'object' && feature.name && feature.tooltip && 
+							<span className={feature.hasOwnProperty('bold') ? 'font-bold' : 'font-normal'}>{typeof feature === 'string' ? feature : feature.name}</span>
+							{typeof feature === 'object' && feature.name && feature.hasOwnProperty('tooltip') && 
 								<Icon
 									src={InfoIcon}
 									alt="Info Icon"
 									parentClassName='ml-2'
-									tooltipOptions={{activateTooltip: true, tooltipContent: feature.tooltip}}
+									tooltipOptions={{activateTooltip: true, tooltipContent: feature.tooltip!}}
 								/>
 							}
 						</li>

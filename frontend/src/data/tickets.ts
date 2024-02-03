@@ -1,4 +1,8 @@
-export type featureType = (string | { name: string; tooltip: string })[];
+export type feature =
+	| string
+	| { name: string; tooltip?: string; bold?: boolean }
+
+export type featureType = feature[];
 
 export type ticket = {
 	id: number;
@@ -68,14 +72,18 @@ export const tickets: ticket[] = [
 			"Included source code",
 			"Responsive design",
 			"Error Validation",
-			"Search Engine Optimization",
+			{
+				name: "Search Engine Optimization",
+				bold: true
+			},
 			{
 				name: "Accessibility",
 				tooltip: `
 					I believe in inclusivity. My websites are crafted with accessibility in mind,
 					ensuring that everyone can navigate and interact effortlessly. 
 					From clean semantic code to keyboard navigation, I make your website usable by all.
-				`
+				`,
+				bold: true
 			},
 			"Custom design using Figma"
 		],
