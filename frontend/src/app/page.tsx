@@ -10,11 +10,8 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import TicketsSection from '@/components/sections/TicketsSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-// import CountContext from '@/context/count-context';
 import { TicketContextProvider } from '@/context/ticket-context';
 import { CountContextProvider } from '@/context/count-context';
-
-import CountDown from '@/components/UI/CountDown';
 
 const Home: React.FC = () => {
 

@@ -8,9 +8,12 @@ import PortraitDiplomaImage from "../../../public/images/portrait_diploma_pic_1.
 import PortraitImage1 from "../../../public/images/portrait_pic_1.webp";
 import PortraitImage2 from "../../../public/images/portrait_pic_2.webp";
 
+import LinearGradient from "@/components/UI/LinearGradient";
+
 const IntroductionSection: React.FC = () => {
 	return (
-		<section className="lg:flex lg:gap-x-14 lg:items-center w-full">
+		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
+			<LinearGradient className="top-8 right-0" />
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
 				<p className="my-8 animate fade-in">
 					Right now you might think:
@@ -43,7 +46,9 @@ const IntroductionSection: React.FC = () => {
 					Someone who will not quit and run away when things get difficult. I
 					might be a little direct but there&apos;s a specific reason for that.
 				</p>
-				<h3 className="text-main animate fade-in">I want the best possible results for you!</h3>
+				<h3 className="text-main animate fade-in">
+					I want the best possible results for you!
+				</h3>
 				<p className="my-8 animate fade-in">
 					To achieve that, I must ensure you are thinking as a winner. And if
 					you&apos;re still reading this, I can confidentially tell
@@ -58,7 +63,8 @@ const IntroductionSection: React.FC = () => {
 					world.
 					<br />
 					<br />A website that even your competitors will appreciate how
-					<strong>&nbsp;professional</strong> and <strong>&nbsp;well-ordered</strong> it looks.
+					<strong>&nbsp;professional</strong> and{" "}
+					<strong>&nbsp;well-ordered</strong> it looks.
 				</p>
 				<Link href="#testimonials" className="base-btn animate fade-left">
 					Testimonials

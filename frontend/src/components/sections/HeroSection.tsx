@@ -10,9 +10,12 @@ import HappyMoneyImage from "../../../public/images/happy_money.jpg";
 import DepressedImage from "../../../public/images/depressed.webp";
 import TiredImage from "../../../public/images/tired.webp";
 
+import LinearGradient from "@/components/UI/LinearGradient";
+
 const HeroSection: React.FC = () => {
 	return (
-		<section className="lg:flex lg:gap-x-14 lg:items-center w-full">
+		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
+			<LinearGradient className='top-8 right-0'/>
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
 				<h1 className="text-2xl mb-16 show-content-animation">
 					How To <span className="text-orange-500">“Unstuck”</span> Your
