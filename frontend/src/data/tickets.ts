@@ -21,13 +21,13 @@ export const tickets: ticket[] = [
 		name: "Basic",
 		intro: "Build a web application. Front End or Back End",
 		price: {
-			defaultPrice: 200,
-			discountedPrice: 150
+			defaultPrice: 199.99,
+			discountedPrice: 149.99
 		},
 		features: ["Up to 2 pages", "Included source code", "Responsive design"],
 		pricePerPage: {
-			defaultPrice: 100,
-			discountedPrice: 75
+			defaultPrice: 99.99,
+			discountedPrice: 74.99
 		}
 	},
 	{
@@ -36,8 +36,8 @@ export const tickets: ticket[] = [
 		name: "Standard",
 		intro: "Full-Stack web application. Front End + Back End",
 		price: {
-			defaultPrice: 320,
-			discountedPrice: 240
+			defaultPrice: 319.99,
+			discountedPrice: 239.99
 		},
 		features: [
 			"Up to 4 pages",
@@ -47,8 +47,8 @@ export const tickets: ticket[] = [
 			"Search Engine Optimization"
 		],
 		pricePerPage: {
-			defaultPrice: 80,
-			discountedPrice: 60
+			defaultPrice: 79.99,
+			discountedPrice: 59.99
 		}
 	},
 	{
@@ -58,8 +58,8 @@ export const tickets: ticket[] = [
 		intro:
 			"Full-Stack web application. Front End + Back End + User Authentication",
 		price: {
-			defaultPrice: 490,
-			discountedPrice: 350
+			defaultPrice: 489.99,
+			discountedPrice: 349.99
 		},
 		features: [
 			"Up to 7 pages",
@@ -71,8 +71,8 @@ export const tickets: ticket[] = [
             "Custom design using Figma"
 		],
 		pricePerPage: {
-			defaultPrice: 70,
-			discountedPrice: 50
+			defaultPrice: 69.99,
+			discountedPrice: 49.99
 		}
 	}
 ];

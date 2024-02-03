@@ -106,7 +106,7 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 						className={`relative flex ${isExpired ? "items-center" : "items-end"} text-sm h-8`}
 					>
 						{!isExpired && (
-							<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[2.5rem] h-[3px] bg-black" />
+							<span className="absolute bottom-0 left-0 origin-left -rotate-[25deg] w-[2.5rem] h-[1px] bg-black" />
 						)}
 						<span className="font-extralight">
 							+{ticket.pricePerPage.defaultPrice}&nbsp;
