@@ -1,17 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-type tooltipPlace = "top" | "top-start" | "top-end" | "right" | "right-start" | "right-end" | "bottom" | "bottom-start" | "bottom-end" | "left" | "left-start" | "left-end"
-type tooltipVariant = "dark" | "light" | "success" | "warning" | "error" | "info";
+import TooltipWrapper from "./TooltipWrapper";
 
 type tooltipOptions = {
     activateTooltip: boolean,
     tooltipContent: string,
-    tooltipPlace: tooltipPlace,
-    tooltipVariant?: tooltipVariant,
 }
 
 export type iconProps = {
@@ -21,10 +18,8 @@ export type iconProps = {
     width?: number,
     height?: number,
     alt: string,
-    id?: string,
     href?: string,
     target?: string,
-    onClick?: () => void,
     tooltipOptions?: tooltipOptions
 }
 
@@ -36,18 +31,24 @@ const Icon: React.FC<iconProps> = (
         width,
         height,
         alt,
-        id,
         href,
         target,
-        onClick,
         tooltipOptions
     }
 ) => {
+    const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
-    {/*priority is set to high (fetchpriority='high'), not loading lazily (loading='lazy') since this is just a normal icon, small format and lightweight*/}
     return (
-        <div className={`${parentClassName || ''} relative`} onClick={onClick}>
-            {href && target ? <a href={href} target={target} /> : null}
+        <div 
+            className={`
+                ${parentClassName || ''}
+                ${tooltipOptions?.activateTooltip && 'cursor-pointer'}
+                relative
+            `}
+            onMouseOver={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+        >
+            {href && target && <a href={href} target={target} />}
             <Image
                 className={className || ''}
                 src={src}
@@ -56,15 +57,9 @@ const Icon: React.FC<iconProps> = (
                 height={height}
                 priority
             />
-            {/* {tooltipOptions && tooltipOptions.activateTooltip &&
-                //TODO: TooltipWrapper component
-                <TooltipWrapper
-                    id={id}
-                    variant={tooltipOptions.tooltipVariant}
-                    place={tooltipOptions.tooltipPlace} 
-                    content={tooltipOptions.tooltipContent}
-                />
-            } */}
+            {tooltipOptions?.activateTooltip && showTooltip &&
+                <TooltipWrapper content={tooltipOptions.tooltipContent}/>
+            }
         </div>
     );
 };

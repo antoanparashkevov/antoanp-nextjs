@@ -1,13 +1,15 @@
+export type featureType = (string | { name: string; tooltip: string })[];
+
 export type ticket = {
 	id: number;
-    code: string,
+	code: string;
 	name: string;
 	intro: string;
 	price: {
 		defaultPrice: number;
 		discountedPrice: number;
 	};
-	features: string[];
+	features: featureType;
 	pricePerPage: {
 		defaultPrice: number;
 		discountedPrice: number;
@@ -17,7 +19,7 @@ export type ticket = {
 export const tickets: ticket[] = [
 	{
 		id: 1,
-        code: "basic",
+		code: "basic",
 		name: "Basic",
 		intro: "Build a web application. Front End or Back End",
 		price: {
@@ -32,7 +34,7 @@ export const tickets: ticket[] = [
 	},
 	{
 		id: 2,
-        code: "standard",
+		code: "standard",
 		name: "Standard",
 		intro: "Full-Stack web application. Front End + Back End",
 		price: {
@@ -53,7 +55,7 @@ export const tickets: ticket[] = [
 	},
 	{
 		id: 3,
-        code: "premium",
+		code: "premium",
 		name: "Premium",
 		intro:
 			"Full-Stack web application. Front End + Back End + User Authentication",
@@ -67,8 +69,15 @@ export const tickets: ticket[] = [
 			"Responsive design",
 			"Error Validation",
 			"Search Engine Optimization",
-            "Accessibility",
-            "Custom design using Figma"
+			{
+				name: "Accessibility",
+				tooltip: `
+					I believe in inclusivity. My websites are crafted with accessibility in mind,
+					ensuring that everyone can navigate and interact effortlessly. 
+					From clean semantic code to keyboard navigation, I make your website usable by all.
+				`
+			},
+			"Custom design using Figma"
 		],
 		pricePerPage: {
 			defaultPrice: 69.99,

@@ -7,6 +7,7 @@ import Icon from './Icon';
 
 import MarkIcon from '../../../public/icons/mark.svg';
 import DocumentIcon from '../../../public/icons/document.svg';
+import InfoIcon from '../../../public/icons/info.svg';
 
 import { ticket } from '@/data/tickets';
 
@@ -84,7 +85,7 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 				Claim the offer
 			</button>
 			<ul role="list" className="flex flex-col gap-y-[25px] w-full">
-				{ticket.features.map((feature: string, index: number) => {
+				{ticket.features.map((feature: string | { name: string, tooltip: string}, index: number) => {
 					return (
 						<li key={index} className="flex items-center text-sm text-main">
 							<Icon
@@ -92,7 +93,15 @@ const Ticket: React.FC<ticketProps> = ({ ticket }) => {
 								alt="Mark Icon"
 								className="text-orange-500 mr-1"
 							/>
-							{feature}
+							<span>{typeof feature === 'string' ? feature : feature.name}</span>
+							{typeof feature === 'object' && feature.name && feature.tooltip && 
+								<Icon
+									src={InfoIcon}
+									alt="Info Icon"
+									parentClassName='ml-2'
+									tooltipOptions={{activateTooltip: true, tooltipContent: feature.tooltip}}
+								/>
+							}
 						</li>
 					);
 				})}
