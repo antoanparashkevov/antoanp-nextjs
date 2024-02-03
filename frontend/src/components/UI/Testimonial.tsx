@@ -6,6 +6,7 @@ import Icon from "../UI/Icon";
 import StarIcon from "../../../public/icons/star.svg";
 import GithubIcon from '../../../public/icons/github_black.svg';
 import GlobeIcon from '../../../public/icons/globe.svg';
+import FigmaIcon from '../../../public/icons/figma.svg';
 
 import { testimonial } from "@/data/testimonials";
 
@@ -38,14 +39,13 @@ const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 			</blockquote>
 			<div className="flex justify-end items-center gap-x-2">
 				{testimonial.projectLink && (
-					<a href={testimonial.projectLink} target="_blank" rel="noreferrer">
-						<Icon src={GlobeIcon} alt="Globe Icon" />
-					</a>
+					<Icon src={GlobeIcon} alt="Globe Icon" href={testimonial.projectLink} target="_blank" />
+				)}
+				{testimonial.designLink && (
+					<Icon src={FigmaIcon} alt="Figma Icon" href={testimonial.designLink} target="_blank" />
 				)}
 				{testimonial.githubLink && (
-					<a href={testimonial.githubLink} target="_blank" rel="noreferrer">
-						<Icon src={GithubIcon} alt="Github Icon" />
-					</a>
+					<Icon src={GithubIcon} alt="Github Icon" href={testimonial.githubLink} target="_blank" />
 				)}
 			</div>
 			<figcaption className="flex gap-x-3 justify-start items-center py-4">

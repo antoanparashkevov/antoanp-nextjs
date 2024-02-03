@@ -10,6 +10,7 @@ export type testimonial = {
     author: string,
     authorInfo: string,
 	projectLink?: string,
+	designLink?: string,
 	githubLink?: string,
     authorImage: StaticImport | string
 }
@@ -38,6 +39,7 @@ export const testimonials: testimonial[] = [
 		author: "Nikolay Yordanov",
 		authorInfo: "Business owner",
 		projectLink: "https://itcommunity.vercel.app",
+		designLink: "https://www.figma.com/file/tqyxHF9RfEQyLEMCzFDvhz/it-community?type=design&node-id=0-1&mode=design&t=hqsgZKdr6Hkq2f0b-0",
 		githubLink: "https://github.com/antoanparashkevov/it-community-react",
 		authorImage: NikiImage
 	}

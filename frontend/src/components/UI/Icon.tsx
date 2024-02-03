@@ -42,13 +42,13 @@ const Icon: React.FC<iconProps> = (
         <div 
             className={`
                 ${parentClassName || ''}
-                ${tooltipOptions?.activateTooltip ? 'cursor-pointer' : 'cursor-default'}
+                ${tooltipOptions?.activateTooltip ? 'cursor-pointer' : ''}
                 relative
             `}
             onMouseOver={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
         >
-            {href && target && <a href={href} target={target} />}
+            {href && target && <a href={href} target={target} rel='noreferrer' className='absolute inset-0' />}
             <Image
                 className={className || ''}
                 src={src}
