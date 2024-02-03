@@ -14,19 +14,21 @@ const HeroSection: React.FC = () => {
 	return (
 		<section className="lg:flex lg:gap-x-14 lg:items-center w-full">
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
-				<h1 className="text-2xl mb-16">
+				<h1 className="text-2xl mb-16 show-content-animation">
 					How To <span className="text-orange-500">“Unstuck”</span> Your
 					Starting Business From Having 0 or FEW Clients To 10x{" "}
 					<span className="text-orange-500">In Less Than 60 Days</span>
 				</h1>
 
-				<p className="text-lg mb-8">
+				<p className="text-lg mb-8 show-content-animation-small-delay">
 					Let&apos;s Fix This Once And For All By Building You An
-					<span className="text-orange-500"> Affordable High-Performing Website </span>
+					<span className="text-orange-500">&nbsp;
+						Affordable High-Performing Website&nbsp;
+					</span>
 					That Will Steal Your Competitors&apos; Clients
 				</p>
 
-				<Link href="#testimonials" className="base-btn">
+				<Link href="#testimonials" className="base-btn show-content-animation-large-delay">
 					Testimonials
 				</Link>
 			</div>
