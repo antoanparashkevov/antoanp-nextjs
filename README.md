@@ -1,7 +1,5 @@
 # AntoanP - V1
 
-You can visit the project from here: https://antoanp.vercel.app
-
 # Table of Contents
 - <a href="#about">About this Project</a>
 - <a href="#design">Design</a>
