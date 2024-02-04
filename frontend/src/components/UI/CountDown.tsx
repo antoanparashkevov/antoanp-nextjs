@@ -33,7 +33,7 @@ const CountDown: React.FC<{ hours: number }> = ({ hours = 24 }) => {
 
 			setCountToDate(
 				new Date(Number(timestamp)).setHours(
-					new Date(timestamp).getHours() + 48
+					new Date(timestamp).getHours() + hours
 				)
 			);
 		} else {
