@@ -13,8 +13,10 @@ import ContactSection from '@/components/sections/ContactSection';
 import { TicketContextProvider } from '@/context/ticket-context';
 import { CountContextProvider } from '@/context/count-context';
 
-const Home: React.FC = () => {
+import { dictionary } from '@/lib/content';
+import { defaultLocale } from '@/middleware';
 
+const Home: React.FC<{params: { lang: string }}> = ({ params }) => {
 	return (
 		<TicketContextProvider>
 			<CountContextProvider>

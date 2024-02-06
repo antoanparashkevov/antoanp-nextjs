@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
+import { defaultLocale } from '@/middleware';
 
 import '../styles/globals.css';
 
@@ -18,12 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children
+	children,
+	params
 }: Readonly<{
 	children: React.ReactNode;
+	params: { lang: string };
 }>) {
 	return (
-		<html lang="en" className={`${source_sans_3.variable} font-sans`}>
+		<html lang={params.lang ?? defaultLocale} className={`${source_sans_3.variable} font-sans`}>
 			<body className="min-w-[360px] w-full min-h-screen flex flex-col text-main text-base">
 				<div id='overlay' />
 				<header className="container flex w-full min-h-[130px] mb-16">
