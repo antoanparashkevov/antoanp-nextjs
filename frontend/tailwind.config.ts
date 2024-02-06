@@ -78,8 +78,8 @@ const config: Config = {
 				"900": "#1e408a",
 				"950": "#172a54"
 			},
-			"headerText": "#111827",
-			"main": "#4B5563"
+			headerText: "#111827",
+			main: "#4B5563"
 		},
 		spacing: {
 			px: "1px",
@@ -120,12 +120,12 @@ const config: Config = {
 			100: "25rem"
 		},
 		fontSize: {
-			"xs": ["0.75rem", { lineHeight: '1rem'}],//extra small 12px
-			"sm": ['0.875rem', { lineHeight: '1.25rem'}],//small 14px
-			"base": ['1.25rem', { lineHeight: '1.8rem'}],//normal 20px
-			"lg": ['1.5rem', { lineHeight: '2.15rem'}],//bigger 24px
-			"xl": ['2rem', { lineHeight: '2.85rem'}],//biggest 32px
-			"2xl": ['3.75rem', { lineHeight: '5.35rem'}],//extra biggest 60px
+			xs: ["0.75rem", { lineHeight: "1rem" }], //extra small 12px
+			sm: ["0.875rem", { lineHeight: "1.25rem" }], //small 14px
+			base: ["1.25rem", { lineHeight: "1.8rem" }], //normal 20px
+			lg: ["1.5rem", { lineHeight: "2.15rem" }], //bigger 24px
+			xl: ["2rem", { lineHeight: "2.85rem" }], //biggest 32px
+			"2xl": ["3.75rem", { lineHeight: "5.35rem" }] //extra biggest 60px
 		},
 		//Extending the default theme.
 		//Preserve the default values for a theme option (for example spacing option), but also add new values
@@ -134,7 +134,26 @@ const config: Config = {
 				100: "100",
 				1000: "1000",
 				10000: "10000"
-			}
+			},
+			keyframes: {
+				showContent: {
+					"0%": {
+						opacity: "0",
+						filter: "blur(33px)",
+						transform: "translateY(100px)"
+					},
+					"100%": {
+						opacity: "1",
+						filter: "blur(0px)",
+						transform: "translateY(0)"
+					}
+				}
+			},
+			animation: ({ theme }) => ({
+				showContent: "showContent 1s ease-in-out 1 forwards",
+				"showContent-smallDelay": "showContent 1s ease-in-out 0.3s 1 forwards",
+				"showContent-bigDelay": "showContent 1s ease-in-out 0.6s 1 forwards"
+			})
 		}
 	},
 	plugins: []

@@ -17,13 +17,13 @@ const HeroSection: React.FC = () => {
 		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
 			<LinearGradient className='top-8 right-0'/>
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
-				<h1 className="text-2xl mb-16 show-content-animation">
+				<h1 className="text-2xl mb-16 animate-showContent">
 					How To <span className="text-orange-500">“Unstuck”</span> Your
 					Starting Business From Having 0 or FEW Clients To 10x{" "}
-					<span className="text-orange-500">In Less Than 60 Days</span>
+					<span className="text-orange-500">In Less Than 90 Days</span>
 				</h1>
 
-				<p className="text-lg mb-8 show-content-animation-small-delay">
+				<p className="text-lg mb-8 animate-showContent-smallDelay">
 					Let&apos;s Fix This Once And For All By Building You An
 					<span className="text-orange-500">&nbsp;
 						Affordable High-Performing Website&nbsp;
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
 					That Will Steal Your Competitors&apos; Clients
 				</p>
 
-				<Link href="#testimonials" className="base-btn show-content-animation-large-delay">
+				<Link href="#testimonials" className="base-btn animate-showContent-bigDelay">
 					Testimonials
 				</Link>
 			</div>

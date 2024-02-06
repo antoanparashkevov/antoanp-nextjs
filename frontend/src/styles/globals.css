@@ -15,42 +15,6 @@ body, html {
     scroll-behavior: smooth;
 }
 
-.show-content-animation {
-    opacity: 0;
-    animation: showContent 1s ease-in-out 1 forwards;
-}
-
-.show-content-animation-small-delay {
-    opacity: 0;
-    animation: showContent 1s ease-in-out 0.3s 1 forwards;
-}
-
-.show-content-animation-large-delay {
-    opacity: 0;
-    animation: showContent 1s ease-in-out 0.6s 1 forwards;
-}
-
-.animate {
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-range-start: cover;
-    animation-range-end: contain 20%;
-    animation-timeline: view();
-    animation-timing-function: linear;
-}
-
-.fade-in {
-    animation-name: fade-in;
-}
-
-.fade-left {
-    animation-name: fade-left;
-}
-
-.fade-right {
-    animation-name: fade-right;
-}
-
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -81,19 +45,6 @@ body, html {
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes showContent {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-        filter: blur(33px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
     }
 }
 
@@ -219,6 +170,27 @@ body, html {
     .accessibility {
         clip: rect(0, 0, 0, 0);
         @apply absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden whitespace-nowrap border-0;
+    }
+
+    .animate {
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-range-start: cover;
+        animation-range-end: contain 20%;
+        animation-timeline: view();
+        animation-timing-function: linear;
+    }
+
+    .fade-in {
+        animation-name: fade-in;
+    }
+
+    .fade-left {
+        animation-name: fade-left;
+    }
+
+    .fade-right {
+        animation-name: fade-right;
     }
 }
 
