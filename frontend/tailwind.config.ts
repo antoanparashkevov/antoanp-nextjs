@@ -120,12 +120,12 @@ const config: Config = {
 			100: "25rem"
 		},
 		fontSize: {
-			"xs": ["0.75rem", { lineHeight: '0.975rem'}],//extra small 12px
-			"sm": ['0.875rem', { lineHeight: '1rem'}],//small 14px
-			"base": ['1.25rem', { lineHeight: '1.625rem'}],//normal 20px
-			"lg": ['1.5rem', { lineHeight: '1.95rem'}],//bigger 24px
-			"xl": ['2rem', { lineHeight: '2.675rem'}],//biggest 32px
-			"2xl": ['3.75rem', { lineHeight: '4.8725rem'}],//extra biggest 60px
+			"xs": ["0.75rem", { lineHeight: '1rem'}],//extra small 12px
+			"sm": ['0.875rem', { lineHeight: '1.25rem'}],//small 14px
+			"base": ['1.25rem', { lineHeight: '1.8rem'}],//normal 20px
+			"lg": ['1.5rem', { lineHeight: '2.15rem'}],//bigger 24px
+			"xl": ['2rem', { lineHeight: '2.85rem'}],//biggest 32px
+			"2xl": ['3.75rem', { lineHeight: '5.35rem'}],//extra biggest 60px
 		},
 		//Extending the default theme.
 		//Preserve the default values for a theme option (for example spacing option), but also add new values
