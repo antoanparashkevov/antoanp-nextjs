@@ -11,7 +11,7 @@ import TextArea from "./TextArea";
 import Circle from "./Circle";
 const SubmitButton = dynamic(() => import("./SubmitButton"));
 
-import { create } from "../../app/actions";
+import { create } from "@/lib/actions";
 import { TicketContext } from "@/context/ticket-context";
 import { CountContext } from "@/context/count-context";
 
