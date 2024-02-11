@@ -37,7 +37,7 @@ const AdminPage: React.FC = async () => {
 				<Fragment>
 					<span>Welcome back, {session.email}</span>
 					{data && (
-						<ul className="flex flex-col justify-center items-center gap-8 my-8">
+						<ul className="flex flex-col justify-center gap-8 my-8">
 							{data.map((application, index: number) => {
 								return (
 									<li
