@@ -12,3 +12,7 @@ export type applicationItem = {
 export const create = (item: applicationItem) => {
     return ApplicationModel.create(item)
 }
+
+export const getAll = () => {
+    return ApplicationModel.find({});
+}
