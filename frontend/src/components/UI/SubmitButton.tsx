@@ -7,23 +7,32 @@ import { useFormStatus } from "react-dom";
 const Notification = dynamic(() => import('./Notification'));
 
 import type { ZodIssue } from "zod";
-import type { initialStateType } from "./ContactForm";
 
-const SubmitButton: React.FC<{formState: initialStateType}> = ({formState}) => {
+export type formStateType = {
+	message: string;
+	errors: ZodIssue[] | null | string;
+};
+
+const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string }> = ({
+	formState,
+	buttonStyle
+}) => {
 	const { pending } = useFormStatus();
 
 	return (
 		<Fragment>
-			{ !pending && (formState.errors?.length! > 0 || formState.message) && (
+			{!pending && (formState.errors?.length! > 0 || formState.message) && (
 				<Notification
 					status={formState.message ? "success" : "error"}
 					timeout={4000}
-            >
+				>
 					{formState.message ||
 						(formState.errors
-							? formState
-									.errors!.map((error: ZodIssue) => error.message)
-									.join("\n")
+							? Array.isArray(formState.errors)
+								? formState
+										.errors!.map((error: ZodIssue) => error.message)
+										.join("\n")
+								: formState.errors
 							: "Something went wrong!")}
 				</Notification>
 			)}
@@ -31,12 +40,12 @@ const SubmitButton: React.FC<{formState: initialStateType}> = ({formState}) => {
 				type="submit"
 				aria-disabled={pending}
 				disabled={pending}
-				className="base-btn"
-            >
+				className={`base-btn ${buttonStyle}`.trim()}
+			>
 				{pending ? "Submitting..." : "Submit"}
 			</button>
 		</Fragment>
 	);
-}
+};
 
 export default SubmitButton;

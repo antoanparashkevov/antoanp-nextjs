@@ -15,17 +15,12 @@ import { create } from "@/lib/actions";
 import { TicketContext } from "@/context/ticket-context";
 import { CountContext } from "@/context/count-context";
 
-import type { ZodIssue } from "zod";
-
 import { social, socials } from "@/data/social";
 import dynamic from "next/dynamic";
 
-export type initialStateType = {
-	message: string,
-	errors: ZodIssue[] | null
-}
+import { formStateType } from "./SubmitButton";
 
-const initialState: initialStateType = {
+const initialState: formStateType = {
 	errors: null,
 	message: '',
 }

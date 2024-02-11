@@ -41,9 +41,9 @@ const Icon: React.FC<iconProps> = (
     return (
         <div 
             className={`
-                ${parentClassName || ''}
-                ${tooltipOptions?.activateTooltip ? 'cursor-pointer' : ''}
                 relative
+                ${tooltipOptions?.activateTooltip ? 'cursor-pointer' : ''}
+                ${parentClassName}
             `}
             onMouseOver={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
