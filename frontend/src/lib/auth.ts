@@ -8,9 +8,9 @@ const key = new TextEncoder().encode(secretKey);
 
 export async function encrypt(payload: any) {
     return await new SignJWT(payload)
-        .setProtectedHeader({ alg: "HS256"})
+        .setProtectedHeader({ alg: "HS256" })
         .setIssuedAt()
-        .setExpirationTime('10 sec from now')
+        .setExpirationTime('1h')
         .sign(key)
 }
 
@@ -23,7 +23,7 @@ export async function decrypt(session: string): Promise<any> {
 }
 
 export async function signIn(email: string): Promise<void> {
-    const expires = new Date(Date.now() + 10 * 1000);
+    const expires = new Date(Date.now() + 3600 * 1000);
     const session = await encrypt({ email, expires });
 
     cookies().set('session', session, { expires, httpOnly: true });
