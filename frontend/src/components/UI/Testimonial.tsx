@@ -10,7 +10,7 @@ import FigmaIcon from '../../../public/icons/figma.svg';
 
 import type { testimonial } from "@/lib/content";
 
-const Testimonial: React.FC<{testimonial: testimonialimonial}> = ({testimonial}) => {
+const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 	return (
 		<figure
 			className={
