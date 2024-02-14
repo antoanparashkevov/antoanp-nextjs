@@ -20,22 +20,31 @@ import dynamic from "next/dynamic";
 
 import { formStateType } from "./SubmitButton";
 
+import type { FormLabels, NotificationContent } from "@/lib/content";
+
 const initialState: formStateType = {
 	errors: null,
 	message: '',
 }
 
-const ContactForm: React.FC = () => {
+type ContactFormProps = {
+	notificationContent: NotificationContent;
+	subheadline: string;
+	picked_plan: string;
+	formLabels: FormLabels;
+};
+
+const ContactForm: React.FC<ContactFormProps> = ({ notificationContent, subheadline, picked_plan, formLabels }) => {
 	const ticketCtx = useContext(TicketContext);
 	const { isExpired } = useContext(CountContext);
 
-	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket, isExpired), initialState);
+	const [formState, formAction] = useFormState(create.bind(null, ticketCtx.activeTicket, isExpired, notificationContent), initialState);
 
 	return (
 		<Fragment>
 			<section id="contact" className="grid grid-cols-1 lg:grid-cols-3">
 				<div className="py-20 px-6 lg:py-48 lg:px-8 bg-[#F3F4F6] shadow-[10px_0px_0px_0px_rgba(0,_0,_0,_0.11)]">
-					<h2>Get in touch</h2>
+					<h2>{subheadline}</h2>
 					<dl className="flex flex-col justify-start items-start gap-y-[20px] mt-12 text-[1rem]">
 						{socials.map((social: social) => {
 							return (
@@ -58,7 +67,7 @@ const ContactForm: React.FC = () => {
 					action={formAction}
 					className="grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-x-8 gap-y-6 py-20 px-6 lg:py-48 lg:px-8">
 					<p className="flex text-sm text-black font-bold md:col-span-2">
-						Picked plan:&nbsp;
+						{picked_plan}:&nbsp;
 						<span className="inline-flex gap-x-[1px] text-blue-600">
 							<Circle className="bg-blue-600" />
 							{ticketCtx.activeTicket.charAt(0).toUpperCase() +
@@ -67,7 +76,7 @@ const ContactForm: React.FC = () => {
 					</p>
 					<div className="flex flex-col justify-start items-start gap-y-[10px]">
 						<label htmlFor="firstName" className="block text-sm font-bold">
-							First name
+							{formLabels.first_name}
 						</label>
 						<Input
 							id="firstName"
@@ -79,7 +88,7 @@ const ContactForm: React.FC = () => {
 					</div>
 					<div className="flex flex-col justify-start items-start gap-y-[10px]">
 						<label htmlFor="lastName" className="block text-sm font-bold">
-							Last name
+							{formLabels.last_name}
 						</label>
 						<Input
 							id="lastName"
@@ -92,8 +101,9 @@ const ContactForm: React.FC = () => {
 					<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
 						<label
 							htmlFor="email"
-							className="block text-sm font-bold mb-[10px]">
-							Email
+							className="block text-sm font-bold mb-[10px]"
+						>
+							{formLabels.email}
 						</label>
 						<Input
 							id="email"
@@ -106,13 +116,18 @@ const ContactForm: React.FC = () => {
 					<div className="flex flex-col justify-start items-start gap-y-[10px] md:col-span-2">
 						<label
 							htmlFor="message"
-							className="block text-sm font-bold mb-[10px]">
-							Message
+							className="block text-sm font-bold mb-[10px]"
+						>
+							{formLabels.message}
 						</label>
 						<TextArea id="message" name="message" />
 					</div>
 					<div className="flex justify-end md:col-span-2">
-						<SubmitButton formState={formState} />
+						<SubmitButton 
+							formState={formState}
+							buttonLabels={formLabels.buttonAction} 
+							notificationContent={notificationContent} 
+						/>
 					</div>
 				</form>
 			</section>

@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import { Fragment } from "react";
 import { useFormStatus } from "react-dom";
 
+import type { FormLabels, NotificationContent } from "@/lib/content";
+
 const Notification = dynamic(() => import('./Notification'));
 
 import type { ZodIssue } from "zod";
@@ -13,9 +15,11 @@ export type formStateType = {
 	errors: ZodIssue[] | null | string;
 };
 
-const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string }> = ({
+const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string, buttonLabels: FormLabels['buttonAction'], notificationContent?: NotificationContent }> = ({
 	formState,
-	buttonStyle
+	buttonStyle,
+	buttonLabels,
+	notificationContent
 }) => {
 	const { pending } = useFormStatus();
 
@@ -33,7 +37,7 @@ const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string }>
 										.errors!.map((error: ZodIssue) => error.message)
 										.join("\n")
 								: formState.errors
-							: "Something went wrong!")}
+							: (notificationContent?.error || "Something went wrong!"))}
 				</Notification>
 			)}
 			<button
@@ -42,7 +46,9 @@ const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string }>
 				disabled={pending}
 				className={`base-btn ${buttonStyle}`.trim()}
 			>
-				{pending ? "Submitting..." : "Submit"}
+				{pending
+					? buttonLabels?.sendingLabel || "Submitting"
+					: buttonLabels?.label || "Submit"}
 			</button>
 		</Fragment>
 	);

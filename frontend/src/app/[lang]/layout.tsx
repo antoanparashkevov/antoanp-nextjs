@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
 import { defaultLocale } from '@/middleware';
 
-import '../styles/globals.css';
+import '@/styles/globals.css';
 
 import TheHeader from '@/components/layout/TheHeader';
+import { headerContent } from '@/lib/content';
 
 const source_sans_3 = Source_Sans_3({
 	weight: ['400', '600', '700'],
@@ -25,13 +26,15 @@ export default function RootLayout({
 	children: React.ReactNode;
 	params: { lang: string };
 }>) {
+	const lang = params.lang || defaultLocale;
+
 	return (
 		<html lang={params.lang ?? defaultLocale} className={`${source_sans_3.variable} font-sans`}>
 			<body className="min-w-[360px] w-full min-h-screen flex flex-col text-main text-base">
 				<div id='overlay' />
 				<div id='backdrop' />
 				<header className="container flex w-full min-h-[130px] mb-16">
-					<TheHeader />
+					<TheHeader content={headerContent[lang]} />
 				</header>
 				<main className="container flex flex-col flex-grow justify-start items-center">
 					{children}

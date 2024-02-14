@@ -4,6 +4,8 @@ import { z } from "zod";
 
 import mongoDBClient from "../../mongoose/config/configuration";
 
+import type { NotificationContent } from "./content";
+
 import {
 	applicationItem,
 	create as createApplication
@@ -34,6 +36,7 @@ const schema = z.object({
 export async function create(
 	ticketCode: string,
 	isExpired: boolean,
+	notificationContent: NotificationContent,
 	initialState: any,
 	formData: FormData
 ) {
@@ -66,7 +69,7 @@ export async function create(
 
 	return {
 		errors: null,
-		message: "You've successfully sent the message!"
+		message: notificationContent.success
 	};
 }
 

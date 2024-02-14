@@ -1,14 +1,26 @@
 import React from "react";
+
 import ContactForm from "../UI/ContactForm";
 
-const ContactSection: React.FC = () => {
+import type { ContactSectionContent } from "@/lib/content";
+
+const ContactSection: React.FC<{ content: ContactSectionContent }> = ({ content }) => {
 	return (
 		<section className="w-full">
 			<h1 className="w-[80%] text-[45px] mb-4 text-center mx-auto">
-				Sign Up <span className="text-orange-500">Now</span> And Let&apos;s
-				Build Your <span className='text-orange-500'>Dream-Looking</span> Website Together
+				{content.headline.map((item: string, index: number) => {
+					if( index % 2 === 1 ) {
+						return <span key={index} className='text-orange-500'>{item}</span>
+					} 
+					return item;
+				})}
 			</h1>
-			<ContactForm />
+			<ContactForm 
+				notificationContent={content.notificationContent}
+				subheadline={content.subheadline} 
+				picked_plan={content.picked_plan} 
+				formLabels={content.form} 
+			/>
 		</section>
 	);
 };

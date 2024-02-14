@@ -2,10 +2,12 @@ import Image from 'next/image';
 
 import CommunityIcon from '../../../public/images/community.webp';
 
-import { testimonials, testimonial } from '../../data/testimonials';
 import Testimonial from '../UI/Testimonial';
+import React from 'react';
 
-const TestimonialsSection = () => {
+import type { TestimonialsSectionContent, testimonial } from '@/lib/content';
+
+const TestimonialsSection: React.FC<{ content: TestimonialsSectionContent }> = ({ content }) => {
 	return (
 		<section
 			id="testimonials"
@@ -19,7 +21,7 @@ const TestimonialsSection = () => {
 					className="object-cover blur-sm"
 				/>
 			</div>
-			{ testimonials.map((testimonial: testimonial) => {
+			{ content.map((testimonial: testimonial) => {
 				return (
 					<Testimonial 
 						key={testimonial.id}

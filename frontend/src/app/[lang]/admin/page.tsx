@@ -4,12 +4,12 @@ import BaseDialog from "@/components/UI/BaseDialog";
 import LoginForm from "@/components/admin/LoginForm";
 
 import { getSession } from "@/lib/auth";
-import mongoDBClient from "../../../mongoose/config/configuration";
+import mongoDBClient from "../../../../mongoose/config/configuration";
 
 import {
 	applicationItem,
 	getAll
-} from "../../../mongoose/services/applicationService";
+} from "../../../../mongoose/services/applicationService";
 
 async function getData(
 	session: string | null

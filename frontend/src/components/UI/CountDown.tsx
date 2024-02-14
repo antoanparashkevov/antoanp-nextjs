@@ -7,7 +7,9 @@ import styles from "./CountDown.module.css";
 import { CountContext } from "@/context/count-context";
 import Link from "next/link";
 
-const CountDown: React.FC<{ hours: number }> = ({ hours = 24 }) => {
+import type { CountDown } from "@/lib/content";
+
+const CountDown: React.FC<{ hours: number, content: CountDown }> = ({ hours = 24, content }) => {
 	const { isExpired } = useContext(CountContext);
 
 	const [countToDate, setCountToDate] = useState(
@@ -222,13 +224,12 @@ const CountDown: React.FC<{ hours: number }> = ({ hours = 24 }) => {
 			</section>
 			{isExpired && (
 				<section className="text-center">
-					<h1 className="text-xl mb-4">Unfortunately, your time expired...</h1>
+					<h1 className="text-xl mb-4">{content.headline}</h1>
 					<p className="mb-4">
-						But don&apos;t worry, you still have a chance to get the discounts if
-						you contact me now
+						{content.subheadline}
 					</p>
 					<Link href="#contact" className="base-btn">
-						Contact Me
+						{content.actionButtonLabel}
 					</Link>
 				</section>
 			)}

@@ -17,24 +17,26 @@ import { dictionary } from '@/lib/content';
 import { defaultLocale } from '@/middleware';
 
 const Home: React.FC<{params: { lang: string }}> = ({ params }) => {
+	const lang = params.lang || defaultLocale;
+
 	return (
 		<TicketContextProvider>
 			<CountContextProvider>
-				<HeroSection />
+				<HeroSection content={dictionary[lang]["heroSection"]} />
 				<SeparationLine />
-				<IntroductionSection />
+				<IntroductionSection content={dictionary[lang]['introductionSection']} />
 				<SeparationLine />
-				<BenefitsSection />
+				<BenefitsSection content={dictionary[lang]['benefitsSection']} />
 				<SeparationLine />
-				<AboutMeSection />
+				<AboutMeSection content={dictionary[lang]['aboutMeSection']} />
 				<SeparationLine />
-				<FeaturesSection />
+				<FeaturesSection content={dictionary[lang]['featuresSection']} />
 				<SeparationLine />
-				<TestimonialsSection />
+				<TestimonialsSection content={dictionary[lang]['testimonialsSection']} />
 				<SeparationLine />
-				<TicketsSection />
+				<TicketsSection content={dictionary[lang]['ticketsSection']} langCode={lang} />
 				<SeparationLine />
-				<ContactSection />
+				<ContactSection content={dictionary[lang]['contactSection']} />
 			</CountContextProvider>
 		</TicketContextProvider>
 	);

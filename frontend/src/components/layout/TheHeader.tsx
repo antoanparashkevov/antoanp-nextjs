@@ -2,7 +2,9 @@ import React from "react";
 import ActionButton from "../UI/ActionButton";
 import Link from "next/link";
 
-const TheHeader: React.FC = () => {
+import type { HeaderContent } from "@/lib/content";
+
+const TheHeader: React.FC<{ content: HeaderContent}> = ({ content }) => {
 
     return (
 			<nav className="flex justify-between items-center w-full min-h-full">
@@ -12,7 +14,7 @@ const TheHeader: React.FC = () => {
 				<ul role="list">
 					<li>
 						<ActionButton className="text-orange-500" href="#prices">
-							Go to prices
+							{content.actionButtonLabel}
 						</ActionButton>
 					</li>
 				</ul>

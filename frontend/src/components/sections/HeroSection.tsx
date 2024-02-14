@@ -12,23 +12,39 @@ import TiredImage from "../../../public/images/tired.webp";
 
 import LinearGradient from "@/components/UI/LinearGradient";
 
-const HeroSection: React.FC = () => {
+import type { HeroSectionContent } from "@/lib/content";
+
+const HeroSection: React.FC<{ content: HeroSectionContent }> = ({content}) => {
 	return (
 		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
 			<LinearGradient className='top-8 right-0'/>
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
 				<h1 className="text-2xl mb-16 animate-showContent">
-					How To <span className="text-orange-500">“Unstuck”</span> Your
-					Starting Business From Having 0 or FEW Clients To 10x{" "}
-					<span className="text-orange-500">In Less Than 90 Days</span>
+					{content.headline.map((item: string, index: number) => {
+						if( index % 2 === 1 ) {
+							return (
+								<span key={index} className="text-orange-500">
+									{item}
+								</span>
+							);
+						}
+
+						return item;
+					})}
 				</h1>
 
 				<p className="text-lg mb-8 animate-showContent-smallDelay">
-					Let&apos;s Fix This Once And For All By Building You An
-					<span className="text-orange-500">&nbsp;
-						Affordable High-Performing Website&nbsp;
-					</span>
-					That Will Steal Your Competitors&apos; Clients
+					{content.subheadline.map((item: string, index: number) => {
+						if( index % 2 === 1 ) {
+							return (
+								<span key={index} className="text-orange-500">
+									{item}
+								</span>
+							);
+						}
+						
+						return item;
+					})}
 				</p>
 
 				<Link href="#testimonials" className="base-btn animate-showContent-bigDelay">

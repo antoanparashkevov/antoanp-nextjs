@@ -4,25 +4,21 @@ import Image from 'next/image';
 import PortraitImage from '../../../public/images/portrait_pic_3.webp';
 import PortraitDiplomaImage2 from '../../../public/images/portrait_diploma_pic_2.webp';
 import PortraitDiplomaImage3 from '../../../public/images/portrait_diploma_pic_3.webp';
+import { AboutMeSectionContent } from '@/lib/content';
 
-const AboutMeSection: React.FC = () => {
+const AboutMeSection: React.FC<{ content: AboutMeSectionContent }> = ({ content }) => {
 
     return (
 			<section className="lg:flex lg:gap-x-8 lg:items-center w-full">
 				<div className="lg:flex-shrink-0 max-w-[30rem] w-full">
-					<h2 className='mb-4 animate fade-left'>A little about me</h2>
+					<h2 className='mb-4 animate fade-left'>{content.headline}</h2>
 					<p className='animate fade-left'>
-						Graduated from
-						<span className="text-orange-500"> The #1 Software University in Bulgaria</span>.
-						<br />
-						During my studies there, I had the amazing opportunity to learn from
-						<span className="text-orange-500"> top experts and professors </span>
-						with more than
-						<span className="text-orange-500"> 10 years of experience </span>in
-						the area. Besides mastering the basics, I&apos;ve also learned more
-						advanced techniques that will be the “secret sauce” when it comes to
-						attracting new customers to your website and making tons of money
-						from them.
+						{content.para.map((item: string, index: number) => {
+							if( index % 2 === 1) {
+								return <span key={index} className="text-orange-500">{item}</span>
+							}
+							return item;
+						})}
 					</p>
 				</div>
 
