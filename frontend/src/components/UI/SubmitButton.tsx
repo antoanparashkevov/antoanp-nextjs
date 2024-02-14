@@ -15,7 +15,14 @@ export type formStateType = {
 	errors: ZodIssue[] | null | string;
 };
 
-const SubmitButton: React.FC<{ formState: formStateType, buttonStyle?: string, buttonLabels: FormLabels['buttonAction'], notificationContent?: NotificationContent }> = ({
+type SubmitButtonProps = {
+	formState: formStateType;
+	buttonStyle?: string;
+	buttonLabels?: FormLabels["buttonAction"];
+	notificationContent?: NotificationContent;
+};
+
+const SubmitButton: React.FC<SubmitButtonProps> = ({
 	formState,
 	buttonStyle,
 	buttonLabels,
