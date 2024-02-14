@@ -8,9 +8,9 @@ import GithubIcon from '../../../public/icons/github_black.svg';
 import GlobeIcon from '../../../public/icons/globe.svg';
 import FigmaIcon from '../../../public/icons/figma.svg';
 
-import { testimonial } from "@/data/testimonials";
+import type { testimonial } from "@/lib/content";
 
-const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
+const Testimonial: React.FC<{testimonial: testimonialimonial}> = ({testimonial}) => {
 	return (
 		<figure
 			className={
