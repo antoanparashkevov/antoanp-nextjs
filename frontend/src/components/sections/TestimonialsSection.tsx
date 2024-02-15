@@ -11,7 +11,7 @@ const TestimonialsSection: React.FC<{ content: TestimonialsSectionContent }> = (
 	return (
 		<section
 			id="testimonials"
-			className="relative grid grid-cols-1 justify-center items-center w-full py-20 px-10 gap-8 lg:grid-cols-3 lg:py-40 lg:px-10 lg:gap-12">
+			className="relative grid grid-cols-1 justify-center items-center w-full py-20 px-10 gap-8 xl:grid-cols-3 xl:py-40 xl:px-10 xl:gap-12">
 			<div className="absolute inset-0">
 				<Image
 					src={CommunityIcon}

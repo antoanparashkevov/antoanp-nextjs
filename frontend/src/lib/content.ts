@@ -3,6 +3,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import YoanaImage from "../../public/images/Yoana.jpeg";
 import SlaviImage from "../../public/images/Slavi.jpg";
 import NikiImage from "../../public/images/Niki.jpeg";
+import SevdelinImage from "../../public/images/Sevdelin.jpg";
 
 export type HeaderContent = {
 	actionButtonLabel: string;
@@ -489,6 +490,15 @@ export const dictionary: Record<string, DictionaryEntry> = {
 					"https://www.figma.com/file/tqyxHF9RfEQyLEMCzFDvhz/it-community?type=design&node-id=0-1&mode=design&t=hqsgZKdr6Hkq2f0b-0",
 				githubLink: "https://github.com/antoanparashkevov/it-community-react",
 				authorImage: NikiImage
+			},
+			{
+				id: 4,
+				quote: `"Antoan is extremely serious and reliable partner! The process was easy and enjoyable! With his professionalism and strong skills he managed to exceed my desired result!"`,
+				author: "Sevdelin Kolarov",
+				authorInfo: "Businessmen",
+				projectLink: "https://lovejourney69.xyz",
+				githubLink: "https://github.com/antoanparashkevov/book-nextjs",
+				authorImage: SevdelinImage
 			}
 		],
 		ticketsSection: {
@@ -982,6 +992,15 @@ export const dictionary: Record<string, DictionaryEntry> = {
 					"https://www.figma.com/file/tqyxHF9RfEQyLEMCzFDvhz/it-community?type=design&node-id=0-1&mode=design&t=hqsgZKdr6Hkq2f0b-0",
 				githubLink: "https://github.com/antoanparashkevov/it-community-react",
 				authorImage: NikiImage
+			},
+			{
+				id: 4,
+				quote: `"Aнтоан е изключително сериозен и надежден партньор! Процесът беше лек и приятен! Със неговия професионализъм и завидни умения, успя да надмине желания от мен резултат!"`,
+				author: "Севделин Коларов",
+				authorInfo: "Бизнесмен",
+				projectLink: "https://lovejourney69.xyz",
+				githubLink: "https://github.com/antoanparashkevov/book-nextjs",
+				authorImage: SevdelinImage
 			}
 		],
 		ticketsSection: {
