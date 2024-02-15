@@ -5,7 +5,8 @@ import { defaultLocale } from '@/middleware';
 import '@/styles/globals.css';
 
 import TheHeader from '@/components/layout/TheHeader';
-import { headerContent } from '@/lib/content';
+
+import { headerContent, metadataContent } from '@/lib/content';
 
 const source_sans_3 = Source_Sans_3({
 	weight: ['400', '600', '700'],
@@ -14,10 +15,15 @@ const source_sans_3 = Source_Sans_3({
 	variable: '--font-source-sans-3'
 });
 
-export const metadata: Metadata = {
-	title: 'Professional Web-Development Services At Affordable Price For Your Business',
-	description: 'Professional website development for your business with an expert web developer including web design with Figma'
-};
+export function generateMetadata({
+	params
+}: Readonly<{
+	params: { lang: string }; 
+}>) {
+	const lang = params.lang || defaultLocale;
+
+	return metadataContent[lang];
+}
 
 export default function RootLayout({
 	children,

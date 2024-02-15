@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import YoanaImage from "../../public/images/Yoana.jpeg";
@@ -127,6 +128,21 @@ type DictionaryEntry = {
 	testimonialsSection: TestimonialsSectionContent;
 	ticketsSection: TicketsSectionContent;
 	contactSection: ContactSectionContent;
+};
+
+export const metadataContent: Record<string, Metadata> = {
+	en: {
+		title:
+			"Professional Web-Development Services At Affordable Price For Your Business",
+		description:
+			"Professional website development for your business with an expert web developer including web design with Figma"
+	},
+	bg: {
+		title:
+			"Професионални услуги по уеб разработка на достъпни цени за твоя бизнес",
+		description:
+			"Професионално разработване на уебсайт за твоя бизнес включващ уеб дизайн с Фигма от експертен уеб разработчик"
+	}
 };
 
 export const headerContent: Record<string, HeaderContent> = {
