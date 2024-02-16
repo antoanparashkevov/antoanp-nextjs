@@ -222,7 +222,11 @@ export const dictionary: Record<string, DictionaryEntry> = {
                             I will build you a top-tier website that when your clients see it for the time, 
 							they will have NO CHOICE but to buy your products or services.
                         `,
+						"<br />",
+						"<br />",
 						"Why?",
+						"<br />",
+						"<br />",
 						`Because it will look so `,
 						"professional",
 						" that even your competitors will be ",
@@ -526,7 +530,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
                 `,
 				"special discount",
 				" if you sign up for discussion in the next ",
-				"24"
+				"24 hours"
 			],
 			plans: "Plans",
 			countDown: {

@@ -13,23 +13,25 @@ export type selectorItem = {
 }
 
 type DataSelectorWrapperProps = {
-	initialPlaceHolderValue?: string;
+	hasInitialPlaceholderValue?: boolean;
+	placeholderValue: string;
 	selectorData: selectorItem[];
 	closeOnLeave?: boolean;
 	onResubForNewData: (data: selectorItem) => void;
 };
 
 const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
-	initialPlaceHolderValue,
+	hasInitialPlaceholderValue,
+	placeholderValue,
 	selectorData,
 	closeOnLeave = false,
 	onResubForNewData
 }) => {
 	const router = useRouter();
 
-	//when we have initialPlaceHolderValue, we should hide the list (false)
-	//when we don't have initialPlaceHolderValue, we should show the list (true)
-	const [isSelectorClicked, setIsSelectorClicked] = useState<boolean>(!initialPlaceHolderValue);
+	//when we have hasInitialPlaceholderValue, we should hide the list (false)
+	//when we don't have hasInitialPlaceholderValue, we should show the list (true)
+	const [isSelectorClicked, setIsSelectorClicked] = useState<boolean>(!hasInitialPlaceholderValue);
 
 	const expandCollapseSelector = () => {
 		setIsSelectorClicked((prevState) => !prevState);
@@ -57,14 +59,14 @@ const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
 			}
 			onKeyDown={closeOnLeave ? () => setIsSelectorClicked(false) : undefined}
 			className={`
-                ${initialPlaceHolderValue ? 
+                ${hasInitialPlaceholderValue ? 
 					"relative min-w-[200px] h-[45px]" :
 					"absolute top-[30px] right-0 z-10"
 				}
                 text-black text-base font-bold capitalize cursor-pointer
             `.trim()}
 		>
-			{initialPlaceHolderValue && (
+			{hasInitialPlaceholderValue && (
 				<div
 					onClick={expandCollapseSelector}
 					onKeyUp={expandCollapseSelector}
@@ -74,7 +76,7 @@ const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
 						${isSelectorClicked? "bg-[#F1F1F1]" : "bg-white"}
 					`}
 				>
-					<span>{initialPlaceHolderValue}</span>
+					<span>{placeholderValue}</span>
 					<BaseArrow rotate={isSelectorClicked} />
 				</div>
 			)}
@@ -82,7 +84,7 @@ const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
 			{isSelectorClicked && (
 				<ul 
 					className={`
-						${initialPlaceHolderValue ? "absolute top-[46px] left-0 z-10" : ""}
+						${hasInitialPlaceholderValue ? "absolute top-[46px] left-0 z-10" : ""}
 						flex flex-col justify-start items-start
 						w-max py-1
 						border border-solid border-[#E5E5E5] rounded-md
@@ -102,7 +104,10 @@ const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
 								)}
 								className={`
 									w-full leading-[45px] pl-[15px] pr-[10px] cursor-pointer
-									${initialPlaceHolderValue === item.title ? "bg-[#F1F1F1]" : "bg-white"}
+									${ placeholderValue.toLocaleLowerCase() === item.title.toLocaleLowerCase() ?
+										"bg-[#F1F1F1]" :
+										"bg-white"
+									}
 									hover:bg-[#F1F1F1]
 								`}
 							>

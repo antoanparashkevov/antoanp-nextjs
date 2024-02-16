@@ -4,7 +4,7 @@ import React, { useContext, useMemo, useState } from "react";
 import Link from "next/link";
 import { supportedLocales } from "@/middleware";
 
-import type { HeaderContent } from "@/lib/content";
+import { headerContent } from "@/lib/content";
 
 import ActionButton from "../UI/ActionButton";
 
@@ -12,11 +12,9 @@ import DataSelectorWrapper, { selectorItem } from "../UI/DataSelectorWrapper";
 
 import { LanguageContext } from "@/context/language-context";
 
-const TheHeader: React.FC<{ content: HeaderContent }> = ({
-	content,
-}) => {
+const TheHeader: React.FC = () => {
 	const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-	const languageContext = useContext(LanguageContext);
+	const { language, setLanguageCode } = useContext(LanguageContext);
 
 	const selectorData = useMemo(
 		() => supportedLocales.map(
@@ -29,7 +27,7 @@ const TheHeader: React.FC<{ content: HeaderContent }> = ({
 	)
 
 	function changeLanguage(data: selectorItem) {
-		languageContext.setLanguageCode(data.code);
+		setLanguageCode(data.code);
 		setOpenDropdown(false);
 	}
 
@@ -39,11 +37,6 @@ const TheHeader: React.FC<{ content: HeaderContent }> = ({
 					<Link href="/">AntoanP</Link>
 				</h3>
 				<ul role="list" className="flex items-center gap-x-4">
-					<li>
-						<ActionButton className="text-orange-500" href="#prices">
-							{content.actionButtonLabel}
-						</ActionButton>
-					</li>
 					<li className='relative'>
 						<svg
 							onClick={() => setOpenDropdown(!openDropdown)}
@@ -63,9 +56,15 @@ const TheHeader: React.FC<{ content: HeaderContent }> = ({
 						{ openDropdown && (
 							<DataSelectorWrapper
 								selectorData={selectorData}
+								placeholderValue={language}
 								onResubForNewData={changeLanguage}
 							/>
 						)}
+					</li>
+					<li>
+						<ActionButton className="text-orange-500" href="#prices">
+							{headerContent[language].actionButtonLabel}
+						</ActionButton>
 					</li>
 				</ul>
 			</nav>
