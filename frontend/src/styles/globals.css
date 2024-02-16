@@ -192,6 +192,16 @@ body, html {
     .fade-right {
         animation-name: fade-right;
     }
+
+    /*validation*/
+    .invalid label {
+        @apply font-bold text-red-500;
+    }
+
+    .invalid input,
+    .invalid textarea {
+        border-color: theme('colors.red.500') !important;
+    }
 }
 
 @layer utilities {
