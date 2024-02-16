@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useContext } from 'react';
 
 import SeparationLine from '@/components/UI/SeparationLine';
 import HeroSection from '@/components/sections/HeroSection';
@@ -14,11 +16,12 @@ import { TicketContextProvider } from '@/context/ticket-context';
 import { CountContextProvider } from '@/context/count-context';
 
 import { dictionary } from '@/lib/content';
-import { defaultLocale } from '@/middleware';
+import { LanguageContext } from '@/context/language-context';
 
 const Home: React.FC<{params: { lang: string }}> = ({ params }) => {
-	const lang = params.lang || defaultLocale;
-
+	
+	const { language: lang } = useContext(LanguageContext);
+	
 	return (
 		<TicketContextProvider>
 			<CountContextProvider>
