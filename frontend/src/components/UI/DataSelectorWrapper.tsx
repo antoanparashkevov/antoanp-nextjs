@@ -86,7 +86,7 @@ const DataSelectorWrapper: React.FC<DataSelectorWrapperProps> = ({
 					className={`
 						${hasInitialPlaceholderValue ? "absolute top-[46px] left-0 z-10" : ""}
 						flex flex-col justify-start items-start
-						w-max py-1
+						${hasInitialPlaceholderValue ? 'min-w-[200px]' : 'w-max'} py-1
 						border border-solid border-[#E5E5E5] rounded-md
 						shadow-md bg-[rgba(255,_255,_255,_0.9)] backdrop-blur-sm
 					`}
