@@ -7,7 +7,6 @@ type inputProps = {
 	required?: boolean;
 	name: string;
 	placeholder?: string;
-	showRemoveIcon?: boolean;
 	inputDisabled?: boolean;
 	iconSrc?: string;
 	iconAlt?: string;
@@ -26,7 +25,6 @@ const Input: React.FC<inputProps> = ({
 	iconWidth,
 	iconHeight,
 	iconSrc,
-	//showRemoveIcon,
 }) => {
 	return (
 		<div className="w-full relative inline-flex justify-start items-center gap-x-2.5 mb-4">
@@ -54,14 +52,6 @@ const Input: React.FC<inputProps> = ({
 				placeholder={placeholder}
 				disabled={inputDisabled}
 			/>
-			{/* {showRemoveIcon && enteredValue.toString().length > 0 &&
-                <div
-                    onClick={() => reset()}
-                    className='w-6 h-full absolute top-0 right-4 flex justify-center items-center text-black cursor-pointer pointer-events-auto'
-                >
-                    <Icon src='/icons/remove.svg' alt='Remove' width={24} height={24}/>
-                </div>
-            } */}
 		</div>
 	);
 };
