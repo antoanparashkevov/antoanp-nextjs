@@ -1,15 +1,12 @@
-import styles from "./BaseArrow.module.scss";
+import React from "react";
 
-//UI components
-import Icon from "@/components/UI/Icon";
-
-const BaseArrow = ({ rotate = false }: { rotate?: boolean }) => {
+const BaseArrow: React.FC<{ rotate: boolean }> = ({ rotate = false }) => {
 	return (
 		<svg
 			width="24"
 			height="24"
 			className={`
-                cursor-pointer transition-transform duration-75 ease-out
+                cursor-pointer transition-transform duration-[0.5s] ease-out
                 ${rotate ? "rotate-90" : "rotate-[270deg]"}
             `}
 			viewBox="0 0 24 24"
