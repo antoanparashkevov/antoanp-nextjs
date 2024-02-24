@@ -19,7 +19,7 @@ const HeroSection: React.FC<{ content: HeroSectionContent }> = ({content}) => {
 		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
 			<LinearGradient className='top-8 right-0'/>
 			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
-				<h1 className="text-2xl mb-16 animate-showContent">
+				<h1 className="text-xl md:text-2xl mb-16 animate-showContent">
 					{content.headline.map((item: string, index: number) => {
 						if( index % 2 === 1 ) {
 							return (
@@ -33,11 +33,11 @@ const HeroSection: React.FC<{ content: HeroSectionContent }> = ({content}) => {
 					})}
 				</h1>
 
-				<p className="text-lg mb-8 animate-showContent-smallDelay">
+				<p className="text-base md:text-lg mb-8 animate-showContent-smallDelay">
 					{content.subheadline.map((item: string, index: number) => {
 						if( index % 2 === 1 ) {
 							return (
-								<span key={index} className="text-orange-500">
+								<span key={index} className="text-orange-500 font-bold">
 									{item}
 								</span>
 							);

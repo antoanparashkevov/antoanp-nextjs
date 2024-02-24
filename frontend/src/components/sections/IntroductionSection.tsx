@@ -38,8 +38,14 @@ const IntroductionSection: React.FC<{ content: IntroductionSectionContent }> = (
 						</Fragment>
 					);
 				})}
-				<Link href="#testimonials" className="base-btn animate fade-left">
+				<Link href="#testimonials" className="base-btn animate fade-left mb-8">
 					Testimonials
+				</Link>
+				<p className='font-bold animate fade-in'>
+					{content.outro}
+				</p>
+				<Link href="#contact" className='base-btn animate fade-left my-8'>
+					{content.contactMeLabel}
 				</Link>
 			</div>
 			<div className="flex gap-8">

@@ -17,6 +17,8 @@ export type HeroSectionContent = {
 
 export type IntroductionSectionContent = {
 	sections: { headline?: string; para: string[] }[];
+	outro: string;
+	contactMeLabel: string;
 };
 
 export type BenefitsSectionContent = {
@@ -159,7 +161,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 		heroSection: {
 			headline: [
 				"How To ",
-				`“Unstuck”`,
+				"Transform",
 				" Your Starting Business From Having 0 or FEW Clients To 10x ",
 				"In Less Than 90 Days"
 			],
@@ -189,73 +191,62 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						`
                             You see, as a professional full-stack web developer dedicated to his
                             craft for over 3 years now, I want to make sure I will work with a
-                            serious ambitious individual who wants 
+                            serious ambitious individual.
                         `,
-						"nothing but the best for himself and his starting business.",
-						"<br />",
-						"<br />",
-						"Someone who is committed to making his business №1 and blowing away the competition, and most importantly:",
 						"<br />",
 						"<br />",
 						"",
-						`
-                            Someone who will not quit and run away when things get difficult.
-                            I might be a little direct but there's a specific reason for that.
-                        `
+						"I might be a little direct but there's a specific reason for that."
 					]
 				},
 				{
 					headline: "I want the best possible results for you!",
 					para: [
 						`
-                            To achieve that, I must ensure you are thinking as a winner. And if
-					        you're still reading this, I can confidentially tell 
+                            To achieve that, I must ensure you are thinking as an individual who 
+                            wants the best for his starting business, and more specifically:
                         `,
-						"you are!",
+						"<br />",
+						"<br />",
+						"To attain hundreds of clients for your business and make tons of money from them.",
 						"<br />",
 						"<br />",
 						"So how will I get you a lot of clients? The answer is simple:",
 						"<br />",
 						"<br />",
-						"",
-						`
-                            I will build you a top-tier website that when your clients see it for the time, 
-							they will have NO CHOICE but to buy your products or services.
-                        `,
+						`I will build you a top-tier website so that when your clients see it for the time, 
+						they will have NO CHOICE but to buy your products or services.`,
 						"<br />",
 						"<br />",
-						"Why?",
+						"How do I know?",
 						"<br />",
 						"<br />",
-						`Because it will look so `,
-						"professional",
-						" that even your competitors will be ",
-						"envious",
-						" of it."
+						"Because I have already done that repeatedly with my previous customers as you can check here.",
 					]
 				}
-			]
+			],
+			outro: "Sign up here if you want an elite website that will drag you hundreds of clients for your starting business.",
+			contactMeLabel: "Contact me"
 		},
 		benefitsSection: {
 			headline: [
-				`
-                    So in the past few months, I've done detailed research about my
-					competitors' performance and picked the 4 most crucial elements
-					they miss in their services. And of course, as a competitive
-					professional who wants only 
-                `,
-				"the best possible results for my clients",
-				" I will ensure you won't miss a single one of them and completely distinguish you from the amateurs."
+				`Over the past few months, I conducted an in-depth study of the top web development 
+				companies worldwide and identified the `,
+				"four key",
+				` elements missing from their services to 
+				achieve optimal results for their clients. These elements `,
+				"WILL NOT BE MISSING",
+				" once we create your website and will completely set you apart from the competition.",
 			],
 			sections: [
 				{
 					headline: "Start Strong, Spend Smart",
 					para: [
 						`I know from experience how “pocket-draining” and stressful it can be
-						to take off a business. That's why I want to reduce the risk as
-						much as possible for you and provide you with a high-quality website
-						for a `,
-						"very affordable starting price",
+						to take off a business and to make it as easy as possible for you 
+						I will make you a website that is not only high-quality, 
+						but it will also be at a `,
+						"very affordable price",
 						"."
 					],
 					actionButton: {
@@ -266,14 +257,9 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: "Your Website, Your Vision, Your Way!",
 					para: [
-						`
-                            Picture the perfect-looking design for your website. Think of every
-						    color, layout, and detail of it. 
-                        `,
-						"This exactly what you will get",
-						`. Unlike the pretty restricted and expensive template choices
-						some big companies have, I will create a beautiful-looking design
-						for your website that will leave your visitors' jaws dropped.`
+						`Unlike the pretty limited and expensive template choices
+						some big companies offer to their clients, I will create a beautifully 
+						designed website tailored to your preferences that will leave your visitors with dropped jaws.`
 					],
 					actionButton: {
 						href: "#offers",
@@ -283,15 +269,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: "User Bliss: Where Functionality Meets Friendliness!",
 					para: [
-						`
-                            Most websites lack a good user experience for their clients. Imagine
-                            you enter a website and you see the bad structure, saturated colors,
-                            and scattered text all over the place. It's an unpleasant
-                            experience, isn't it? That's why we will be professionals
-                            and will provide your audience with an 
-                        `,
-						"easy-to-use well-ordered",
-						" website with a seamless user experience."
+						`Imagine entering a low-quality website and seeing its poor structure, 
+						saturated colors, and scattered text. Not pleasant, right? 
+						That's why we will be professionals and provide your visitors with an easily accessible and 
+						well-organized website that is comfortable to read and won't overwhelm them with endless text!`,
 					],
 					actionButton: {
 						href: "#offers",
@@ -303,11 +284,9 @@ export const dictionary: Record<string, DictionaryEntry> = {
 					para: [
 						"Privacy is ",
 						"sacred",
-						` 
-                            for most people. Unfortunately, many big companies
-						    ignore this crucial fact and use their clients' data
-						    information for their own marketing purposes which in my opinion is 
-                        `,
+						` for most people. Unfortunately, many big companies
+						ignore this crucial fact and use their clients' data
+						information for their own marketing purposes which in my opinion is `,
 						"pathetic",
 						"! But don't worry, once your website is finished, you and ONLY you will have access to the code."
 					],
@@ -337,9 +316,9 @@ export const dictionary: Record<string, DictionaryEntry> = {
 		},
 		featuresSection: {
 			headline:
-				"Since I am a generous person and want to provide you as much value as possible",
+				"Since I am a generous person and want to provide you as much value as possible for your starting business",
 			subheadline:
-				"In addition to ALL of the exclusive benefits above, you will also get:",
+				"In addition to the benefits above, you will also get:",
 			sections: [
 				{
 					headline: [
@@ -350,12 +329,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						" Briliance"
 					],
 					para: [
-						`
-                            If your website is an expensive luxurious sports car, the front end
-                            is the sleek exterior design, polished finish, and cutting-edge
-                            features of the vehicle. It's everything your client will
-                            interact with on your website: the
-                        `,
+						"It's everything your client will interact with on your website – the ",
 						"layout",
 						", ",
 						"design",
@@ -363,11 +337,12 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"buttons",
 						", ",
 						"forms",
-						`, and any other visual
-						element. For this part, I'm using one of the most efficient
+						", and any other ",
+						"visual element",
+						`. For this part, I'm using one of the most efficient
 						technologies right now - `,
 						"Next.JS",
-						" that optimizes the most important parts of a website - ",
+						" which optimizes the most important parts of a website - ",
 						"Images",
 						" and ",
 						"Fonts",
@@ -403,42 +378,37 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						": SEO Tactics for Enhanced Visibility"
 					],
 					para: [
-						"This is the ",
-						"golden key ",
-						`
-                            that will unlock the full potential of your website's presence. Here
-                            I'm using a specific technology that will 
-                        `,
-						"skyrocket ",
-						`
-                            the visibility of
-                            your website to your desired target audience by at least 10% -
-                            because a well-crafted website deserves to be at the top of the
-                            search engines.
-                        `
+						"This is a ",
+						"special technology",
+						` that will significantly enhance the visibility of your website in the online space 
+						by targeting your desired audience with at least 10% - because a `,
+						"high-level website",
+						" deserves to be ",
+						"at the top",
+						" of the search engine!"
 					]
 				},
 				{
 					headline: [
 						"Versatile ",
 						"User Experience",
-						": The Magic of Responsive Design"
+						": The Magic of ",
+						"Responsive",
+						" Design"
 					],
 					para: [
 						"One website - ",
-						"diversity ",
-						`
-                            of ways to reach it. This one-of-a-kind service is specifically
-                            designed to deliver multiple ways for people to reach your website
-                            across 
-                        `,
+						"diversity",
+						` of ways to reach it. This one-of-a-kind service is specifically
+						designed to deliver multiple ways for people to reach your website
+						across `,
 						"ALL devices",
 						`. Witness a stunning and seamless user experience as your site
 						dynamically adapts to `,
 						"desktops",
 						", ",
 						"tablets",
-						", ",
+						", and ",
 						"smartphones",
 						"."
 					]
@@ -468,16 +438,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"All of Your Website's Users"
 					],
 					para: [
-						"I'll make your website open to ",
-						"everyone.",
-						`
-                            Accessibility is my
-                            commitment to ensuring that every visitor, including those with
-                            disabilities, can enjoy your website. It's about making your website
-                            an 
-                        `,
-						"inclusive",
-						" place for every single visitor."
+						"I'll make your website open and accessible to ",
+						"everyone",
+						`. I must ensure that every visitor, including those with
+						disabilities, can fully enjoy your website.`,
 					]
 				}
 			]
@@ -515,7 +479,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				id: 4,
 				quote: `"Antoan is extremely serious and reliable partner! The process was easy and enjoyable! With his professionalism and strong skills he managed to exceed my desired result!"`,
 				author: "Sevdelin Kolarov",
-				authorInfo: "Businessmen",
+				authorInfo: "Businessman",
 				projectLink: "https://lovejourney69.xyz",
 				githubLink: "https://github.com/antoanparashkevov/book-nextjs",
 				authorImage: SevdelinImage
@@ -524,12 +488,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 		ticketsSection: {
 			headline: "But WAIT that's not everything…",
 			subheadline: [
-				`
-                    Making it this far only shows me you are TRULY serious about
-					10x your clients and for this reason, I will give you a 
-                `,
+				`Making it this far shows me that you are TRULY serious about
+				the success of your start-up business and for this reason, I will make you a `,
 				"special discount",
-				" if you sign up for discussion in the next ",
+				" if you sign up for discussion with me in the next ",
 				"24 hours"
 			],
 			plans: "Plans",
@@ -631,7 +593,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			],
 			para: "No additional and hidden fees - pay once and get full access to your website",
 			money_back: `
-                    And of course, if you are not satisfied with ANY of my services, you
+                    And of course, if you are not satisfied with my services, you
 					will get a 100% refund of your money in the blink of an eye.
                 `
 		},
@@ -643,9 +605,9 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			headline: [
 				"Sign Up ",
 				"Now",
-				" And Let's Build Your ",
-				"Dream-Looking",
-				" Website Together"
+				" And Let's Create An ",
+				"Elite-Performing",
+				" Website For Your Starting Business"
 			],
 			subheadline: "Get in touch",
 			picked_plan: "Picked plan",
@@ -666,11 +628,11 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			headline: [
 				"Как да",
 				" трансформираш ",
-				"своя стартиращ бизнес от 0 или няколко клиента до х10 ",
+				"своя стартиращ бизнес от 0 или няколко клиента до 10х ",
 				"за по-малко от 90 дни"
 			],
 			subheadline: [
-				"Нека поправим това веднъж завинаги като ти направя ",
+				"Нека поправим това веднъж завинаги като ти създам ",
 				"високопроизводителен сайт",
 				" на ",
 				"изключително достъпна цена",
@@ -694,72 +656,58 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: "Колко силно искаш твоят бизнес да успее?",
 					para: [
-						`
-                            Като професионален full-stack уеб разработчик, който е посветен над уменията си повече от 3 години, 
-                            аз искам да се убедя, че работя със сериозни и амбицирани хора, които 
-                        `,
-						"искат най-доброто за себе си и за техния стартиращ бизнес.",
-						"<br />",
-						"<br />",
-						"Някой, който е ангажиран да направи своя бизнес №1 на пазара и да отвее всички конкуренти, но и най-важното:",
+						`Като професионален full-stack уеб разработчик, който е посветен над занаята си повече от 3 години, 
+						аз искам да се уверя, че работя със сериозен и амбициран човек.`,
 						"<br />",
 						"<br />",
 						"",
-						`
-                            Някой, който няма да се откаже и избяга, когато нещата станат трудни! 
-                            Може да съм малко директен, но за това си има конкретна причина:
-                        `
+						"Може да съм леко директен, но за това си има конкретна причина:"
 					]
 				},
 				{
 					headline: "Аз искам най-добрите възможни резултати за теб!",
 					para: [
-						`
-                            За да ги постигнем, аз трябва се уверя, че ти мислиш като победител. 
-                            И ако все още четеш това, аз уверено мога да кажа, че 
-                        `,
-						"си!",
+						`И за да ги постигнем, аз трябва се уверя, че искаш най-доброто 
+						за своя стартиращ бизнес, а именно:`,
 						"<br />",
 						"<br />",
-						"И относно въпроса как ще ти докарам много клиенти- отговорът е много прост.",
+						"Да привлечеш стотици клиенти за бизнеса си и да изкараш купища пари от тях.",
 						"<br />",
 						"<br />",
 						"",
-						`
-                            Ще ти направя уебсайт на такова ниво, че когато клиентите ти го видят, 
-							те няма да имат избор но да купят от продуктите или услугите, които предлагаш. 
-                        `,
+						"И сега да се върнем на въпроса как ще ти докарам много клиенти? Отговорът е прост:",
 						"<br />",
 						"<br />",
-						"Защо?",
+						`Ще ти направя уебсайт на такова ниво, че когато клиентите ти го видят, 
+						те няма да имат избор но да купят продуктите или услугите, които предлагаш.`,
 						"<br />",
 						"<br />",
-						"Защото сайтът ти ще изглежда толкова ",
-						"професионален",
-						" че дори конкурентите ти ще ",
-						"завидят",
-						"!"
+						"Откъде съм толкова сигурен?",
+						"<br />",
+						"<br />",
+						"Знам, защото вече съм го постигал многократно с мои предишни доволни клиенти, както може да видиш тук.",
 					]
 				}
-			]
+			],
+			outro: "Свържи се с мен сега, ако искаш елитен уебсайт, който ще привлече стотици клиенти за твоя стартиращ бизнес!",
+			contactMeLabel: "Изпрати съобщение"
 		},
 		benefitsSection: {
 			headline: [
-				`
-                    Последните няколко месеца направих проучване относно конкуренти ми и взех 4-те ключови елемента,
-                    които липсват в техните услуги. И, разбира се, като съревнователен професионалист, който иска 
-                `,
-				"най-добрите възможни резултати за моите клиенти",
-				", ще се уверя, че не ти липсва нито един от тези елементи, напълно отличавайки те от аматьорите."
+				"Последните няколко месеца направих подробно проучване на най-големите компании за уеб-разработка в света и от тях взех ",
+				"4-те ключови елемента",
+				", които липсват в услугите им за постигане на най-добрите възжмони резултати за техните клиенти. ",
+				"",
+				"Елементи, който ",
+				"НЯМА ДА ЛИПСВАТ",
+				" в твоя уебсайт и ще те отличат напълно от конкуренцията."
 			],
 			sections: [
 				{
 					headline: "Започни силно, харчи умно",
 					para: [
-						`
-                            Знам от опит колко скъпо и стресиращо да започнеш бизнес. 
-                            Точно затова, аз искам да намаля риска колкото се може повече и да ти осигуря висококачествен уебсайт на 
-                        `,
+						`Знам от опит колко скъпо и стресиращо е да започнеш бизнес. и за да те улесня 
+						максимално ще ти направя уебсайт не просто на високо ниво, но и на `,
 						"много достъпна цена",
 						"."
 					],
@@ -771,15 +719,8 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: "Твоят сайт, Твоята визия, Твоят начин!",
 					para: [
-						`
-                            Представи си перфектно-изглеждащия дизайн за твоя уебсайт. 
-                            Помисли за всеки цвят, оформление, детайл. 
-                        `,
-						"Ще получиш точно това!",
-						`
-                            За разлика от доста ограничените и скъпи шаблони, които конкурентите предлагат на своите клиенти,
-                            аз ще създам красиво изглеждащ дизайн за твоя уебсайт, който ще остави посетителите ти с паднало чене!
-                        `
+						`За разлика от доста ограничените и скъпи шаблони, които повечето уеб-разработчици и компании предлагат, 
+						аз ще създам красиво изглеждащ дизайн за твоя уебсайт по твой вкус, който ще остави посетителите ти с паднало чене.`
 					],
 					actionButton: {
 						href: "#offers",
@@ -789,17 +730,13 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: "Където функционалността е приоритет!",
 					para: [
-						`
-                            На повечето уебсайтове им липсва добро потребителско изживяване. 
-                            Представи си как влизаш в уебсайт и виждаш лошата структура, 
-                            наситените цветове, разпръснатият текст. 
-                            Не е приятно, нали? Затова ние ще сме професионалисти 
-                            и ще предоставим на клиентите ти  
-                        `,
+						`Представи си как влизаш в нискокачествен уебсайт и виждаш лошата структура, 
+						наситените цветове, и разпръснатият текст по него. Не е приятно, нали? 
+						Затова ние ще сме професионалисти и ще предоставим на клиентите ти `,
 						"леснодостъпен",
 						" и ",
 						"добре организиран",
-						" уебсайт!"
+						" уебсайт, който ще е удобен за четене и няма да ги натоварва с безкраен текст!"
 					],
 					actionButton: {
 						href: "#offers",
@@ -832,23 +769,23 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			headline: "Накратко за мен",
 			para: [
 				"Завършил съм ",
-				"един от най-добрите софтуерни университети в страната - Софтуни",
-				". По време на обучението ми там, имах невероятната възможност да уча от ",
+				"един от най-добрите софтуерни университети в България - Софтуни",
+				". По време на обучението ми там, имах невероятната възможност да се обуча от ",
 				"топ експерти",
 				" с ",
 				"над 10 години опит в сферата ",
 				`
                     на програмирането. Освен научаване и затвърдяване на основите, 
-                    аз също научих по-напреднали техники, които биха могли да бъдат “тайният сос”, 
+                    аз също научих по-напреднали техники, които ще бъдат “тайният сос”, 
                     когато дойде ред да привлечем нови клиенти в твоят уебсайт.
                 `
 			]
 		},
 		featuresSection: {
 			headline:
-				"И тъй като съм щедър човек, който иска да даде на клиентите си колкото се може повече стойност",
+				"И тъй като съм щедър човек, който иска да ти даде колкото се може повече стойност за твоя стартиращ бизнес:",
 			subheadline:
-				"Kато допълнение към ВСИЧКИ ползи, които описах горе, ти също ще получиш:",
+				"В допълнение към ползите, които описах горе, ти също ще получиш:",
 			sections: [
 				{
 					headline: [
@@ -858,11 +795,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"Front-End"
 					],
 					para: [
-						`
-                            Ако твоят уебсайт беше скъпа, луксозна спортна кола, Front-End частта ще е 
-                            елегантният външен облик и полираното покритие.
-                            Това е всичко, с което клиентът ти ще взаимодейства по твоя уебсайт -
-                        `,
+						"Това включва всичко, с което клиентът ти ще взаимодейства по твоя уебсайт - ",
 						"оформлението",
 						", ",
 						"дизайнът",
@@ -870,12 +803,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"бутоните",
 						", ",
 						"формите",
-						`
-                            , и всичко останали визуални елементи по екрана.
-                            За тази част, аз използвам най-модерната технология в момента -
-                        `,
+						`, и всичко останали визуални елементи по екрана.
+						За тази част, аз използвам най-модерната технология в момента - `,
 						"Next.JS",
-						", който оптимизира най-важните части на уебсайта - ",
+						", която оптимизира най-важните части на уебсайта - ",
 						"текстът",
 						" и ",
 						"снимките",
@@ -890,12 +821,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"функционалност"
 					],
 					para: [
-						`
-                            Докато Front-End частта се фокусира върху приятното визуално преживяване на твоя уебсайт, 
-                            тази услуга управлява задкулисната магия. Това включва сървър, база от данни, 
-                            защита (CSRF protection, CORS protection, Authentication protection). 
-                            Тук използвам една от най-модерните PHP технологии - 
-                        `,
+						`Докато Front-End частта се фокусира върху приятното визуално преживяване на твоя уебсайт, 
+						тази услуга управлява задкулисната магия в него. Това включва сървър, база от данни, 
+						защита (CSRF protection, CORS protection, Authentication protection). 
+						Тук използвам една от най-модерните PHP технологии - `,
 						"Laravel",
 						"."
 					]
@@ -907,39 +836,31 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						": SEO тактики за подобряване на видимостта"
 					],
 					para: [
-						"Това е ",
-						"златният ключ",
-						`
-                            , който ще отключи пълния потенциал на твоя уебсайт. 
-                            Тук аз използвам специфична технология, която ще 
-                        `,
-						"засили ",
-						`
-                            видимостта на твоя уебсайт в онлайн пространството, като таргетира твоята желана аудитория с поне 10% - 
-                            защото добре сглобеният уебсайт заслужава да бъде на върха на търсачката!
-                        `
+						"Тук аз използвам специална технология, която ",
+						"драстично ще засили",
+						` видимостта на твоя уебсайт в онлайн пространството, 
+						като таргетира твоята желана аудитория с поне 10% - защото сайт на високо ниво 
+						заслужава да бъде на високо място в търсачката!`,
 					]
 				},
 				{
 					headline: [
 						"Универсално ",
 						"потребителско изживяване",
-						": Магията на Responsive дизайна"
+						": Магията на ",
+						"Responsive",
+						" дизайна"
 					],
 					para: [
-						`
-                            Един сайт - разнообразие от начини да го достъпиш! Това е единствена по рода си услуга, 
-                            която е специфично устроена да достави различни начини на хората да достъпват твоят уебсайт от
-                        `,
+						`Един сайт - разнообразие от начини да го достъпиш! Това е единствена по рода си услуга, 
+						която е специфично устроена да достави различни начини на хората да достъпват уебсайта ти от `,
 						"ВСЯКО устройство",
-						`
-                            ! Уебсайтът ти ще има зашеметяващо и безпроблемно потребителско изживяване, 
-                            докато динамично се адаптира на
-                        `,
+						`! Той ще има зашеметяващо и безпроблемно потребителско изживяване, 
+						динамично адаптирайки се на `,
 						"таблети",
-						",",
+						", ",
 						"телефони",
-						",",
+						", ",
 						"компютри",
 						"."
 					]
@@ -947,16 +868,13 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				{
 					headline: [
 						"Никаква толерантност за ",
-						"бъгове",
-						": Издигни производителността със строга ",
+						"бъговете",
+						": Издигни производителността на сайта си със строга ",
 						"проверка за грешки"
 					],
 					para: [
-						`
-                            Мразиш, когато формата, която си попълнил и опиташ да изпратиш, 
-                            но не ти позволи или линкове, които не водят до никъде? 
-                            Услугата за валидиране прави възможното твоят уебсайт да върви като 
-                        `,
+						`Не ти ли е неприятно когато формата не успее да се изпрати или линкът води до никъде? 
+						Услугата за валидиране прави възможното твоят уебсайт да върви като `,
 						"Швейцарски часовник",
 						"! Без повече бъгове: всичко с ",
 						"прецизност",
@@ -973,13 +891,10 @@ export const dictionary: Record<string, DictionaryEntry> = {
 						"всички потребители"
 					],
 					para: [
-						"Аз ще ти направя уебсайта отворен и достъпен за ",
+						"Аз ще ти направя уебсайта ти отворен и достъпен за ",
 						"всички",
-						`! Достъпността е моя отговорност, за да бъда сигурен, че всеки посетител, 
-                            включително и тези с усложнения, ще могат да се наслаждават на уебсайта! 
-                            Всичко опира до това да направя уебсайтът ти `,
-						"приобщаващо",
-						" място за всеки посетител!"
+						`! Мое задължение е да бъда сигурен, че всеки посетител, включително и тези с усложнения, 
+						ще могат да му се насладят напълно.`,
 					]
 				}
 			]
@@ -1026,10 +941,8 @@ export const dictionary: Record<string, DictionaryEntry> = {
 		ticketsSection: {
 			headline: "Но ИЗЧАКАЙ, това не е всичко…",
 			subheadline: [
-				`
-                    Стигайки до тук, ти ми доказа, че си наистина сериозен за 
-                    х10 клиенти и поради тази причина, аз ще ти предложа 
-                `,
+				`Стигайки до тук, ти ми доказа, че си наистина сериозен за 
+				успеха на своя стартиращ бизнес и поради тази причина, ще ти направя `,
 				"специална оферта",
 				" ако се свържеш с мен в следващите ",
 				"24 часа"
@@ -1132,10 +1045,9 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				}
 			],
 			para: "Без допълнителни и скрити такси - плащаш веднъж и получаваш достъп до твоя уебсайт",
-			money_back: `
-                    Разбира се, ако не си удовлетворен от дори едно нещо от моите услуги, 
-                    веднага ще получиш 100% възвръщаемост на парите!
-                `
+			money_back:
+				`Разбира се, ако не си удовлетворен от услугите ми, 
+				веднага ще получиш 100% възвръщаемост на парите си!`
 		},
 		contactSection: {
 			notificationContent: {
@@ -1145,11 +1057,11 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			headline: [
 				"Свържи Се С Мен ",
 				"Сега",
-				" И Нека Създадем Твоя ",
+				" И Нека Създадем ",
 				"Високофункциониращ",
-				" Уебсайт Заедно"
+				" Уебсайт За Твоя Стартиращ Бизнес"
 			],
-			subheadline: "Свържете се с мен и през социалните мрежи",
+			subheadline: "Свържете се с мен и през социалните ми мрежи",
 			picked_plan: "Избран план",
 			form: {
 				first_name: "Собствено име",
