@@ -15,7 +15,7 @@ const IntroductionSection: React.FC<{ content: IntroductionSectionContent }> = (
 	return (
 		<section className="relative lg:flex lg:gap-x-14 lg:items-center w-full">
 			<LinearGradient className="top-8 right-0" />
-			<div className="flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full">
+			<div className="relative flex flex-col items-start lg:flex-shrink-0 max-w-[36rem] w-full pb-52">
 				{ content.sections.map((item: { headline?: string, para: string[]}, index: number) => {
 					return (
 						<Fragment key={index}>
@@ -38,14 +38,21 @@ const IntroductionSection: React.FC<{ content: IntroductionSectionContent }> = (
 						</Fragment>
 					);
 				})}
-				<Link href="#testimonials" className="base-btn animate fade-left mb-8">
+				<Link href="#testimonials" className="base-btn animate fade-left mb-25">
 					Testimonials
 				</Link>
-				<p className='font-bold animate fade-in'>
+				<Link
+					href='#contact'
+					className='
+						w-full
+						absolute bottom-0 max-md:left-0 md:left-1/2
+						font-bold uppercase p-6 italic
+						border border-solid border-orange-500 rounded-md
+						hover:bg-gray-50 hover:shadow-2xl
+						animate fade-in
+					'
+				>
 					{content.outro}
-				</p>
-				<Link href="#contact" className='base-btn animate fade-left my-8'>
-					{content.contactMeLabel}
 				</Link>
 			</div>
 			<div className="flex gap-8">

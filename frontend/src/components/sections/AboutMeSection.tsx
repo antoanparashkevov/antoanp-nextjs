@@ -15,7 +15,7 @@ const AboutMeSection: React.FC<{ content: AboutMeSectionContent }> = ({ content 
 					<p className='animate fade-left'>
 						{content.para.map((item: string, index: number) => {
 							if( index % 2 === 1) {
-								return <span key={index} className="text-orange-500">{item}</span>
+								return <span key={index} className="text-orange-500 font-bold">{item}</span>
 							}
 							return item;
 						})}
