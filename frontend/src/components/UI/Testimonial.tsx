@@ -38,6 +38,7 @@ const Testimonial: React.FC<{testimonial: testimonial}> = ({testimonial}) => {
 				{testimonial.quote}
 			</blockquote>
 			<div className="flex justify-end items-center gap-x-2">
+				<span className='text-white font-bold text-[16px]'>Links:</span>
 				{testimonial.projectLink && (
 					<Icon src={GlobeIcon} alt="Globe Icon" href={testimonial.projectLink} target="_blank" />
 				)}

@@ -62,12 +62,14 @@ const IntroductionSection: React.FC<{ content: IntroductionSectionContent }> = (
 						alt="Portrait"
 						placeholder="blur"
 						className="rounded-xl"
+						sizes='176w'
 					/>
 					<Image
 						src={PortraitImage2}
 						alt="Portrait"
 						placeholder="blur"
 						className="rounded-xl mt-4"
+						sizes='176w'
 					/>
 				</div>
 				<div className="w-[11rem] pt-[1rem] animate fade-right">
@@ -76,12 +78,14 @@ const IntroductionSection: React.FC<{ content: IntroductionSectionContent }> = (
 						alt="Portrait Diploma Software Engineer"
 						placeholder="blur"
 						className="rounded-xl"
+						sizes='176w'
 					/>
 					<Image
 						src={DiplomaImage}
 						alt="Diploma Software Engineer"
 						placeholder="blur"
 						className="rounded-xl mt-4"
+						sizes='176w'
 					/>
 				</div>
 			</div>

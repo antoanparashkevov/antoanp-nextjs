@@ -30,6 +30,7 @@ const AboutMeSection: React.FC<{ content: AboutMeSectionContent }> = ({ content 
 								alt="Portrait Diploma Software Engineer"
 								placeholder="blur"
 								className="rounded-xl"
+								sizes='160w'
 							/>
 						</div>
 						<div className="w-1/2 pt-[12rem] animate fade-in">
@@ -38,6 +39,7 @@ const AboutMeSection: React.FC<{ content: AboutMeSectionContent }> = ({ content 
 								alt="Portrait Diploma Software Engineer"
 								placeholder="blur"
 								className="rounded-xl"
+								sizes='160w'
 							/>
 						</div>
 					</div>
@@ -47,6 +49,7 @@ const AboutMeSection: React.FC<{ content: AboutMeSectionContent }> = ({ content 
                             alt='Portrait Software Engineer'
                             placeholder='blur'
                             className='rounded-xl'
+							sizes='350w'
                         />
                     </div>
 				</div>

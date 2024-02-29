@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import YoanaImage from "../../public/images/Yoana.jpeg";
+import YoanaImage from "../../public/images/Yoana.jpg";
 import SlaviImage from "../../public/images/Slavi.jpg";
-import NikiImage from "../../public/images/Niki.jpeg";
+import NikiImage from "../../public/images/Niki.jpg";
 import SevdelinImage from "../../public/images/Sevdelin.jpg";
+import StanimirImage from "../../public/images/Stanimir.jpg";
 
 export type HeaderContent = {
 	actionButtonLabel: string;
@@ -483,13 +484,22 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				projectLink: "https://lovejourney69.xyz",
 				githubLink: "https://github.com/antoanparashkevov/book-nextjs",
 				authorImage: SevdelinImage
+			},
+			{
+				id: 5,
+				quote: `"Web development was always a challenging task for me until I collaborated with Antoan. His innovative ideas truly set him apart. The project, General Meal, exceeded my expectations."`,
+				author: "Stanimir Stoykow",
+				authorInfo: "Young entrepreneur",
+				projectLink: "https://generalmeal.com",
+				githubLink: "https://github.com/antoanparashkevov/general-meal-nextjs",
+				authorImage: StanimirImage
 			}
 		],
 		ticketsSection: {
 			headline: "But WAIT that's not everything…",
 			subheadline: [
-				`Making it this far shows me that you are TRULY serious about
-				the success of your start-up business and for this reason, I will make you a `,
+				`Making it this far shows me that you are TRULY about
+				attaining hundreds of clients for your starting business and for this reason, I will make you a `,
 				"special discount",
 				" if you sign up for discussion with me in the next ",
 				"24 hours"
@@ -935,13 +945,22 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				projectLink: "https://lovejourney69.xyz",
 				githubLink: "https://github.com/antoanparashkevov/book-nextjs",
 				authorImage: SevdelinImage
+			},
+			{
+				id: 5,
+				quote: `"Уеб разработката винаги беше трудна задача за мен, докато не се сътрудничих с Антоан. Неговите новаторски идеи наистина го отличават. Проектът, General Meal, надмина моите очаквания."`,
+				author: "Станимир Стойков",
+				authorInfo: "Млад предприемач",
+				projectLink: "https://generalmeal.com",
+				githubLink: "https://github.com/antoanparashkevov/general-meal-nextjs",
+				authorImage: StanimirImage
 			}
 		],
 		ticketsSection: {
 			headline: "Но ИЗЧАКАЙ, това не е всичко…",
 			subheadline: [
 				`Стигайки до тук, ти ми доказа, че си наистина сериозен за 
-				успеха на своя стартиращ бизнес и поради тази причина, ще ти направя `,
+				постигането на стотици клиенти за твоя стартиращ бизнес и поради тази причина, ще ти направя `,
 				"специална оферта",
 				" ако се свържеш с мен в следващите ",
 				"24 часа"
