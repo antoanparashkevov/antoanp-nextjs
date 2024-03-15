@@ -11,7 +11,7 @@ services:
       - /app/node_modules  # Persistent volume for dependencies
       - /app/.next  # Persistent volume for Next.js build output
     ports:
-      - "3000:3000"
+      - "3001:3001"
     depends_on: # Ensure the app-backend service starts after the app-frontend service
       - app-backend
       - db
