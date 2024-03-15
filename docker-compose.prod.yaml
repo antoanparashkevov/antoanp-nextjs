@@ -12,12 +12,8 @@ services:
       - /app/.next  # Persistent volume for Next.js build output
     ports:
       - "3001:3001"
-    depends_on: # Ensure the app-backend service starts after the app-frontend service
-      - app-backend
-      - db
-      - nginx
     networks:
-      - prod_network
+      - host-prod-network
 
 # Back-end service (starts first)
   app-backend:
@@ -39,7 +35,7 @@ services:
     volumes:
       - ./backend:/var/www/backend  # Mount backend directory
     networks:
-      - prod_network
+      - host-prod-network
 
   db:
     image: mysql:8.0
@@ -55,32 +51,8 @@ services:
     volumes:
       - ./docker-compose/prod/mysql:/docker-entrypoint-initdb.d
     networks:
-      - prod_network
-
-  nginx:
-    image: nginx:alpine
-    container_name: nginx-antoanp-prod-container
-    restart: unless-stopped
-    ports:
-      - "443:443" #mapping port 443 to the container's port for HTTPS
-      - "80:80"
-    volumes:
-     # - ./backend:/var/www/backend:cached  # Mount backend directory for serving
-      - ./frontend:/var/www/frontend:cached # Mount backend directory for serving  
-      - ./docker-compose/prod/nginx:/etc/nginx/conf.d/:ro
-      - ./certbot/www/:/var/www/certbot/:ro
-      - ./certbot/conf:/etc/nginx/ssl:ro #mounting the letsencrypt certificates to the nginx container
-    networks:
-      - prod_network
-
-  certbot:
-    image: certbot/certbot:latest
-    container_name: certbot-antoanp-container
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw # rw stands for read and write. Certbot will write its files into ./certbot/www and nginx will serve them on port 80 to every user asking for
-      - ./certbot/conf/:/etc/letsencrypt:rw # Certbot will create the certificates in the /etc/letsencrypt. We will use volumes to share the files between nginx and certbot
-
+      - host-prod-network
 
 networks:
-  prod_network:
-    driver: bridge
+  host-prod-network:
+    external: true
