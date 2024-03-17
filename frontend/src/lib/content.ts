@@ -468,7 +468,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			{
 				id: 3,
 				quote: `"I had the pleasure of working with Antoan on our IT Job Board web project, and the experience was nothing short of exceptional."`,
-				author: "Nikolay Yordanov",
+				author: "Nikola Yordanov",
 				authorInfo: "Business owner",
 				projectLink: "https://itcommunity.antoanp.com",
 				designLink:
@@ -929,7 +929,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 			{
 				id: 3,
 				quote: `"Имах удоволствието да работя с Антоан върху уеб проекта IT Job Board и изживяването не беше нищо друго освен изключително!"`,
-				author: "Николай Йорданов",
+				author: "Никола Йорданов",
 				authorInfo: "Млад предприемач",
 				projectLink: "https://itcommunity.antoanp.com",
 				designLink:
