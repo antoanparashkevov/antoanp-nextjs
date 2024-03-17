@@ -470,7 +470,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 				quote: `"I had the pleasure of working with Antoan on our IT Job Board web project, and the experience was nothing short of exceptional."`,
 				author: "Nikolay Yordanov",
 				authorInfo: "Business owner",
-				projectLink: "https://itcommunity.vercel.app",
+				projectLink: "https://itcommunity.antoanp.com",
 				designLink:
 					"https://www.figma.com/file/tqyxHF9RfEQyLEMCzFDvhz/it-community?type=design&node-id=0-1&mode=design&t=hqsgZKdr6Hkq2f0b-0",
 				githubLink: "https://github.com/antoanparashkevov/it-community-react",
