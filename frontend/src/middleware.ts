@@ -17,14 +17,15 @@ function getLocale(request: NextRequest): string {
 
     const languages = new Negotiator({ headers: headersObject }).languages();
 
-    if( languages.includes("*") === false ) {
-        return match(languages, supportedLocales, defaultLocale);
-    }
+   // if( languages.includes("*") === false ) {
+   //     return match(languages, supportedLocales, defaultLocale);
+   // }
 
     return match(["en"], supportedLocales, defaultLocale);
 }
 
 export function middleware(request: NextRequest) {
+    console.log('inside middleware')
     let locale = getLocale(request) ?? defaultLocale;
     let pathName = request.nextUrl.pathname;// should be /
 
