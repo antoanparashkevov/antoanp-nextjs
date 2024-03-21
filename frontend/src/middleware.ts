@@ -8,7 +8,7 @@ export const defaultLocale = 'en';
 function getLocale(request: NextRequest): string {
     const headers = new Headers(request.headers);
     const acceptLanguage = headers.get("Accept-Language");
-
+    console.log('acceptLanguage', acceptLanguage);
     if( acceptLanguage ) {
         headers.set("Accept-Language", acceptLanguage.replaceAll("_", "-"));
     }
@@ -16,16 +16,15 @@ function getLocale(request: NextRequest): string {
     const headersObject = Object.fromEntries(headers.entries());
 
     const languages = new Negotiator({ headers: headersObject }).languages();
-
-   // if( languages.includes("*") === false ) {
-   //     return match(languages, supportedLocales, defaultLocale);
-   // }
+    console.log('languages', languages);
+   if( languages.includes("*") === false ) {
+       return match(languages, supportedLocales, defaultLocale);
+   }
 
     return match(["en"], supportedLocales, defaultLocale);
 }
 
 export function middleware(request: NextRequest) {
-    console.log('inside middleware')
     let locale = getLocale(request) ?? defaultLocale;
     let pathName = request.nextUrl.pathname;// should be /
 
