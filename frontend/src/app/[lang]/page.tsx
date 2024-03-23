@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
 import SeparationLine from '@/components/UI/SeparationLine';
 import HeroSection from '@/components/sections/HeroSection';
@@ -25,21 +25,25 @@ const Home: React.FC<{params: { lang: string }}> = ({ params }) => {
 	return (
 		<TicketContextProvider>
 			<CountContextProvider>
-				<HeroSection content={dictionary[lang]["heroSection"]} />
-				<SeparationLine />
-				<IntroductionSection content={dictionary[lang]['introductionSection']} />
-				<SeparationLine />
-				<BenefitsSection content={dictionary[lang]['benefitsSection']} />
-				<SeparationLine />
-				<AboutMeSection content={dictionary[lang]['aboutMeSection']} />
-				<SeparationLine />
-				<FeaturesSection content={dictionary[lang]['featuresSection']} />
-				<SeparationLine />
-				<TestimonialsSection content={dictionary[lang]['testimonialsSection']} />
-				<SeparationLine />
-				<TicketsSection content={dictionary[lang]['ticketsSection']} langCode={lang} />
-				<SeparationLine />
-				<ContactSection content={dictionary[lang]['contactSection']} />
+				{ lang &&
+					<Fragment>
+						<HeroSection content={dictionary[lang]["heroSection"]} />
+						<SeparationLine />
+						<IntroductionSection content={dictionary[lang]['introductionSection']} />
+						<SeparationLine />
+						<BenefitsSection content={dictionary[lang]['benefitsSection']} />
+						<SeparationLine />
+						<AboutMeSection content={dictionary[lang]['aboutMeSection']} />
+						<SeparationLine />
+						<FeaturesSection content={dictionary[lang]['featuresSection']} />
+						<SeparationLine />
+						<TestimonialsSection content={dictionary[lang]['testimonialsSection']} />
+						<SeparationLine />
+						<TicketsSection content={dictionary[lang]['ticketsSection']} langCode={lang} />
+						<SeparationLine />
+						<ContactSection content={dictionary[lang]['contactSection']} />
+					</Fragment>
+				}
 			</CountContextProvider>
 		</TicketContextProvider>
 	);

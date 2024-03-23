@@ -31,6 +31,10 @@ const TheHeader: React.FC = () => {
 		setOpenDropdown(false);
 	}
 
+	if( !language ) {
+		return null;
+	}
+
     return (
 			<nav className="flex justify-between items-center w-full min-h-full">
 				<h3 className="cursor-pointer text-orange-500">

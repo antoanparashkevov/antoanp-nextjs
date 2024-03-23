@@ -29,6 +29,7 @@ const TicketsSection: React.FC<{ content: TicketsSectionContent, langCode: strin
 				</p>
 				<h2 className="text-[45px]">{content.plans}</h2>
 				<CountDown hours={24} content={content.countDown} />
+				<strong className="text-[30px] text-center">{content.guarantee}</strong>
 				<p className="text-black underline">
 					{content.para}
 				</p>
