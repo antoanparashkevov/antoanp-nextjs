@@ -601,7 +601,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 					actionButtonLabel: "Claim the offer"
 				}
 			],
-			para: "No additional and hidden fees - pay once and get full access to your website",
+			para: "No upfront costs! No additional and hidden fees - pay once and get full access to your website",
 			money_back: `
                     And of course, if you are not satisfied with my services, you
 					will get a 100% refund of your money in the blink of an eye.
@@ -1062,7 +1062,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
 					actionButtonLabel: "Грабни офертата"
 				}
 			],
-			para: "Без допълнителни и скрити такси - плащаш веднъж и получаваш достъп до твоя уебсайт",
+			para: "Без предварително заплащане! Без допълнителни и скрити такси - плащаш веднъж и получаваш достъп до твоя уебсайт",
 			money_back:
 				`Разбира се, ако не си удовлетворен от услугите ми, 
 				веднага ще получиш 100% възвръщаемост на парите си!`
